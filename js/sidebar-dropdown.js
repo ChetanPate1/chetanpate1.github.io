@@ -8,13 +8,14 @@ var side = {
     3: 'close',
     4: 'close',
     5: 'close',
-    6: 'close'
+    6: 'close',
+    7: 'close'
 };
 
 var createSide = function (){
     var card = {}, close;
 
-    for(var i = 1; i <= 6; i++){
+    for(var i = 1; i <= 7; i++){
         close = 57*(i - 1) + 'px';
 
         card[i] = {
@@ -41,11 +42,12 @@ function resetSide(){
         3: 'close',
         4: 'close',
         5: 'close',
-        6: 'close'
+        6: 'close',
+        7: 'close'
     };
 
 
-    for(var i = 1; i <= 6; i++){
+    for(var i = 1; i <= 7; i++){
         $('#sidebar-nav li:nth-child('+ i +')').css(createSide()[i]);
     }
 
@@ -66,10 +68,10 @@ $sidebar_items.on('tap', function(){
         $this.addClass('open');
         side[$thisIndex + 1] = 'open';
 
-        for(var i = $thisIndex + 2; i <= 6; i++){
+        for(var i = $thisIndex + 2; i <= 7; i++){
 
             var height_and_content = $this.height() - 57;
-            var from = 57*(i-1);
+            var from = 57*(i - 1);
             var moveTo = height_and_content + from +'px';
 
             $('#sidebar-nav li:nth-child('+ i +')').css({
