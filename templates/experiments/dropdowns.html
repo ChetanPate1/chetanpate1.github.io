@@ -1,0 +1,449 @@
+<div class="section white page-header">
+    <div class="gradient-container container-fluid">
+        <div class="container">
+            <h1>MOBILE DROPDOWNS</h1>
+        </div>
+
+        <div class="created">
+            <div class="con">
+                <span class="title">CREATED</span>
+                <span class="day">07 <span class="ago">MONTHS <br>AGO</span></span>
+            </div>
+        </div>
+        <a class="c-button skip-to-demo-btn" href="#md-demo" du-smooth-scroll offset="70" duration="1000">Skip to demo <span class="sprite skip"></span></a>
+    </div>
+</div>
+
+
+<div class="section white padding-bottom-120 padding-top-120">
+    <div class="container">
+        <h2 class="margin-bottom-60">Concept</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 remove-padding-mobile">
+                <div class="css-iphone">
+                    <div class="speaker"></div>
+                    <div class="content dd-css-iphone-content">
+                        <div class="min-nav">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul>
+                            <li>.card:nthchild(1)<span></span></li>
+                            <li>content <span></span></li>
+                            <li>.card:nthchild(2)<span></span></li>
+                            <li>.card:nthchild(3)<span></span></li>
+                            <li>.</li>
+                            <li>.</li>
+                            <li>.</li>
+                            <li>.card:nthchild(i)</li>
+                        </ul>
+                    </div>
+                    <div class="button"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <p>
+                    Usually dropdowns are hidden and onclick they
+                    are shown. But I wanted the content to slide down
+                    using transforms and transitions, so I thought
+                    about them as stacked cards where each dropdown
+                    content is hidden by the progressing child.
+                </p>
+                <p>
+                    We can use a for loop to translate each of the .cards by the height*i.
+                    This is the default position of all the cards.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 dd-concept-key">
+                <p>
+                    To open a card we need to all the .cards after the one
+                    clicked on to translate down by its height + the
+                    dropdown content height.
+                </p>
+                <p>
+                    So .card:nthchild(2) needs move down by:
+                    <span class="g">.card:nthchild(2)</span> height + <br>
+                    <span class="r">.card:nthchild(1)</span> height.
+                </p>
+                <p>
+                    .card:nthchild(3) needs move down by:
+                    <span class="b">.card:nthchild(3)</span> height + <br>
+                    <span class="g">.card:nthchild(2)</span> height + <br>
+                    <span class="r">.card:nthchild(1)</span> height. And so on.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gradient-separator"></div>
+
+<div class="section white padding-bottom-120 padding-top-120">
+    <div class="container">
+        <div class="row">
+            <h4 class="margin-bottom-30">Creating the card stake</h4>
+            <h6 class="margin-bottom-60">Here are the two for loops</h6>
+            <div class="col-md-6 mobile-edge">
+                <div class="title-card color-1 code-example">
+                    <h5>Create loop</h5>
+                    <p>
+                        <span class="css-indent">
+                            <span class="purple">for</span> (<span class="purple">var</span> i <span class="turquoise">=</span> <span class="orange">1</span>; i <span class="turquoise"><=</span> numberOfCategories; i<span class="turquoise">++</span>){
+                        </span>
+                        <span class="css-indent-2">
+                            <span class="purple">var</span> closed <span class="turquoise">=</span> linkTitleHeight<span class="turquoise">*</span>(i <span class="turquoise">-</span> <span class="orange">1</span>) <span class="turquoise">+</span><span class="green">'px'</span>;
+                        </span><br>
+                        <span class="css-indent-2">
+                            <span class="purple">$</span>(<span class="green">'.navigation-container .card:nth-child('</span><span class="turquoise">+</span> i <span class="turquoise">+</span><span class="green">'</span>)').<span class="blue">css</span>({
+                        </span>
+                        <span class="css-indent-3">
+                            <span class="green">'transform':'translateY('</span><span class="turquoise">+</span> closed <span class="turquoise">+</span><span class="green">')'</span>
+                        </span>
+                        <span class="css-indent-2">});</span>
+                        <span class="css-indent">}</span>
+                    </p>
+                </div>
+                <p class="code-example-annotation">
+                    The reset function moves all the cards so they cascade by there link
+                    heights.(Basically the onload position)
+                </p>
+            </div>
+            <div class="col-md-6 mobile-edge">
+                <div class="title-card color-2 code-example">
+                    <h5>Move loop</h5>
+                    <p>
+                        <span class="css-indent">
+                            <span class="purple">var</span> $this <span class="turquoise">=</span> <span class="blue">$</span>(<span class="red">this</span>);
+                        </span>
+                        <span class="css-indent">
+                            <span class="purple">var</span> $thisIndex <span class="turquoise">=</span> <span class="red">$this</span>.<span class="blue">index</span>() <span class="turquoise">+</span> <span class="purple">2</span>;
+                        </span>
+                        <span class="css-indent">
+                            <span class="purple">var</span> heightOfSelf <span class="turquoise">=</span> <span class="red">$this</span>.<span class="blue">height</span>() <span class="turquoise">-</span> linkTitleHeight;
+                        </span><br>
+                        <span class="css-indent">
+                            <span class="purple">for</span>(<span class="purple">var</span> i <span class="turquoise">=</span> <span>$thisIndex</span>; i <span class="turquoise"><=</span> numberOfCategories; i<span class="turquoise">++</span>){
+                        </span>
+                        <span class="css-indent-2">
+                            <span class="purple">var</span> from <span class="turquoise">=</span> linkTitleHeight<span class="turquoise">*</span>(i <span class="turquoise">-</span> <span class="orange">1</span>);
+                        </span>
+                        <span class="css-indent-2">
+                            <span class="purple">var</span> moveTo <span class="turquoise">=</span> heightOfSelf <span class="turquoise">+</span> from <span class="turquoise">+</span><span class="green">'px'</span>;
+                        </span>
+                        <span class="css-indent-2">
+                            <span class="blue">$</span>(<span class="green">'.navigation-container .card:nth-child('</span><span class="turquoise">+</span> i <span class="turquoise">+</span><span class="green">')'</span>).<span class="blue">css</span>({
+                        </span>
+                        <span class="css-indent-3">
+                            <span class="green">'transform'</span>:<span class="green">'translateY('</span><span class="turquoise">+</span> moveTo <span class="turquoise">+</span><span class="green">')'</span>
+                        </span>
+                        <span class="css-indent-2">});</span>
+                        <span class="css-indent">}</span>
+                    </p>
+                </div>
+                <p class="code-example-annotation">
+                    The move function is where the calculation happens. First it gets the index of the clicked card adds two.
+                    We add 2 because index starts at 0 and one card below we add another one.
+                    This is so the for loop starts after the clicked card, each card moves down by
+                    its own height + the title height.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gradient-separator"></div>
+
+<div class="section white padding-bottom-120 padding-top-120">
+    <div class="container">
+        <h3 class="margin-bottom-60">Interactive Model</h3>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="col-xs-8 col-sm-5 col-md-7 stack-3d-example" ng-class="{perspective: ExperimentsCtrl.perspective}">
+                    <img class="stack-card" ng-src="images/3d-mockup.png">
+                    <img class="stack-card" ng-src="images/3d-mockup.png">
+                    <img class="stack-card" ng-src="images/3d-mockup.png">
+                    <img class="stack-card" ng-src="images/3d-mockup.png">
+                </div>
+                <button class="perspective-button" ng-click="ExperimentsCtrl.dropDownModalButton()">{{ ExperimentsCtrl.buttonName }}</button>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <ul class="stack-3d-card-values">
+                    <li><span>CARD</span> TRANSLATE POSITION</li>
+                    <li><span>1</span><div></div></li>
+                    <li><span>2</span><div></div></li>
+                    <li><span>3</span><div></div></li>
+                    <li><span>4</span><div></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gradient-separator"></div>
+
+<div class="section white padding-bottom-120 padding-top-120">
+    <div class="container" id="md-demo">
+        <h3 class="margin-bottom-60">Demo</h3>
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                <div class="navigation-container">
+                    <div class="navigation-category">
+                        <div class="link-name">DROPDOWN 1
+                            <span class="chevron">
+                                <div class="rect"></div>
+                                <div class="rect"></div>
+                            </span>
+                        </div>
+
+                        <div class="content">
+                            <a class="link-name">LINK 1.1</a>
+                            <a class="link-name">LINK 1.2</a>
+                        </div>
+                    </div>
+
+                    <div class="navigation-category">
+                        <a class="link-name">LINK 1</a>
+                    </div>
+
+                    <div class="navigation-category">
+                        <a class="link-name">LINK 2</a>
+                    </div>
+
+                    <div class="navigation-category">
+                        <div class="link-name">DROPDOWN 2
+                            <span class="chevron">
+                                <div class="rect"></div>
+                                <div class="rect"></div>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <a class="link-name">LINK 3.1</a>
+                            <a class="link-name">LINK 3.2</a>
+                            <a class="link-name">LINK 3.3</a>
+                        </div>
+                    </div>
+
+                    <div class="navigation-category">
+                        <div class="link-name">DROPDOWN 3
+                            <span class="chevron">
+                                <div class="rect"></div>
+                                <div class="rect"></div>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <a class="link-name">LINK 4.1</a>
+                            <a class="link-name">LINK 4.2</a>
+                            <a class="link-name">LINK 4.3</a>
+                        </div>
+                    </div>
+
+                    <div class="navigation-category">
+                        <div class="link-name">DROPDOWN 4
+                            <span class="chevron">
+                                <div class="rect"></div>
+                                <div class="rect"></div>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <a class="link-name">LINK 5.1</a>
+                        </div>
+                    </div>
+
+                    <div class="navigation-category"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <p class="col-sm-6 col-md-12">
+                    Instead of hiding the content of the dropdowns I
+                    translated the content by -100% in the Y direction otherwise we would see
+                    the content excess at the bottom of the stack
+                </p>
+                <p class="col-sm-6 col-md-12">
+                    We could use translate 3d but would not work in ie 9. This way we can fallback to
+                    no animation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).on('resize', function(){
+        resetStack();
+    });
+
+    var list_link_height = 52;
+    var number_of_links = $('.navigation-container .navigation-category').size();
+    var stack = {
+        1: 'close',
+        2: 'close',
+        3: 'close',
+        4: 'close',
+        5: 'close',
+        6: 'close'
+    };
+
+    var createStack = function (){
+        var card = {}, close;
+
+        for(var i = 1; i <= number_of_links; i++){
+            close = list_link_height*(i - 1) + 'px';
+
+            card[i] = {
+                '-webkit-transform':'translateY('+ close +')',
+                '-moz-transform':'translateY('+ close +')',
+                '-ms-transform':'translateY('+ close +')',
+                '-o-transform':'translateY('+ close +')',
+                'transform':'translateY('+ close +')',
+                'z-index': i*500
+            };
+        }
+
+        return card;
+    };
+
+
+    function resetStack(){
+        $('.navigation-category .chevron').removeClass('opened');
+        $('.navigation-category .content').removeClass('down');
+        stack = {
+            1: 'close',
+            2: 'close',
+            3: 'close',
+            4: 'close',
+            5: 'close',
+            6: 'close'
+        };
+
+
+        for(var i = 1; i <= number_of_links; i++){
+            $('.navigation-container .navigation-category:nth-child('+ i +')').css(createStack()[i]);
+        }
+
+    }
+    resetStack();
+
+
+    $('.navigation-category').on('tap', function(){
+        var $this = $(this);
+        var $thisIndex = $this.index();
+
+        if (stack[$thisIndex + 1] == 'open'){
+
+            resetStack();
+
+        }else {
+            resetStack();
+            stack[$thisIndex + 1] = 'open';
+
+            $this.find('.chevron').addClass('opened');
+            $this.find('.content').addClass('down');
+
+            for(var i = $thisIndex + 2; i <= number_of_links; i++){
+
+                var height_and_content = $this.height() - list_link_height;
+                var from = list_link_height*(i-1);
+                var moveTo = height_and_content + from +'px';
+
+                $('.navigation-container .navigation-category:nth-child('+ i +')').css({
+                    '-webkit-transform':'translateY('+ moveTo +')',
+                    '-moz-transform':'translateY('+ moveTo +')',
+                    '-ms-transform':'translateY('+ moveTo +')',
+                    '-o-transform':'translateY('+ moveTo +')',
+                    'transform':'translateY('+ moveTo +')'
+                });
+            }
+        }
+
+    });
+
+    //End CSS dropdown demo
+
+
+    var stack3d = {
+        1: 'close',
+        2: 'close',
+        3: 'close',
+        4: 'close'
+    };
+
+    function resetStackModel(){
+        stack3d = {
+            1: 'close',
+            2: 'close',
+            3: 'close',
+            4: 'close'
+        };
+
+        for(var i = 1; i <= 4; i++){
+            var close = 10*(i-1)+'%';
+
+            $('.stack-3d-example .stack-card:nth-child('+ i +')').css({
+                '-webkit-transform':'translateX('+ i*2 +'%) translateY('+ close +')',
+                '-moz-transform':'translateX('+ i*2 +'%) translateY('+ close +')',
+                '-ms-transform':'translateX('+ i*2 +'%) translateY('+ close +')',
+                '-o-transform':'translateX('+ i*2 +'%) translateY('+ close +')',
+                'transform':'translateX('+ i*2 +'%) translateY('+ close +')',
+                'z-index': i*500
+            });
+
+            $('.stack-3d-example.perspective .stack-card:nth-child('+ i +')').css({
+                '-webkit-transform':'translateX('+ i*20 +'%) translateY('+ close +')',
+                '-moz-transform':'translateX('+ i*20 +'%) translateY('+ close +')',
+                '-ms-transform':'translateX('+ i*20 +'%) translateY('+ close +')',
+                '-o-transform':'translateX('+ i*20 +'%) translateY('+ close +')',
+                'transform':'translateX('+ i*20 +'%) translateY('+ close +')',
+                'z-index': i*500
+            });
+
+            $('.stack-3d-card-values li:nth-child('+ (i+1)  +') div').text('translateY('+ close +')');
+
+        }
+    }
+    resetStackModel();
+
+
+    $('.stack-3d-example .stack-card').on('click', function(){
+
+        var $this = $(this);
+        var $thisIndex = $this.index();
+        $('.stack-3d-card-values li').removeClass();
+
+        if (stack3d[$thisIndex + 1] == 'open'){
+
+            resetStackModel();
+
+        }else {
+            resetStackModel();
+            stack3d[$thisIndex + 1] = 'open';
+
+            for(var i = $thisIndex + 2; i <= number_of_links; i++){
+                var height_and_content = 20;
+                var from = 10*(i-1);
+                var moveTo = height_and_content + from +'%';
+
+                $('.stack-3d-example .stack-card:nth-child('+ i +')').css({
+                    '-webkit-transform':'translateX('+ i*2 +'%) translateY('+ moveTo +')',
+                    '-moz-transform':'translateX('+ i*2 +'%) translateY('+ moveTo +')',
+                    '-ms-transform':'translateX('+ i*2 +'%) translateY('+ moveTo +')',
+                    '-o-transform':'translateX('+ i*2 +'%) translateY('+ moveTo +')',
+                    'transform':'translateX('+ i*2 +'%) translateY('+ moveTo +')'
+                });
+
+                $('.stack-3d-example.perspective .stack-card:nth-child('+ i +')').css({
+                    '-webkit-transform':'translateX('+ i*20 +'%) translateY('+ moveTo +')',
+                    '-moz-transform':'translateX('+ i*20 +'%) translateY('+ moveTo +')',
+                    '-ms-transform':'translateX('+ i*20 +'%) translateY('+ moveTo +')',
+                    '-o-transform':'translateX('+ i*20 +'%) translateY('+ moveTo +')',
+                    'transform':'translateX('+ i*20 +'%) translateY('+ moveTo +')'
+                });
+
+                $('.stack-3d-card-values li:nth-child('+ (i+1) +')').addClass('open');
+                $('.stack-3d-card-values li:nth-child('+ (i+1) +') div').text('translateY('+ moveTo +')');
+            }
+        }
+
+
+    });
+
+</script>

@@ -1,0 +1,43 @@
+.css-iphone{
+  position: relative;
+  width: 294px;
+  height: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 30px;
+  background-color: $jet-black;
+
+  .speaker{
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+
+  }
+  .button{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    margin: auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  .content{
+    position: absolute;
+    top: 70px;
+    height: 460px;
+    width: 100%;
+    background-color: white;
+  }
+}

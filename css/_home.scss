@@ -1,0 +1,547 @@
+.card{
+  position: relative;
+  display: block;
+  margin: 0 auto 40px auto;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 360px;
+  min-height: 380px;
+  z-index: 100;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    border-radius: 0 0 15px 15px;
+
+    @include box-shadow(0 10px 45px $jet-black);
+    @include transforms(scale(0.8));
+  }
+
+  &::after{
+    content: "";
+    width: 100%;
+    height: 40px;
+    background-color: $color-1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    border-radius: 0 0 15px 15px;
+  }
+
+  p{
+    padding: 25px 15px 45px 15px;
+    min-height: 190px;
+    font-size: 16px;
+    margin: 0;
+    @include transforms(translateZ(33px));
+  }
+
+  .gradient-container{
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    background: #6840e5;
+    background: -moz-linear-gradient(-45deg,  #40e5d5 0%, #6840e5 100%);
+    background: -webkit-linear-gradient(-45deg,  #40e5d5 0%,#6840e5 100%);
+    background: linear-gradient(135deg,  #40e5d5 0%,#6840e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40e5d5', endColorstr='#6840e5',GradientType=1 );
+
+    h5{
+      z-index: 30;
+      position: relative;
+      color: $color-1;
+      padding: 80px 0;
+      @include transforms(translateZ(35px));
+    }
+
+    .number-bg{
+      z-index: 10;
+      color: $color-1;
+      position: absolute;
+      top: 0px;
+      left: -15px;
+      font-size: 160px;
+      font-weight: bold;
+      font-family: $h-font;
+      opacity: 0.15;
+      @include transforms(translateZ(-45px));
+    }
+
+    img{
+      z-index: 10;
+      position: absolute;
+      max-height: 170px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0.15;
+      @include transforms(translateZ(-45px));
+    }
+  }
+
+  .more-button{
+    @include transforms(translateZ(70px));
+  }
+
+}
+
+.l-grey{
+  .card{
+    background-color: $color-1;
+  }
+}
+
+.white{
+  .card{
+    background-color: $color-2;
+  }
+
+  .c-badge{
+    background-color: darken($color-2, 5%);
+    color: $p-color;
+
+    @include transforms(translateZ(35px));
+  }
+}
+
+
+
+
+.more-button{
+  width: 50px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  background-color: $secondary-color;
+  position: absolute;
+  bottom: 20px;
+  right: 35px;
+  z-index: 70;
+
+  @include box-shadow(0 6px 20px transparentize($secondary-color, 0.5));
+  @include transition(all 100ms ease);
+
+  &:hover{
+    background-color: lighten($secondary-color, 5%);
+  }
+
+  .line{
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    background-color: $color-1;
+
+    &:nth-child(1) {
+      @include transforms(translateX(18px) translateY(19px) rotate(45deg));
+    }
+    &:nth-child(2) {
+      @include transforms(translateX(18px) translateY(29px) rotate(-45deg));
+    }
+  }
+
+  &.plus{
+    .line{
+      width: 16px;
+
+      &:nth-child(1) {
+        @include transforms(translateX(17px) translateY(25px) rotate(0deg));
+      }
+      &:nth-child(2) {
+        @include transforms(translateX(17px) translateY(25px) rotate(-90deg));
+      }
+    }
+  }
+
+}
+
+
+.fire-ball{
+  z-index: 100;
+  height: 150px;
+  width: 150px;
+  background-color: $fire-red;
+  border-radius: 100px;
+  position: relative;
+  display: block;
+  margin: auto;
+
+  .more-button{
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    margin: auto;
+
+    background-color: darken($fire-red, 5%);
+
+    @include box-shadow(0 6px 20px transparentize($fire-red, 0.5));
+  }
+
+  @include transforms(translateY(200px));
+
+  @include transition(all 400ms ease);
+  @include transition(all 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  .number{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: $h-font;
+    color: $color-1;
+    background-color: lighten($fire-red, 17%);
+    font-size: 18px;
+    border-radius: 50%;
+    @include box-shadow(-2px 2px 6px darken($fire-red, 5%));
+  }
+
+  .b-1, .b-2, .b-3, .b-4{
+    background-color: $fire-red;
+    position: absolute;
+    border-radius: 50%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .b-1{
+    left: auto;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    @include animation(flames 1.4s infinite);
+  }
+
+  .b-2{
+    height: 20px;
+    width: 20px;
+    @include animation(flames 1s infinite 0.1s);
+  }
+
+  .b-3{
+    left: auto;
+    right: 40px;
+    height: 25px;
+    width: 25px;
+    @include animation(flames 0.7s infinite 0.3s);
+  }
+
+  .b-4{
+    right: auto;
+    left: 25px;
+    height: 15px;
+    width: 15px;
+    @include animation(flames 0.8s infinite 0.2s);
+  }
+
+  .b-5{
+    height: 25px;
+    width: 25px;
+    @include animation(flames 0.9s infinite 0.5s);
+  }
+
+  .b-6{
+    right: auto;
+    left: 40px;
+    height: 15px;
+    width: 15px;
+    @include animation(flames 0.8s infinite 0.4s);
+  }
+
+  .con{
+    &:nth-child(1){ @include animation(flames-wave 1s infinite); }
+    &:nth-child(2){ @include animation(flames-wave 1.3s infinite 0.5s); }
+    &:nth-child(3){ @include animation(flames-wave 1s infinite 0.7s); }
+    &:nth-child(4){ @include animation(flames-wave 2s infinite 0.9s); }
+    &:nth-child(5){ @include animation(flames-wave 1s infinite 0.7s); }
+    &:nth-child(6){ @include animation(flames-wave 1s infinite 0.6s); }
+  }
+
+  &.open{
+    @include transforms(translateY(70px) scale(0.7));
+
+    .more-button{
+      @include transforms(translateY(70px) scale(0))
+    }
+  }
+}
+
+.fire-ball-container{
+  &.orange{
+    .fire-ball, .b-1, .b-2, .b-3, .b-4{
+      background-color: $fire-orange;
+    }
+
+    .number{
+      background-color: lighten($fire-orange, 17%);
+      @include box-shadow(-2px 2px 6px darken($fire-orange, 5%));
+    }
+
+    .more-button{
+      background-color: darken($fire-orange, 5%);
+
+      @include box-shadow(0 6px 20px transparentize($fire-orange, 0.5));
+    }
+  }
+}
+
+.fire-ball-container{
+  &.blue{
+    .fire-ball, .b-1, .b-2, .b-3{
+      background-color: $fire-blue;
+    }
+
+    .number{
+      background-color: lighten($fire-blue, 17%);
+      @include box-shadow(-2px 2px 6px darken($fire-blue, 5%));
+    }
+
+    .more-button{
+      background-color: darken($fire-blue, 5%);
+
+      @include box-shadow(0 6px 20px transparentize($fire-blue, 0.5));
+    }
+  }
+}
+
+
+.fire-ball-container{
+  position: relative;
+  z-index: 100;
+
+  &.blue{
+
+    .fire-ball{
+
+      .b-1{
+        height: 30px;
+        width: 30px;
+        left: auto;
+        right: 15px;
+        @include animation(flames 3s infinite);
+      }
+
+      .b-2{
+        left: 0;
+        right: auto;
+        height: 20px;
+        width: 20px;
+        @include animation(flames 2s infinite 0.6s);
+      }
+
+      .b-3{
+        left: auto;
+        right: 40px;
+        height: 25px;
+        width: 25px;
+        @include animation(flames 2.5s infinite 0.3s);
+      }
+    }
+  }
+}
+
+
+.skills-card {
+  //overflow: hidden;
+  z-index: 40;
+  position: relative;
+  background-color: $color-1;
+  padding: 100px 30px 30px 30px;
+  font-family: $h-font;
+  opacity: 0;
+  max-width: 360px;
+  border-radius: 15px;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    border-radius: 0 0 15px 15px;
+
+    @include box-shadow(0 10px 45px $jet-black);
+    @include transforms(scale(0.8));
+  }
+
+  &::after{
+    content: "";
+    width: 100%;
+    height: 40px;
+    background-color: $color-1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    border-radius: 0 0 15px 15px;
+  }
+
+  @include transforms(translateY(100px));
+
+  .navbar-button-mobile-demo-1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    border-radius: 0 15px 0 0;
+  }
+
+  h6 {
+    font-size: 15px;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  &.open{
+    opacity: 1;
+    @include transforms(translateY(0));
+  }
+
+  @include transition(all 400ms ease);
+  @include transition(all 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+}
+
+
+.experiments, .work{
+  .card{
+    min-height: 450px;
+  }
+}
+
+.horizontal-bar{
+  margin: 5px 0 25px 0;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: transparentize($secondary-color, 0.7);
+
+  .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $secondary-color;
+
+    @include transition(all 600ms ease 500ms);
+
+    @include transform-origin(0, 0);
+    @include transforms(scaleX(0));
+
+    &.b-100{
+      @include transforms(scaleX(1));
+    }
+
+    &.b-90{
+      @include transforms(scaleX(0.9));
+    }
+
+    &.b-75{
+      @include transforms(scaleX(0.75));
+    }
+  }
+}
+
+
+
+@-webkit-keyframes flames{
+  0%   { -webkit-transform: translateY(0); }
+  100% { -webkit-transform: translateY(-200px) scale(0.5); opacity: 0; }
+}
+
+@-moz-keyframes flames{
+  0%   { -moz-transform: translateY(0); }
+  100% { -moz-transform: translateY(-200px) scale(0.5); opacity: 0; }
+}
+
+@-o-keyframes flames{
+  0%   { -o-transform: translateY(0); }
+  100% { -o-transform: translateY(-200px) scale(0.5); opacity: 0; }
+}
+
+@-ms-keyframes flames{
+  0%   { -ms-transform: translateY(0); }
+  100% { -ms-transform: translateY(-200px) scale(0.5); opacity: 0; }
+}
+
+@keyframes flames{
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-200px) scale(0.5); opacity: 0; }
+}
+
+
+@-webkit-keyframes flames-wave{
+  0%   { -webkit-transform: translateX(10px); }
+  50%  { -webkit-transform: translateX(-30px); }
+  100% { -webkit-transform: translateX(10px); }
+}
+
+@-moz-keyframes flames-wave{
+  0%   { -moz-transform: translateX(10px); }
+  50%  { -moz-transform: translateX(-30px); }
+  100% { -moz-transform: translateX(10px); }
+}
+
+@-ms-keyframes flames-wave{
+  0%   { -ms-transform: translateX(10px); }
+  50%  { -ms-transform: translateX(-30px); }
+  100% { -ms-transform: translateX(10px); }
+}
+
+@-o-keyframes flames-wave{
+  0%   { -o-transform: translateX(10px); }
+  50%  { -o-transform: translateX(-30px); }
+  100% { -o-transform: translateX(10px); }
+}
+
+@keyframes flames-wave{
+  0%   { transform: translateX(10px); }
+  50%  { transform: translateX(-30px); }
+  100% { transform: translateX(10px); }
+}
+
+
+@media (max-width: 767px){
+  .remove-padding-mobile{
+    padding: 0;
+  }
+}
+.remove-padding{
+  padding: 0;
+}
+
+
+
+@media (max-width: 767px){
+  .mobile-padding-left{
+    padding-left: 3px;
+    padding-right: 0;
+  }
+  .mobile-padding-right{
+    padding-right: 3px;
+    padding-left: 0;
+  }
+}

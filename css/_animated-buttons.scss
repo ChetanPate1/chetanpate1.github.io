@@ -1,0 +1,590 @@
+.animated-button-example{
+  overflow:hidden;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 20px auto 0 auto;
+  cursor: pointer;
+  & .rect{
+    position: absolute;
+    background-color: #000000;
+    width: 90px;
+    height: 10px;
+    @include transition(all 300ms ease);
+  }
+}
+
+.off-animated-button-example{
+  .rect:nth-child(1){
+    @include transforms(translate3d(5px, 10px, 0));
+  }
+  .rect:nth-child(2){
+    @include transforms(translate3d(5px, 45px, 0));
+  }
+  .rect:nth-child(3){
+    @include transforms(translate3d(5px, 80px, 0));
+  }
+}
+
+.on-animated-button-example{
+  .rect:nth-child(1){
+    @include transforms(translate3d(5px, 45px, 0) rotate(45deg));
+  }
+  .rect:nth-child(2){
+    @include transforms(translate3d(5px, 45px, 0) rotate(-45deg));
+  }
+  .rect:nth-child(3){
+    @include transforms(translate3d(5px, 45px, 0) rotate(-45deg));
+  }
+}
+
+.code-example{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  font-family: Consolas, Helvetica, sans-serif;
+  background-color: #282c34;
+
+  p{
+    color: #c8c8c8;
+    padding: 0;
+    margin: 0;
+  }
+
+  .d-grey{
+    color: #828997;
+  }
+
+  .turquoise{
+    color: #51b6c2;
+  }
+
+  .orange{
+    color: #d19a66;
+  }
+
+  .purple{
+    color: #c678d7;
+  }
+
+  .blue{
+    color: #48a6ef;
+  }
+
+  .green{
+    color: #98c363;
+  }
+
+  .red{
+    color: #e06c75;
+  }
+
+  h5{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .css-indent{
+    margin-left: 30px;
+  }
+  .css-indent-2{
+    margin-left: 60px;
+  }
+  .css-indent-3{
+    margin-left: 80px;
+  }
+  @media (max-width: 767px){
+    &{
+      border-radius: 0;
+    }
+  }
+}
+
+.code-example .css-class,
+.code-example .css-indent,
+.code-example .css-indent-2,
+.code-example .css-indent-3{
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.code-example-annotation{
+  margin-top: 20px;
+}
+
+.code-active-vertical{
+  height: 300px;
+  width: 4px;
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: $primary-color;
+  &.active{
+    background-color: $secondary-color;
+  }
+  @include transition(all 200ms ease);
+
+  @media (max-width: 767px) {
+    &{
+      height: 120px;
+    }
+  }
+}
+
+.code-active-horizontal-left{
+  height: 40px;
+  width: 25%;
+  margin-top: -4px;
+  margin-left: 25%;
+  float: left;
+  border-left: 4px solid $primary-color;
+  border-top: 4px solid $primary-color;
+  border-radius: 20px 0 0 0;
+}
+.code-active-horizontal-right{
+  height: 40px;
+  width: 25%;
+  margin-top: -4px;
+  margin-right: 25%;
+  float: left;
+  border-top: 4px solid $secondary-color;
+  border-right: 4px solid $secondary-color;
+  border-radius: 0 20px 0 0;
+}
+
+.remove-marginBottom{
+  margin-bottom: 0;
+}
+.remove-marginTop{
+  margin-top: 0;
+}
+
+.fine-print{
+  font-size: 13px;
+  margin-top: 20px;
+  color: rgba(34, 34, 34, 0.40);
+}
+
+.navbar-button-mobile-demo-1,.navbar-button-mobile-demo-2,
+.navbar-button-mobile-demo-3,.navbar-button-mobile-demo-4,
+.navbar-button-mobile-demo-5,.navbar-button-mobile-demo-6,
+.navbar-button-mobile-demo-7,.navbar-button-mobile-demo-8,
+.navbar-button-mobile-demo-9,.navbar-button-mobile-demo-10,
+.navbar-button-mobile-demo-11,.navbar-button-mobile-demo-12{
+  overflow:hidden;
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  @include transition(all 300ms ease);
+
+  &:hover{
+    cursor: pointer;
+    background-color: darken($color-2, 5%);
+  }
+
+  .rect{
+    position: absolute;
+    background-color: #000000;
+    width: 20px;
+    height: 2px;
+    @include transition(all 300ms ease);
+  }
+}
+
+//FIRST BUTTON
+
+.off-demo-1 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 18px, 0) rotate(0deg));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 30px, 0) rotate(0deg));
+  }
+}
+
+.on-demo-1 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 25px, 0) rotate(45deg));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 25px, 0) rotate(-45deg));
+  }
+}
+
+//END FIRST BUTTON
+
+//SECOND BUTTON
+
+.off-demo-2 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 18px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 30px, 0));
+  }
+}
+
+.on-demo-2 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 19px, 0) rotate(-45deg) scaleX(0.75));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 29px, 0) rotate(45deg) scaleX(0.75));
+  }
+}
+
+//END SECOND BUTTON
+
+//THIRD BUTTON
+.off-demo-3 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 16px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 32px, 0));
+  }
+}
+
+.on-demo-3 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(12px, 20px, 0) rotate(-45deg) scaleX(0.65));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0) scaleX(0.75));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(12px, 28px, 0) rotate(45deg) scaleX(0.65));
+  }
+}
+//END THIRD BUTTON
+
+//FOURTH BUTTON
+.off-demo-4 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 16px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 32px, 0));
+  }
+}
+
+.on-demo-4 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 24px, 0) rotate(45deg));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0) rotate(-45deg));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 24px, 0) rotate(-45deg));
+  }
+}
+//END FOURTH BUTTON
+
+//FIFTH BUTTON
+.navbar-button-mobile-demo-5 .rect{
+  height: 8px;
+  width: 8px;
+}
+
+.off-demo-5 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 15px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(27px, 15px, 0));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 27px, 0));
+  }
+  &:nth-child(4) {
+    @include transforms(translate3d(27px, 27px, 0));
+  }
+}
+
+.on-demo-5 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(21px, 15px, 0) scale(2.5,0.3));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(21px, 20px, 0) scale(2.5,0.3));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(21px, 25px, 0) scale(2.5,0.3));
+  }
+  &:nth-child(4) {
+    @include transforms(translate3d(21px, 30px, 0) scale(2.5,0.3));
+  }
+}
+//END FIFTH BUTTON
+
+//SIXTH
+.navbar-button-mobile-demo-6 .rect{
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+}
+
+.off-demo-6 .rect {
+  &:nth-child(1) {
+    z-index: 1000;
+    background-color: $color-2;
+    @include transforms(translate3d(15px, 15px, 0) scaleY(1.1) scaleX(0.2));
+  }
+  &:nth-child(2) {
+    z-index: 500;
+    @include transforms(translate3d(15px, 15px, 0) scaleX(0.7));
+  }
+}
+
+.on-demo-6 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(0, 15px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(10px, 15px, 0) scale(0.7) rotate(45deg));
+  }
+}
+//END SIXTH
+
+.navbar-button-mobile-demo-6{
+  &:hover > .rect:nth-child(1) {
+    background-color: darken($color-2, 5%);
+  }
+}
+
+//SEVENTH BUTTON
+.navbar-button-mobile-demo-7{
+  &.on-demo-7{
+    @include transforms(rotate(180deg));
+  }
+}
+
+.off-demo-7 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 16px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 32px, 0));
+  }
+}
+
+.on-demo-7 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(12px, 20px, 0) rotate(-45deg) scaleX(0.65));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0) scaleX(0.75));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(12px, 28px, 0) rotate(45deg) scaleX(0.65));
+  }
+}
+
+//END SEVENTH BUTTON
+
+//EIGHTH BUTTON
+.navbar-button-mobile-demo-8 .rect{
+  height: 10px;
+  width: 12px;
+}
+
+.off-demo-8 .rect{
+  &:nth-child(1){
+    border: 2px solid #000000;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    background-color: transparent;
+    @include transforms(translate3d(19px, 15px, 0));
+  }
+  &:nth-child(2){
+    height: 15px;
+    width: 20px;
+    border-radius: 2px 2px 0 0;
+    border: 2px solid #000000;
+    background-color: transparent;
+    @include transforms(translate3d(15px, 25px, 0));
+  }
+}
+.on-demo-8 .rect{
+  &:nth-child(1){
+    @include transforms(translate3d(10px, 15px, 0) rotateY(180deg));
+  }
+  &:nth-child(2){
+    @include transforms(translate3d(15px, 25px, 0));
+  }
+}
+//END EIGHTH BUTTON
+
+//NINTH BUTTON
+.navbar-button-mobile-demo-9 .rect{
+  height: 2px;
+  width: 20px;
+}
+
+.off-demo-9 .rect{
+  &:nth-child(1){
+    @include transforms(translate3d(15px,24px,0));
+  }
+  &:nth-child(2){
+    @include transforms(translate3d(15px,24px,0) rotate(90deg));
+  }
+}
+.on-demo-9 .rect{
+  &:nth-child(1){
+    @include transforms(translate3d(15px,24px,0) rotate(180deg));
+  }
+  &:nth-child(2){
+    @include transforms(translate3d(15px,24px,0) rotate(0deg));
+  }
+}
+//END NINTH BUTTON
+
+//TENTH BUTTON
+.navbar-button-mobile-demo-10 .rect{
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+}
+
+.off-demo-10 .rect{
+  &:nth-child(1){
+    border-top: 2px solid #000000;
+    border-right: none;
+    border-bottom: none;
+    border-left: 2px solid #000000;
+    @include transforms(translate3d(13px,13px,0));
+  }
+  &:nth-child(2){
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: none;
+    border-left: none;
+    @include transforms(translate3d(28px,13px,0));
+  }
+  &:nth-child(3){
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #000000;
+    border-left: 2px solid #000000;
+    @include transforms(translate3d(13px,28px,0));
+  }
+  &:nth-child(4){
+    border-top: none;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-left: none;
+    @include transforms(translate3d(28px,28px,0));
+  }
+}
+
+.on-demo-10 .rect{
+  &:nth-child(1){
+    @include transforms(translate3d(10px,10px,0));
+  }
+  &:nth-child(2){
+    @include transforms(translate3d(30px,10px,0));
+  }
+  &:nth-child(3){
+    @include transforms(translate3d(10px,30px,0));
+  }
+  &:nth-child(4){
+    @include transforms(translate3d(30px,30px,0));
+  }
+}
+
+//END TENTH BUTTON
+
+//ELEVENTH BUTTON
+.navbar-button-mobile-demo-11 .rect{
+  width: 16px;
+}
+
+.off-demo-11 .rect{
+  &:nth-child(1){
+    height: 22px;
+    @include transforms(translate3d(17px, 18px, 0));
+  }
+  &:nth-child(2){
+    @include transforms(translate3d(17px, 14px, 0));
+  }
+  &:nth-child(3){
+    width: 4px;
+    height: 3px;
+    @include transforms(translate3d(23px, 12px, 0));
+  }
+  &:nth-child(4){
+    height: 16px;
+    width: 3px;
+    background-color: $color-2;
+    @include transforms(translate3d(20px, 21px, 0));
+  }
+  &:nth-child(5){
+    height: 16px;
+    width: 3px;
+    background-color: $color-2;
+    @include transforms(translate3d(27px, 21px, 0));
+  }
+}
+
+.on-demo-11 .rect{
+  &:nth-child(2){
+    @include transforms(translate3d(19px, 13px, 0) rotate(30deg));
+  }
+  &:nth-child(3){
+    @include transforms(translate3d(25px, 11px, 0) rotate(30deg));
+  }
+}
+
+//END ELEVENTH BUTTON
+
+//TWELVE BUTTON
+.navbar-button-mobile-demo-12{
+  .rect{
+    @include transition(all 400ms cubic-bezier(.68,-.55,.265,1.55));
+  }
+}
+
+.off-demo-12 .rect {
+  &:nth-child(1) {
+    @include transforms(translate3d(15px, 16px, 0));
+  }
+  &:nth-child(2) {
+    @include transforms(translate3d(15px, 24px, 0));
+  }
+  &:nth-child(3) {
+    @include transforms(translate3d(15px, 32px, 0));
+  }
+}
+
+.on-demo-12 .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(24px) rotate(45deg));
+  }
+  &:nth-child(2) {
+    @include transforms(translateX(55px) translateY(24px));
+  }
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(24px) rotate(-45deg));
+  }
+}
+//END TWELVE BUTTON

@@ -1,0 +1,53 @@
+.sprite{
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/sprite.png") no-repeat;
+
+  &.home{
+    height: 30px;
+    width: 30px;
+    background-position: 1px -30px;
+  }
+
+  &.work{
+    height: 30px;
+    width: 30px;
+    background-position: 3px -60px;
+  }
+
+  &.skills{
+    height: 30px;
+    width: 30px;
+    background-position: 2px -90px;
+  }
+
+  &.experiments{
+    height: 30px;
+    width: 30px;
+    background-position: 4px 0;
+  }
+
+  &.plus{
+    height: 30px;
+    width: 30px;
+    background-position: 9px -120px;
+  }
+
+  &.logo-w{
+    height: 31px;
+    width: 40px;
+    background-position: 0px -184px;
+  }
+
+  &.logo-b{
+    height: 31px;
+    width: 40px;
+    background-position: 0px -148px;
+  }
+
+  &.skip{
+    height: 16px;
+    width: 15px;
+    background-position: 4px -220px;
+  }
+}

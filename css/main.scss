@@ -1,0 +1,151 @@
+@import "base";
+@import "spirits";
+@import "navigation";
+@import "all";
+@import "typography";
+
+@import "buttons";
+@import "home";
+@import "parallax-cards";
+@import "expanding-image";
+@import "css3-dropdowns";
+@import "animated-buttons";
+@import "mobile-navigation";
+@import "css3-gifs";
+@import "light-gallery";
+
+@import "work";
+
+@import "owl-settings";
+@import "owl-theme";
+@import "owl-carousel";
+
+
+@import "css-iphone";
+
+@import "override-helpers";
+
+
+
+.navbar-button-mobile,
+.mobile-nav-button,
+.mobile-nav-button-2,
+.nav-button,
+.nav-button-2{
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  position: relative;
+  float: right;
+  z-index: 3000;
+}
+
+.navbar-button-mobile .rect,
+.mobile-nav-button .rect,
+.mobile-nav-button-2 .rect,
+.nav-button .rect,
+.nav-button-2 .rect{
+  position: absolute;
+  background-color: $secondary-color;
+  width: 24px;
+  height: 2px;
+  @include transition(all 300ms ease);
+}
+
+.mobile-nav-button .rect,
+.mobile-nav-button-2 .rect{
+  background-color: #000000;
+  @include transition(all 0.3s ease 1s);
+}
+
+
+.navbar-button-mobile .rect{
+  background-color: $color-1;
+}
+
+.navbar-button-mobile{
+  margin: 10px 40px;
+
+  @include transition(all 300ms ease);
+
+  &.on-arrow{
+    @include transforms(rotate(180deg));
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  @media(max-width: 767px){
+    margin: 10px 20px;
+  }
+}
+
+.off-arrow .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(15px));
+  }
+  &:nth-child(2) {
+    @include transforms(translateX(13px) translateY(24px));
+  }
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(33px));
+  }
+}
+
+.on-arrow .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(8px) translateY(19px) rotate(-45deg) scaleX(0.625));
+  }
+  &:nth-child(2) {
+    @include transforms(translateX(13px) translateY(24px) scaleX(0.83));
+  }
+  &:nth-child(3) {
+    @include transforms(translateX(8px) translateY(29px) rotate(45deg) scaleX(0.625));
+  }
+}
+
+.off .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(15px));
+  }
+  &:nth-child(2) {
+    @include transforms(translateX(13px) translateY(24px));
+  }
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(33px));
+  }
+}
+
+.on .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(24px) rotate(45deg));
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(24px) rotate(-45deg));
+  }
+}
+
+
+.on_2 .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(24px) rotate(45deg));
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(24px) rotate(-45deg));
+  }
+}
+.off_2 .rect {
+  &:nth-child(1) {
+    @include transforms(translateX(13px) translateY(15px));
+  }
+  &:nth-child(2) {
+    @include transforms(translateX(13px) translateY(24px));
+  }
+  &:nth-child(3) {
+    @include transforms(translateX(13px) translateY(33px));
+  }
+}

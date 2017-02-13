@@ -1,0 +1,32 @@
+.c-button{
+  padding: 20px 15px;
+  color: $secondary-color;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid $secondary-color;
+  border-radius: 10px;
+  font-family: $h-font;
+
+  @include transition(all 200ms ease);
+
+  &:hover, &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $secondary-color;
+  }
+
+  @media(max-width: 767px){
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+}
