@@ -36,9 +36,9 @@ function config($stateProvider, $urlRouterProvider){
             url: '/mobile-navigation',
             templateUrl: 'templates/experiments/mobile-navigation.html'
         })
-        .state('experiments.parallax-cards',{
-            url: '/3D-cards',
-            templateUrl: 'templates/experiments/parallax-cards.html'
+        .state('experiments.3d-cards',{
+            url: '/3D-Cards',
+            templateUrl: 'templates/experiments/3d-cards.html'
         })
 
         .state('work',{

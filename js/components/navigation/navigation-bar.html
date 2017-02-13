@@ -16,10 +16,11 @@
             <a href="#/home" ng-class="{active: NavbarCtrl.isActive('/home')}" ng-click="NavbarCtrl.close()"><span class="sprite home"></span>HOME</a>
         </li>
         <li class="dropdown-container">
-            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isActive('/experiments/animated-buttons') || NavbarCtrl.isActive('/experiments/loading-GIFs') || NavbarCtrl.isActive('/experiments/expanding-images') || NavbarCtrl.isActive('/experiments/CSS3-dropdown') || NavbarCtrl.isActive('/experiments/mobile-navigation')}"><span class="sprite experiments"></span>EXPERIMENTS
+            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isActive('/experiments/3D-Cards') || NavbarCtrl.isActive('/experiments/animated-buttons') || NavbarCtrl.isActive('/experiments/loading-GIFs') || NavbarCtrl.isActive('/experiments/expanding-images') || NavbarCtrl.isActive('/experiments/CSS3-dropdown') || NavbarCtrl.isActive('/experiments/mobile-navigation')}"><span class="sprite experiments"></span>EXPERIMENTS
                 <span class="sprite plus"></span>
             </a>
             <div class="dropdown-items">
+                <a ng-class="{active: NavbarCtrl.isActive('/experiments/3D-Cards')}" ui-sref="experiments.3d-cards" ng-click="NavbarCtrl.close()">3D CARDS</a>
                 <a ng-class="{active: NavbarCtrl.isActive('/experiments/animated-buttons')}" ui-sref="experiments.animated-buttons" ng-click="NavbarCtrl.close()">ANIMATED BUTTONS</a>
                 <a ng-class="{active: NavbarCtrl.isActive('/experiments/loading-GIFs')}" ui-sref="experiments.loading-GIFs" ng-click="NavbarCtrl.close()">LOADING CSS3 GIFS</a>
                 <a ng-class="{active: NavbarCtrl.isActive('/experiments/expanding-images')}" ui-sref="experiments.expanding-images" ng-click="NavbarCtrl.close()">EXPANDING IMAGE</a>
@@ -27,7 +28,7 @@
                 <a ng-class="{active: NavbarCtrl.isActive('/experiments/mobile-navigation')}" ui-sref="experiments.mobile-navigation" ng-click="NavbarCtrl.close()">MOBILE NAVIGATION</a>
             </div>
         </li>
-        <li >
+        <li>
             <a href="#skills" du-smooth-scroll du-scrollspy offset="100" duration="500" ng-click="NavbarCtrl.goTo('home')"><span class="sprite skills"></span>SKILLS</a>
         </li>
         <li class="dropdown-container">
