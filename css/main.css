@@ -729,8 +729,8 @@ small {
     -ms-box-shadow: 0 6px 20px rgba(244, 0, 0, 0.5);
     -o-box-shadow: 0 6px 20px rgba(244, 0, 0, 0.5);
     box-shadow: 0 6px 20px rgba(244, 0, 0, 0.5); }
-  .fire-ball:hover {
-    cursor: pointer; }
+    .fire-ball .more-button:hover {
+      background-color: #e50000; }
   .fire-ball .number {
     position: absolute;
     right: 0;
@@ -880,6 +880,8 @@ small {
   -ms-box-shadow: 0 6px 20px rgba(255, 51, 0, 0.5);
   -o-box-shadow: 0 6px 20px rgba(255, 51, 0, 0.5);
   box-shadow: 0 6px 20px rgba(255, 51, 0, 0.5); }
+  .fire-ball-container.orange .more-button:hover {
+    background-color: #f03000; }
 
 .fire-ball-container.blue .fire-ball, .fire-ball-container.blue .b-1, .fire-ball-container.blue .b-2, .fire-ball-container.blue .b-3 {
   background-color: #00D8FF; }
@@ -897,6 +899,8 @@ small {
   -ms-box-shadow: 0 6px 20px rgba(0, 216, 255, 0.5);
   -o-box-shadow: 0 6px 20px rgba(0, 216, 255, 0.5);
   box-shadow: 0 6px 20px rgba(0, 216, 255, 0.5); }
+  .fire-ball-container.blue .more-button:hover {
+    background-color: #00cbf0; }
 
 .fire-ball-container {
   position: relative;
