@@ -88,3 +88,8 @@ $jet-black: #2e3034;
   -o-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
+
+@mixin filter($function){
+  -webkit-filter: $function;
+  filter: $function;
+}

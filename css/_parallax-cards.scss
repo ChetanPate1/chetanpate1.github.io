@@ -30,6 +30,8 @@
   -o-transition: -o-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 
+  @include box-shadow(0 30px 45px -30px rgba(46, 48, 52, 0.4));
+
   .content {
     position: absolute;
     bottom: 0;

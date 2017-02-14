@@ -40,6 +40,10 @@ function config($stateProvider, $urlRouterProvider){
             url: '/3D-Cards',
             templateUrl: 'templates/experiments/3d-cards.html'
         })
+        .state('experiments.frost-glass-cards',{
+            url: '/frost-glass-cards',
+            templateUrl: 'templates/experiments/frost-glass-cards.html'
+        })
 
         .state('work',{
             url: '/recent-work',

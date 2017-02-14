@@ -10,32 +10,7 @@
   min-height: 380px;
   z-index: 100;
 
-  &::before{
-    content: "";
-    width: 100%;
-    height: 5px;
-    background-color: transparent;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 20;
-    border-radius: 0 0 15px 15px;
-
-    @include box-shadow(0 10px 45px $jet-black);
-    @include transforms(scale(0.8));
-  }
-
-  &::after{
-    content: "";
-    width: 100%;
-    height: 40px;
-    background-color: $color-1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 40;
-    border-radius: 0 0 15px 15px;
-  }
+  @include box-shadow(0 40px 45px -30px rgba(46, 48, 52, 0.28));
 
   p{
     padding: 25px 15px 45px 15px;
@@ -127,7 +102,7 @@
   right: 35px;
   z-index: 70;
 
-  @include box-shadow(0 6px 20px transparentize($secondary-color, 0.5));
+  @include box-shadow(0 6px 20px -3px transparentize($secondary-color, 0.5));
   @include transition(all 100ms ease);
 
   &:hover{
@@ -182,7 +157,7 @@
 
     background-color: darken($fire-red, 5%);
 
-    @include box-shadow(0 6px 20px transparentize($fire-red, 0.5));
+    @include box-shadow(0 6px 20px -3px transparentize($fire-red, 0.5));
 
     &:hover{
       background-color:  darken($fire-red, 3%);
@@ -298,7 +273,7 @@
     .more-button{
       background-color: darken($fire-orange, 5%);
 
-      @include box-shadow(0 6px 20px transparentize($fire-orange, 0.5));
+      @include box-shadow(0 6px 20px -3px transparentize($fire-orange, 0.5));
 
       &:hover{
         background-color: darken($fire-orange, 3%);
@@ -321,7 +296,7 @@
     .more-button{
       background-color: darken($fire-blue, 5%);
 
-      @include box-shadow(0 6px 20px transparentize($fire-blue, 0.5));
+      @include box-shadow(0 6px 20px -3px transparentize($fire-blue, 0.5));
 
       &:hover{
         background-color:  darken($fire-blue, 3%);;
@@ -378,32 +353,7 @@
   max-width: 360px;
   border-radius: 15px;
 
-  &::before{
-    content: "";
-    width: 100%;
-    height: 5px;
-    background-color: transparent;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 20;
-    border-radius: 0 0 15px 15px;
-
-    @include box-shadow(0 10px 45px $jet-black);
-    @include transforms(scale(0.8));
-  }
-
-  &::after{
-    content: "";
-    width: 100%;
-    height: 40px;
-    background-color: $color-1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 40;
-    border-radius: 0 0 15px 15px;
-  }
+  @include box-shadow(0 40px 45px -30px rgba(46, 48, 52, 0.28));
 
   @include transforms(translateY(100px));
 
