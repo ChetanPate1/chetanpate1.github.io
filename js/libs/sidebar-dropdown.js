@@ -1,4 +1,6 @@
-$(window).on('resize', function(){
+var $window = $(window);
+
+$window.on('resize', function(){
     resetSide();
 });
 
@@ -90,6 +92,6 @@ $sidebar_items.on('tap', function(){
 //transparent
 var $navbar = $('.navbar-fixed-top');
 
-$(window).on('scroll', function(){
+$window.on('scroll', function(){
     $(this).scrollTop() > 50 ? $navbar.removeClass('transparent') : $navbar.addClass('transparent');
 });

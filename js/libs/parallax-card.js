@@ -1,3 +1,9 @@
+/*
+* Parallax Cards v1.0
+* 02-02-2017
+* Chetan Patel
+*/
+
 ;(function($){
     'use strict';
 
