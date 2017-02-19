@@ -21,11 +21,11 @@ var createSide = function (){
         close = 57*(i - 1) + 'px';
 
         card[i] = {
-            '-webkit-transform':'translateY('+ close +')',
-            '-moz-transform':'translateY('+ close +')',
-            '-ms-transform':'translateY('+ close +')',
-            '-o-transform':'translateY('+ close +')',
-            'transform':'translateY('+ close +')',
+            '-webkit-transform':'translate(0, '+ close +')',
+            '-moz-transform':'translate(0, '+ close +')',
+            '-ms-transform':'translate(0, '+ close +')',
+            '-o-transform':'translate(0, '+ close +')',
+            'transform':'translate(0, '+ close +')',
             'z-index': i*500
         };
     }
@@ -77,11 +77,11 @@ $sidebar_items.on('tap', function(){
             var moveTo = height_and_content + from +'px';
 
             $('#sidebar-nav li:nth-child('+ i +')').css({
-                '-webkit-transform':'translateY('+ moveTo +')',
-                '-moz-transform':'translateY('+ moveTo +')',
-                '-ms-transform':'translateY('+ moveTo +')',
-                '-o-transform':'translateY('+ moveTo +')',
-                'transform':'translateY('+ moveTo +')'
+                '-webkit-transform':'translate(0, '+ moveTo +')',
+                '-moz-transform':'translate(0, '+ moveTo +')',
+                '-ms-transform':'translate(0, '+ moveTo +')',
+                '-o-transform':'translate(0, '+ moveTo +')',
+                'transform':'translate(0, '+ moveTo +')'
             });
         }
     }
