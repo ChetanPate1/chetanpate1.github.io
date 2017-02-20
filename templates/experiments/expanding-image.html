@@ -197,7 +197,8 @@
 
 <div class="section white padding-top-120 padding-bottom-120">
     <div class="container" id="ei-demo">
-        <h3 class="margin-bottom-60">Demo</h3>
+        <h3 class="margin-bottom-30">Demo</h3>
+        <h6 class="margin-bottom-60">MADE WITH HTML, CSS, JQUERY AND TRANSITIONS</h6>
         <div class="row">
             <div class="col-xs-6 col-sm-3 col-md-3">
                 <img class="thumbnails" ng-src="images/thumbnails/astonMartinVulcanBack.jpg">
@@ -216,92 +217,5 @@
 </div>
 
 <script>
-
-    //expanding image
-    $('.thumbnails').on('tap', function(){
-        //disable scroll
-
-        $('body').addClass('no-scroll');
-
-        var $this = $(this);
-        var clone = $this.clone().addClass('clone').appendTo('body');
-        $this.css({'opacity':'0'});
-        var underlay = $('<div class="underlay"><div class="loading"></div></div>');
-
-        var browserHeight = $(window).height();
-        var browserWidth = $(window).width();
-        var thumbnailHeight = $this.height();
-        var thumbnailWidth = $this.width();
-        var cloneScaleTo = (browserWidth/thumbnailWidth).toFixed(2);
-
-        var fixedTopPos = 0.5*(browserHeight - thumbnailHeight);
-        var fixedLeftPos = 0.5*(browserWidth - thumbnailWidth);
-        var absoluteTopPos = $this.offset().top - $(window).scrollTop();
-        var absoluteLeftPos = $this.offset().left;
-        var animateToX = (fixedLeftPos - absoluteLeftPos).toFixed(0);
-        var animateToY = (fixedTopPos - absoluteTopPos).toFixed(0);
-
-        var src = $this.attr('src');
-        var imgName = src.match(/.*\/(.*)$/)[1];
-        var largeImgPath = 'images/lg/' + imgName;
-        var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-        var translate = 'translate3d('+ animateToX +'px' +','+ animateToY +'px'+',0) scale('+ cloneScaleTo +')';
-
-        $('body').append(underlay);
-        $('.underlay').append('<img src="'+ largeImgPath +'">');
-
-        $('.underlay img').load(function(){
-            $('.loading').remove();
-            $('.underlay img').css({'opacity':'0'});
-        });
-
-        clone.css({
-            'z-index': '5050',
-            'position':'fixed',
-            'width': thumbnailWidth+'px',
-            'left': absoluteLeftPos+'px',
-            'top': absoluteTopPos+'px',
-            'opacity':'1',
-            '-webkit-transform': translate,
-            '-moz-transform': translate,
-            '-ms-transform': translate,
-            '-o-transform': translate,
-            'transform': translate
-        })
-        .one(transitionEnd, function() {
-            $('.underlay img').css({'opacity':'1'});
-        });
-
-        $('.underlay').on('tap', function(){
-            $('.underlay').remove();
-            clone.css({
-                '-webkit-transition-duration': '0.3s',
-                '-moz-transition-duration': '0.3s',
-                '-ms-transition-duration': '0.3s',
-                '-o-transition-duration': '0.3s',
-                'transition-duration': '0.3s',
-                'z-index':'3000',
-                'opacity':'1',
-                '-webkit-transform': 'scale(1)',
-                '-moz-transform': 'scale(1)',
-                '-ms-transform': 'scale(1)',
-                '-o-transform': 'scale(1)',
-                'transform': 'scale(1)'
-            })
-            .one(transitionEnd, function() {
-                clone.remove();
-                $this.css({'opacity':'1'});
-                $('body').removeClass('no-scroll');
-            });
-        });
-
-        $(window).on('resize', function(){
-            clone.remove();
-            $('.underlay').remove();
-            $this.css({'opacity':'1'});
-            $('body').removeClass('no-scroll');
-        });
-    });
-
-    //End expanding image
+    $('.thumbnails').expandImage();
 </script>
