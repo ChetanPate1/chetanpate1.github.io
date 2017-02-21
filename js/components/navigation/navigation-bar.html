@@ -42,6 +42,9 @@
             </div>
         </li>
         <li>
+            <a ng-class="{active: NavbarCtrl.isActive('/my-sketches') }" ui-sref="sketch" ng-click="NavbarCtrl.close()"><span class="sprite sketches"></span>MY SKETCHES</a>
+        </li>
+        <li>
             <a href="#contact" du-smooth-scroll du-scrollspy offset="100" duration="500"><span class="sprite contact"></span>CONTACT</a>
         </li>
         <li class="mask"></li>
