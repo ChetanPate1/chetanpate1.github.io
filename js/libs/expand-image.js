@@ -16,7 +16,7 @@
 
             $this.on('click',function(){
                 var clone = $this.clone().addClass('clone').appendTo('body');
-                var underlayHTML = $('<div class="underlay"><div class="loading"></div></div>');
+                var underlayHTML = $('<div class="underlay"><div class="loading-gif"><span class="poly"></span><span class="poly"></span><span class="poly"></span></div></div>');
                 var src = $this.attr('src');
                 var imgName = src.match(/.*\/(.*)$/)[1];
                 var largeImgPath = 'images/lg/' + imgName;
