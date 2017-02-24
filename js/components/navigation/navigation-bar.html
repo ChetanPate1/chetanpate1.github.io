@@ -13,36 +13,36 @@
 <div id="sidebar-nav" ng-class="{in: NavbarCtrl.navOpen}">
     <ul>
         <li>
-            <a href="#/home" ng-class="{active: NavbarCtrl.isActive('/home')}" ng-click="NavbarCtrl.close()"><span class="sprite home"></span>HOME</a>
+            <a href="#/home" ui-sref-active="active" ng-click="NavbarCtrl.close()"><span class="sprite home"></span>HOME</a>
         </li>
         <li class="dropdown-container">
-            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isActive('/experiments/3d-cards') || NavbarCtrl.isActive('/experiments/frost-glass-cards') || NavbarCtrl.isActive('/experiments/animated-buttons') || NavbarCtrl.isActive('/experiments/loading-GIFs') || NavbarCtrl.isActive('/experiments/expanding-images') || NavbarCtrl.isActive('/experiments/CSS3-dropdown') || NavbarCtrl.isActive('/experiments/mobile-navigation')}"><span class="sprite experiments"></span>EXPERIMENTS
+            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isStateParentActive('experiments') }"><span class="sprite experiments"></span>EXPERIMENTS
                 <span class="sprite plus"></span>
             </a>
             <div class="dropdown-items">
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/3d-cards')}" ui-sref="experiments.3d-cards" ng-click="NavbarCtrl.close()">3D CARDS</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/frost-glass-cards')}" ui-sref="experiments.frost-glass-cards" ng-click="NavbarCtrl.close()">FROST GLASS CARDS</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/animated-buttons')}" ui-sref="experiments.animated-buttons" ng-click="NavbarCtrl.close()">ANIMATED BUTTONS</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/loading-GIFs')}" ui-sref="experiments.loading-GIFs" ng-click="NavbarCtrl.close()">LOADING CSS3 GIFS</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/expanding-images')}" ui-sref="experiments.expanding-images" ng-click="NavbarCtrl.close()">EXPANDING IMAGE</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/CSS3-dropdown')}" ui-sref="experiments.CSS3-dropdown" ng-click="NavbarCtrl.close()">CSS3 DROPDOWN</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/experiments/mobile-navigation')}" ui-sref="experiments.mobile-navigation" ng-click="NavbarCtrl.close()">MOBILE NAVIGATION</a>
+                <a ui-sref-active="active" ui-sref="experiments.3d-cards" ng-click="NavbarCtrl.close()">3D CARDS</a>
+                <a ui-sref-active="active" ui-sref="experiments.frost-glass-cards" ng-click="NavbarCtrl.close()">FROST GLASS CARDS</a>
+                <a ui-sref-active="active" ui-sref="experiments.animated-buttons" ng-click="NavbarCtrl.close()">ANIMATED BUTTONS</a>
+                <a ui-sref-active="active" ui-sref="experiments.loading-GIFs" ng-click="NavbarCtrl.close()">LOADING CSS3 GIFS</a>
+                <a ui-sref-active="active" ui-sref="experiments.expanding-images" ng-click="NavbarCtrl.close()">EXPANDING IMAGE</a>
+                <a ui-sref-active="active" ui-sref="experiments.CSS3-dropdown" ng-click="NavbarCtrl.close()">CSS3 DROPDOWN</a>
+                <a ui-sref-active="active" ui-sref="experiments.mobile-navigation" ng-click="NavbarCtrl.close()">MOBILE NAVIGATION</a>
             </div>
         </li>
         <li>
             <a href="#skills" du-smooth-scroll du-scrollspy offset="100" duration="500" ng-click="NavbarCtrl.goTo('home')"><span class="sprite skills"></span>SKILLS</a>
         </li>
         <li class="dropdown-container">
-            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isActive('/recent-work/lemonade-money') || NavbarCtrl.isActive('/recent-work/healthwatch-surrey') }"><span class="sprite work"></span>RECENT WORK
+            <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isStateParentActive('recent-work') }"><span class="sprite work"></span>RECENT WORK
                 <span class="sprite plus"></span>
             </a>
             <div class="dropdown-items">
-                <a ng-class="{active: NavbarCtrl.isActive('/recent-work/lemonade-money') }" ui-sref="work.lemonade" ng-click="NavbarCtrl.close()">LEMONADE</a>
-                <a ng-class="{active: NavbarCtrl.isActive('/recent-work/healthwatch-surrey') }" ui-sref="work.healthwatch" ng-click="NavbarCtrl.close()">HEALTHWATCH</a>
+                <a ui-sref-active="active" ui-sref="work.lemonade" ng-click="NavbarCtrl.close()">LEMONADE</a>
+                <a ui-sref-active="active" ui-sref="work.healthwatch" ng-click="NavbarCtrl.close()">HEALTHWATCH</a>
             </div>
         </li>
         <li>
-            <a ng-class="{active: NavbarCtrl.isActive('/my-sketches') }" ui-sref="sketch" ng-click="NavbarCtrl.close()"><span class="sprite sketches"></span>MY SKETCHES</a>
+            <a ui-sref-active="active" ui-sref="sketch" ng-click="NavbarCtrl.close()"><span class="sprite sketches"></span>MY SKETCHES</a>
         </li>
         <li>
             <a href="#contact" du-smooth-scroll du-scrollspy offset="100" duration="500"><span class="sprite contact"></span>CONTACT</a>

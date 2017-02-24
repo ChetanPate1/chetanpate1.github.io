@@ -9,7 +9,7 @@
     $.fn.expandImage = function(){
         var $body = $('body');
         var $window = $(window);
-        var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+        var transitionEnd = 'webkitTransitionEnd msTransitionEnd transitionend';
 
         return this.each(function(){
             var $this = $(this);
@@ -62,7 +62,7 @@
                 var animateToX = (fixedLeftPos - absoluteLeftPos).toFixed(0);
                 var animateToY = (fixedTopPos - absoluteTopPos).toFixed(0);
 
-                var translate = 'translateX('+ animateToX +'px)'+' '+'translateY('+ animateToY +'px)'+' '+'scale('+ cloneScaleTo +')';
+                var translate = 'translate('+ animateToX +'px, '+ animateToY +'px) scale('+ cloneScaleTo +')';
 
                 clone.css({
                     'z-index': '5050',
@@ -71,8 +71,8 @@
                     'left': absoluteLeftPos+'px',
                     'top': absoluteTopPos+'px',
                     'opacity':'1',
-                    '-webkit-transform': translate, '-moz-transform': translate,
-                    '-ms-transform': translate, '-o-transform': translate,
+                    '-webkit-transform': translate,
+                    '-ms-transform': translate,
                     'transform': translate
                 })
                 .one(transitionEnd, function() {
@@ -82,16 +82,16 @@
                 $('.underlay').on('click', function(){
                     $('.underlay').empty().remove();
                     clone.css({
-                        '-webkit-transition-duration': '0.3s', '-moz-transition-duration': '0.3s',
-                        '-ms-transition-duration': '0.3s', '-o-transition-duration': '0.3s',
+                        '-webkit-transition-duration': '0.3s',
+                        '-ms-transition-duration': '0.3s',
                         'transition-duration': '0.3s',
-                        '-webkit-transition-timing-function': 'ease', '-moz-transition-timing-function': 'ease',
-                        '-ms-transition-timing-function': 'ease', '-o-transition-timing-function': 'ease',
+                        '-webkit-transition-timing-function': 'ease',
+                        '-ms-transition-timing-function': 'ease',
                         'transition-timing-function': 'ease',
                         'z-index':'3000',
                         'opacity':'1',
-                        '-webkit-transform': 'scale(1)', '-moz-transform': 'scale(1)',
-                        '-ms-transform': 'scale(1)', '-o-transform': 'scale(1)',
+                        '-webkit-transform': 'scale(1)',
+                        '-ms-transform': 'scale(1)',
                         'transform': 'scale(1)'
                     })
                     .one(transitionEnd, function() {
