@@ -35,8 +35,8 @@
 
                 var relativeX = (pageX  - offset.left);
                 var relativeY = (pageY - offset.top);
-                var calcX = Math.round( ( height/2 - relativeY ) / 35 );
-                var calcY = Math.round( ( -width/2 + relativeX ) / 35 );
+                var calcX = Math.round( ( height/2 - relativeY ) / settings.tolerance );
+                var calcY = Math.round( ( -width/2 + relativeX ) / settings.tolerance );
 
                 $this.css({
                     '-webkit-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
