@@ -1,11 +1,12 @@
 /*
-* Parallax Cards v1.0
-* 02-02-2017
-* Chetan Patel
-*/
+ * Parallax Cards v2.0
+ * 02-02-2017
+ * Chetan Patel
+ */
 
 ;(function($){
     'use strict';
+
 
     $.fn.parallaxCard = function(options){
         var settings = $.extend({
@@ -20,37 +21,43 @@
             var height = $this.height();
             var offset = $this.offset();
 
+            this.addEventListener('touchmove', onMove, false);
+            this.addEventListener('touchend', onLeave, false);
+
             $window.on('resize', function(){
                 offset = $this.offset();
             });
 
-            $this.on('mouseenter', function(){
-                $this.on('mousemove', function(e){
+            function onMove(e){
+                e.preventDefault();
+                var pageX = e.pageX || e.touches[0].pageX;
+                var pageY = e.pageY || e.touches[0].pageY;
 
-                    var relativeX = (e.pageX - offset.left);
-                    var relativeY = (e.pageY - offset.top);
-                    var calcX = Math.round( ( height/2 - relativeY ) / settings.tolerance );
-                    var calcY = Math.round( ( -width/2 + relativeX ) / settings.tolerance );
+                var relativeX = (pageX  - offset.left);
+                var relativeY = (pageY - offset.top);
+                var calcX = Math.round( ( height/2 - relativeY ) / 35 );
+                var calcY = Math.round( ( -width/2 + relativeX ) / 35 );
 
-                    $this.css({
-                        '-webkit-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
-                        '-moz-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
-                        '-ms-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
-                        '-o-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
-                        'transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)'
-                    });
+                $this.css({
+                    '-webkit-transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
+                    'transform': 'rotateX(' + calcX +'deg) rotateY('+ calcY + 'deg)',
+                    'will-change': 'transform'
                 });
-            });
+            }
 
-            $this.on('mouseleave', function () {
+            function onLeave() {
                 $this.css({
                     '-webkit-transform': 'rotateX(0deg) rotateY(0deg)',
-                    '-moz-transform': 'rotateX(0deg) rotateY(0deg)',
-                    '-ms-transform': 'rotateX(0deg) rotateY(0deg)',
-                    '-o-transform': 'rotateX(0deg) rotateY(0deg)',
-                    'transform': 'rotateX(0deg) rotateY(0deg)'
+                    'transform': 'rotateX(0deg) rotateY(0deg)',
+                    'will-change': 'intial'
                 });
+            }
+
+            $this.on('mouseenter', function(){
+                $this.on('mousemove', onMove);
             });
+
+            $this.on('mouseleave', onLeave);
         });
     }
 
