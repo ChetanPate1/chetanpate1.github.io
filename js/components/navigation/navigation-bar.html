@@ -13,7 +13,7 @@
 <div id="sidebar-nav" ng-class="{in: NavbarCtrl.navOpen}">
     <ul>
         <li>
-            <a href="#/home" ui-sref-active="active" ng-click="NavbarCtrl.close()"><span class="sprite home"></span>HOME</a>
+            <a ui-sref="home" ui-sref-active="active" ng-click="NavbarCtrl.close()"><span class="sprite home"></span>HOME</a>
         </li>
         <li class="dropdown-container">
             <a class="dropdown-toggle" ng-class="{active: NavbarCtrl.isStateParentActive('experiments') }"><span class="sprite experiments"></span>EXPERIMENTS
