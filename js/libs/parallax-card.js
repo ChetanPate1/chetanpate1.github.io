@@ -1,12 +1,11 @@
 /*
- * Parallax Cards v2.0
+ * Parallax Cards v2.1
  * 02-02-2017
  * Chetan Patel
  */
 
 ;(function($){
     'use strict';
-
 
     $.fn.parallaxCard = function(options){
         var settings = $.extend({
@@ -27,6 +26,10 @@
             $window.on('resize', function(){
                 offset = $this.offset();
             });
+
+            function onStart(e){
+                e.preventDefault();
+            }
 
             function onMove(e){
                 e.preventDefault();
@@ -53,10 +56,8 @@
                 });
             }
 
-            $this.on('mouseenter', function(){
-                $this.on('mousemove', onMove);
-            });
-
+            $this.on('mouseenter', onStart);
+            $this.on('mousemove', onMove);
             $this.on('mouseleave', onLeave);
         });
     }
