@@ -1,6 +1,26 @@
 ### Activate the rewrite rule engine
 RewriteEngine On
 
-RewriteCond %{HTTPS} on
-RewriteRule ^/?$ http://%{chetanpate1.github.io}/ [R=301]
-RewriteRule ^inner/directory/?$ http://%{chetanpate1.github.io}/inner/directory/ [R=301,L]
+### If the request contains the _escaped_fragment_ query parameter, set a flag to proxify the request to SEO4Ajax
+RewriteCond %{ENV:PROXIFY} !true
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{QUERY_STRING} _escaped_fragment_= [NC]
+RewriteRule .* - [E=PROXIFY:true,E=REQUEST_PATH:%{REQUEST_URI}]
+
+### If the request is issued by another known bot, set a flag to proxify the request to SEO4Ajax
+### Note: the 5 following lines can be commented if you are using #! URLs
+RewriteCond %{ENV:PROXIFY} !true
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_USER_AGENT} !(googlebot/|googlebot-mobile|yandexbot|pinterest.*ios|mail\.ru|seznambot|screaming) [NC]
+RewriteCond %{HTTP_USER_AGENT} (bot|spider|pinterest|crawler|archiver|flipboardproxy|mediapartners|facebookexternalhit|quora) [NC]
+RewriteRule .* - [E=PROXIFY:true,E=REQUEST_PATH:%{REQUEST_URI}]
+
+### Proxify the request to SEO4Ajax
+RewriteCond %{ENV:PROXIFY} true
+RewriteRule ^(.*)$ http://api.seo4ajax.com/3b6184b52ff89b1bf4ec75582e137408%{ENV:REQUEST_PATH} [P,QSA,L]
+
+### Otherwise, if the requested file is not present on the server, serve the index file
+### Note: the 3 following lines can be commented if you are using #! URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.html [L]
