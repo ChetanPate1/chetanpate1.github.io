@@ -1,0 +1,9 @@
+### Activate the rewrite rule engine
+RewriteEngine On
+
+### Otherwise, if the requested file is not present on the server, serve the index file
+### Note: the 3 following lines can be commented if you are using #! URLs
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.html [L]
