@@ -1,164 +1,164 @@
 <div class="section page-header white animate-in">
-    <div class="gradient-container container-fluid">
-        <div class="container">
-            <h1 class="margin-bottom-60 margin-bottom-xs-30">LOADING 'Gif'</h1>
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>
-                        Internet speeds are not always ideal so most developers
-                        use a loading gif to indicate that the
-                        image is loading (most of the time).
-                    </p>
-                    <p>
-                        Gifs don't really have a good frame rate especially on mobile devices.
-                    </p>
-                </div>
-                <div class="col-sm-6 margin-bottom-xs-40">
-                    <p>
-                        CSS3 animations run at 60fps because the browser loads it on the gpu.
-                        If you make a loading gif using HTML the browser has one
-                        less thing to download.
-                    </p>
-                </div>
+   <div class="gradient-container container-fluid">
+      <div class="container">
+         <h1 class="margin-bottom-60 margin-bottom-xs-30">LOADING 'Gif'</h1>
+         <div class="row">
+            <div class="col-sm-6">
+               <p>
+                  Internet speeds are not always ideal so most developers
+                  use a loading gif to indicate that the
+                  image is loading (most of the time).
+               </p>
+               <p>
+                  Gifs don't really have a good frame rate especially on mobile devices.
+               </p>
             </div>
-        </div>
-        <created on="9/04/2016"></created>
-      
-        <a class="c-button skip-to-demo-btn" href="#lg-demo" du-smooth-scroll offset="70" duration="1000">Skip to demo <span class="sprite skip"></span></a>
-    </div>
+            <div class="col-sm-6 margin-bottom-xs-40">
+               <p>
+                  CSS3 animations run at 60fps because the browser loads it on the gpu.
+                  If you make a loading gif using HTML the browser has one
+                  less thing to download.
+               </p>
+            </div>
+         </div>
+      </div>
+      <created on="9/04/2016"></created>
+
+      <a class="c-button skip-to-demo-btn" href="#lg-demo" du-smooth-scroll offset="70" duration="1000">Skip to demo <span class="sprite skip"></span></a>
+   </div>
 </div>
 
 
 <div class="section white padding-bottom-120 padding-top-120 animate-in">
-    <div class="container">
-        <h2 class="margin-bottom-60">Concept</h2>
+   <div class="container">
+      <h2 class="margin-bottom-60">Concept</h2>
 
-        <div class="row margin-bottom-60">
-            <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
-                <div class="numbered-card frame-sketch">
-                    <span>1</span>
-                    <img ng-src="images/frame-1.png">
-                    <p class="one">
-                        To make the ball have a cartoony feel, need to exaggerate gravity. So the ball stretches in the y direction on the way down. It also speeds up as it reaches the ground.
-                    </p>
-                </div>
-
+      <div class="row margin-bottom-60">
+         <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
+            <div class="numbered-card frame-sketch">
+               <span>1</span>
+               <img ng-src="images/frame-1.png">
+               <p class="one">
+                  To make the ball have a cartoony feel, need to exaggerate gravity. So the ball stretches in the y direction on the way down. It also speeds up as it reaches the ground.
+               </p>
             </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
-                <div class="numbered-card frame-sketch">
-                    <span>2</span>
-                    <img ng-src="images/frame-2.png">
-                    <p class="two">
-                        The ball is squashes under its own weight to have a jelly/rubber feel. y decreases and x increases. Time spent will be the greatest at this point.
-                    </p>
-                </div>
-            </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
-                <div class="numbered-card frame-sketch">
-                    <span>3</span>
-                    <img ng-src="images/frame-3.png">
-                    <p class="thr">
-                        This is the mirror of animation of <strong>1</strong>.
-                    </p>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
+            <div class="numbered-card frame-sketch">
+               <span>2</span>
+               <img ng-src="images/frame-2.png">
+               <p class="two">
+                  The ball is squashes under its own weight to have a jelly/rubber feel. y decreases and x increases. Time spent will be the greatest at this point.
+               </p>
             </div>
-        </div>
+         </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <p>
-                    I start with a sketch of each frame of the gif (usually doodles on my phone), as
-                    I go along I think about how to code the css.
-                </p>
+         <div class="col-xs-12 col-sm-4 col-md-4 margin-bottom-sm-40">
+            <div class="numbered-card frame-sketch">
+               <span>3</span>
+               <img ng-src="images/frame-3.png">
+               <p class="thr">
+                  This is the mirror of animation of <strong>1</strong>.
+               </p>
             </div>
+         </div>
+      </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <p>
-                    I then write the HTML. I nest divs inside a container
-                    div. The nested divs have the same class so I
-                    can target them with css selectors (nthchild). I set the animation
-                    iteration count to 'infinite' so it repeats. So the instead
-                    of appending a Gif image you just append the HTML.
-                </p>
-            </div>
-        </div>
-    </div>
+      <div class="row">
+         <div class="col-xs-12 col-sm-6 col-md-6">
+            <p>
+               I start with a sketch of each frame of the gif (usually doodles on my phone), as
+               I go along I think about how to code the css.
+            </p>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-6">
+            <p>
+               I then write the HTML. I nest divs inside a container
+               div. The nested divs have the same class so I
+               can target them with css selectors (nthchild). I set the animation
+               iteration count to 'infinite' so it repeats. So the instead
+               of appending a Gif image you just append the HTML.
+            </p>
+         </div>
+      </div>
+   </div>
 </div>
 
 <div class="gradient-separator"></div>
 
 <div class="section white padding-bottom-120 padding-top-120">
-    <div class="container" id="lg-demo">
-        <h3 class="margin-bottom-30">Demo</h3>
-        <h6 class="margin-bottom-60">MADE WITH KEY FRAMES</h6>
-        <div class="row demo-grid">
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif">
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                    </div>
-                </div>
+   <div class="container" id="lg-demo">
+      <h3 class="margin-bottom-30">Demo</h3>
+      <h6 class="margin-bottom-60">MADE WITH KEY FRAMES</h6>
+      <div class="row demo-grid">
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif">
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-2">
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-2">
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-3">
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-3">
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-4">
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-4">
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-5">
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-5">
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-6">
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-6">
+                  <div class="poly"></div>
+               </div>
             </div>
+         </div>
 
-            <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
-                <div class="square">
-                    <div class="loading-gif-7">
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                        <div class="poly"></div>
-                    </div>
-                </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="square">
+               <div class="loading-gif-7">
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+                  <div class="poly"></div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </div>

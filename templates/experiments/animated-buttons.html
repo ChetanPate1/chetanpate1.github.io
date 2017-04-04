@@ -1,291 +1,291 @@
 <div class="section page-header white animate-in">
-    <div class="gradient-container container-fluid">
-        <div class="container">
-            <h1 class="margin-bottom-60 margin-bottom-xs-30">ANIMATED BUTTONS</h1>
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>
-                        Since CSS3 transitions and animations (some properties)
-                        use the gpu of a given device we can have beautiful 60fps
-                        animations and free up the cpu to do what it was intended for.
-                    </p>
-                    <p>
-                        We can animate any element meaningfully into the screen giving
-                        the user the best experience possible on browsers.
-                    </p>
-                </div>
-                <div class="col-sm-6 margin-bottom-xs-40">
-                    <p>
-                        I decide to build buttons was pure CSS and HTML buttons.
-                        So no downloading of sprites for button backgrounds-image or font icons.
-                    </p>
-                    <p>
-                        I did this only with CSS transform properties to use the gpu.
-                    </p>
-                </div>
+   <div class="gradient-container container-fluid">
+      <div class="container">
+         <h1 class="margin-bottom-60 margin-bottom-xs-30">ANIMATED BUTTONS</h1>
+         <div class="row">
+            <div class="col-sm-6">
+               <p>
+                  Since CSS3 transitions and animations (some properties)
+                  use the gpu of a given device we can have beautiful 60fps
+                  animations and free up the cpu to do what it was intended for.
+               </p>
+               <p>
+                  We can animate any element meaningfully into the screen giving
+                  the user the best experience possible on browsers.
+               </p>
             </div>
+            <div class="col-sm-6 margin-bottom-xs-40">
+               <p>
+                  I decide to build buttons was pure CSS and HTML buttons.
+                  So no downloading of sprites for button backgrounds-image or font icons.
+               </p>
+               <p>
+                  I did this only with CSS transform properties to use the gpu.
+               </p>
+            </div>
+         </div>
 
-            <created on="24/04/2016"></created>
-        </div>
-        <a class="c-button skip-to-demo-btn" href="#ab-demo" du-smooth-scroll offset="70" duration="1000">Skip to demo <span class="sprite skip"></span></a>
-    </div>
+         <created on="24/04/2016"></created>
+      </div>
+      <a class="c-button skip-to-demo-btn" href="#ab-demo" du-smooth-scroll offset="70" duration="1000">Skip to demo <span class="sprite skip"></span></a>
+   </div>
 </div>
 
 
 <div class="section white padding-bottom-120 padding-top-120 animate-in">
-    <div class="container">
-        <h2 class="margin-bottom-60">Concept</h2>
-        <h4 class="margin-bottom-30">Hamburger Menu</h4>
-        <div class="row remove-marginBottom">
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <p>
-                    With CSS order matters if I add a class dynamically which
-                    has CSS applied to it the CSS of that element will be
-                    'overwritten'.
-                </p>
+   <div class="container">
+      <h2 class="margin-bottom-60">Concept</h2>
+      <h4 class="margin-bottom-30">Hamburger Menu</h4>
+      <div class="row remove-marginBottom">
+         <div class="col-xs-12 col-sm-4 col-md-4">
+            <p>
+               With CSS order matters if I add a class dynamically which
+               has CSS applied to it the CSS of that element will be
+               'overwritten'.
+            </p>
+         </div>
+         <div class="visible-xs col-xs-12 mobile-edge">
+            <div class="code-example">
+               <h5>HTML</h5>
+               <span class="css-class">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">animated-button-example off</span>&quot;&gt;</span>
+               <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
+               <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
+               <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
+               <span class="css-class">&lt;<span class="pink">/div</span>&gt;</span>
             </div>
-            <div class="visible-xs col-xs-12 mobile-edge">
-                <div class="code-example">
-                    <h5>HTML</h5>
-                    <span class="css-class">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">animated-button-example off</span>&quot;&gt;</span>
-                    <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
-                    <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
-                    <span class="css-indent">&lt;<span class="pink">div</span> <span class="green">class</span>=&quot;<span class="yellow">rect</span>&quot;&gt;&lt;<span class="pink">/div</span>&gt;</span>
-                    <span class="css-class">&lt;<span class="pink">/div</span>&gt;</span>
-                </div>
+         </div>
+         <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="animated-button-example off-animated-button-example" ng-class="{'on-animated-button-example' : ExperimentsCtrl.open}" ng-click="ExperimentsCtrl.toggleButton()">
+               <div class="rect"></div>
+               <div class="rect"></div>
+               <div class="rect"></div>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="animated-button-example off-animated-button-example" ng-class="{'on-animated-button-example' : ExperimentsCtrl.open}" ng-click="ExperimentsCtrl.toggleButton()">
-                    <div class="rect"></div>
-                    <div class="rect"></div>
-                    <div class="rect"></div>
-                </div>
-                <div class="code-active-vertical" ng-class="{active : ExperimentsCtrl.open}"></div>
-            </div>
-            <div class="hidden-xs col-sm-4 col-md-4">
+            <div class="code-active-vertical" ng-class="{active : ExperimentsCtrl.open}"></div>
+         </div>
+         <div class="hidden-xs col-sm-4 col-md-4">
 
-                <div class="title-card color-1 code-example">
-                    <h5>HTML</h5>
-                    <p>
-                        <span class="css-class">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;animated-button-example off&quot;</span>&gt;</span>
-                        <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
-                        <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
-                        <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
-                        <span class="css-class">&lt;<span class="red">/div</span>&gt;</span>
-                    </p>
-                </div>
+            <div class="title-card color-1 code-example">
+               <h5>HTML</h5>
+               <p>
+                  <span class="css-class">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;animated-button-example off&quot;</span>&gt;</span>
+                  <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
+                  <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
+                  <span class="css-indent">&lt;<span class="red">div</span> <span class="orange">class</span>=<span class="green">&quot;rect&quot;</span>&gt;&lt;<span class="red">/div</span>&gt;</span>
+                  <span class="css-class">&lt;<span class="red">/div</span>&gt;</span>
+               </p>
             </div>
-        </div>
+         </div>
+      </div>
 
-        <div class="row remove-marginTop remove-marginBottom">
-            <div class="code-active-horizontal-left"></div>
-            <div class="code-active-horizontal-right"></div>
-        </div>
+      <div class="row remove-marginTop remove-marginBottom">
+         <div class="code-active-horizontal-left"></div>
+         <div class="code-active-horizontal-right"></div>
+      </div>
 
-        <h5 class="text-center">CSS</h5>
-        <div class="row remove-marginTop">
-            <div class="col-xs-6 col-sm-6 col-md-5 mobile-padding-right">
-                <div class="title-card color-1 code-example">
-                    <h5>off</h5>
-                    <p>
-                        <span class="css-class">
-                            <span class="orange">.off .rect:nth-child</span><span class="purple">(</span><span class="orange">1</span><span class="purple">)</span> {
-                        </span>
-                        <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 10px, 0<span class="d-grey">);</span></span>
-                        <span class="css-class">}</span>
-                    </p>
-                    <p>
-                        <span class="css-class"><span class="orange">.off .rect:nth-child</span><span class="purple">(</span><span class="orange">2</span><span class="purple">)</span> {</span>
+      <h5 class="text-center">CSS</h5>
+      <div class="row remove-marginTop">
+         <div class="col-xs-6 col-sm-6 col-md-5 mobile-padding-right">
+            <div class="title-card color-1 code-example">
+               <h5>off</h5>
+               <p>
+                  <span class="css-class">
+                     <span class="orange">.off .rect:nth-child</span><span class="purple">(</span><span class="orange">1</span><span class="purple">)</span> {
+                     </span>
+                     <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 10px, 0<span class="d-grey">);</span></span>
+                     <span class="css-class">}</span>
+                  </p>
+                  <p>
+                     <span class="css-class"><span class="orange">.off .rect:nth-child</span><span class="purple">(</span><span class="orange">2</span><span class="purple">)</span> {</span>
                         <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">);</span></span>
                         <span class="css-class">}</span>
-                    </p>
-                    <p>
+                     </p>
+                     <p>
                         <span class="css-class"><span class="orange">.off .rect:nth-child</span><span class="purple">(</span><span class="orange">3</span><span class="purple">)</span> {</span>
-                        <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 80px, 0<span class="d-grey">);</span></span>
-                        <span class="css-class">}</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-offset-2 col-md-5 mobile-padding-left">
-                <div class="title-card color-2 code-example">
-                    <h5>on</h5>
-                    <p>
-                        <span class="css-class">
-                            <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">1</span><span class="purple">)</span> {
-                        </span>
-                        <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>45deg<span class="d-grey">);</span></span>
-                        <span class="css-class">}</span>
-                    </p>
-                    <p>
-                        <span class="css-class">
-                            <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">2</span><span class="purple">)</span> {
-                        </span>
-                        <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>-45deg<span class="d-grey">);</span></span>
-                        <span class="css-class">}</span>
-                    </p>
-                    <p>
-                        <span class="css-class">
-                            <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">3</span><span class="purple">)</span> {
-                        </span>
-                        <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>-45deg<span class="d-grey">);</span></span>
-                        <span class="css-class">}</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+                           <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 80px, 0<span class="d-grey">);</span></span>
+                           <span class="css-class">}</span>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-offset-2 col-md-5 mobile-padding-left">
+                     <div class="title-card color-2 code-example">
+                        <h5>on</h5>
+                        <p>
+                           <span class="css-class">
+                              <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">1</span><span class="purple">)</span> {
+                              </span>
+                              <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>45deg<span class="d-grey">);</span></span>
+                              <span class="css-class">}</span>
+                           </p>
+                           <p>
+                              <span class="css-class">
+                                 <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">2</span><span class="purple">)</span> {
+                                 </span>
+                                 <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>-45deg<span class="d-grey">);</span></span>
+                                 <span class="css-class">}</span>
+                              </p>
+                              <p>
+                                 <span class="css-class">
+                                    <span class="orange">.on .rect:nth-child</span><span class="purple">(</span><span class="orange">3</span><span class="purple">)</span> {
+                                    </span>
+                                    <span class="css-indent">transform: <span class="d-grey">translate3d(</span>5px, 45px, 0<span class="d-grey">)</span> <span class="d-grey">rotate(</span>-45deg<span class="d-grey">);</span></span>
+                                    <span class="css-class">}</span>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
 
-        <div class="row margin-top-40">
-            <div class="col-md-offset-4 col-md-4">
-                <p class="text-center">
-                    As seen when the button is closed the css for closed
-                    is applied but when clicked open 'overwrites' it.
-                </p>
-            </div>
-            <div class="col-md-12">
-                <p class="text-center fine-print">
-                    To keep the sample code simple the browser prefixes
-                    have been left out.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+                        <div class="row margin-top-40">
+                           <div class="col-md-offset-4 col-md-4">
+                              <p class="text-center">
+                                 As seen when the button is closed the css for closed
+                                 is applied but when clicked open 'overwrites' it.
+                              </p>
+                           </div>
+                           <div class="col-md-12">
+                              <p class="text-center fine-print">
+                                 To keep the sample code simple the browser prefixes
+                                 have been left out.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 
-<div class="gradient-separator"></div>
+                  <div class="gradient-separator"></div>
 
-<div class="section white padding-bottom-120 padding-top-120">
-    <div class="container" id="ab-demo">
-        <h3 class="margin-bottom-30">Demo</h3>
-        <h6 class="margin-bottom-60">MADE WITH HTML, CSS AND TRANSITIONS</h6>
+                  <div class="section white padding-bottom-120 padding-top-120">
+                     <div class="container" id="ab-demo">
+                        <h3 class="margin-bottom-30">Demo</h3>
+                        <h6 class="margin-bottom-60">MADE WITH HTML, CSS AND TRANSITIONS</h6>
 
-        <div class="row demo-grid">
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-1 off-demo-1" toggle-class="on-demo-1">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                        <div class="row demo-grid">
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-1 off-demo-1" toggle-class="on-demo-1">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-2 off-demo-2" toggle-class="on-demo-2">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-2 off-demo-2" toggle-class="on-demo-2">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-3 off-demo-3" toggle-class="on-demo-3">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-4 off-demo-4" toggle-class="on-demo-4">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-3 off-demo-3" toggle-class="on-demo-3">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-4 off-demo-4" toggle-class="on-demo-4">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-5 off-demo-5" toggle-class="on-demo-5">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-5 off-demo-5" toggle-class="on-demo-5">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-6 off-demo-6" toggle-class="on-demo-6">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-6 off-demo-6" toggle-class="on-demo-6">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-7 off-demo-7" toggle-class="on-demo-7">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-7 off-demo-7" toggle-class="on-demo-7">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-8 off-demo-8" toggle-class="on-demo-8">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-8 off-demo-8" toggle-class="on-demo-8">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-9 off-demo-9" toggle-class="on-demo-9">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-9 off-demo-9" toggle-class="on-demo-9">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-10 off-demo-10" toggle-class="on-demo-10">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-10 off-demo-10" toggle-class="on-demo-10">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-11 off-demo-11" toggle-class="on-demo-11">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-11 off-demo-11" toggle-class="on-demo-11">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-12 off-demo-12" toggle-class="on-demo-12">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-12 off-demo-12" toggle-class="on-demo-12">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
 
-            <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
-                <div class="square">
-                    <div class="navbar-button-mobile-demo-13 off-demo-13" toggle-class="on-demo-13">
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                        <div class="rect"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                           <div class="col-xs-6 col-sm-3 col-md-2 margin-bottom-30">
+                              <div class="square">
+                                 <div class="navbar-button-mobile-demo-13 off-demo-13" toggle-class="on-demo-13">
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                    <div class="rect"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
