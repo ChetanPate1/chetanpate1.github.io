@@ -1,0 +1,20 @@
+.main-footer{
+  background: $color-1;
+  padding: 30px 15px;
+
+  .email{
+    display: block;
+    margin: auto;
+
+    a{
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: $h-font;
+      letter-spacing: 2px;
+      color: darken($color-2, 15%);
+
+    }
+  }
+}

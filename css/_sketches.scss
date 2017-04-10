@@ -1,0 +1,13 @@
+.my-gallery{
+  figure{
+    display: block;
+    margin: auto;
+
+    img{
+      display: block;
+      margin: auto;
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@-webkit-keyframes animate-in{
+  0%   { opacity: 0; -webkit-transform: translateY(-10px); }
+  100% { opacity: 1; -webkit-transform: translateY(0px);}
+}
+
+@-moz-keyframes animate-in{
+  0%   { opacity: 0; -moz-transform: translateY(-10px); }
+  100% { opacity: 1; -moz-transform: translateY(0px);}
+}
+
+@-o-keyframes animate-in{
+  0%   { opacity: 0; -o-transform: translateY(-10px); }
+  100% { opacity: 1; -o-transform: translateY(0px);}
+}
+
+@keyframes animate-in{
+  0%   { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.animate-in{
+  @include animation(animate-in 500ms cubic-bezier(0.4, 0, 0.22, 1));
+}
