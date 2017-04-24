@@ -354,7 +354,7 @@
 
 .fire-ball-container{
   &.blue{
-    .fire-ball, .b-1, .b-2, .b-3{
+    .fire-ball, .b-1, .b-2, .b-3, .b-4{
       background-color: $fire-blue;
     }
 
@@ -484,11 +484,15 @@
     }
 
     &.b-90{
-      @include transforms(scaleX(0.9));
+      @include transforms(scaleX(0.90));
     }
 
     &.b-75{
       @include transforms(scaleX(0.75));
+    }
+
+    &.b-60{
+      @include transforms(scaleX(0.60));
     }
   }
 }

@@ -913,7 +913,7 @@ small {
   .fire-ball-container.orange .more-button:hover {
     background-color: #f03000; }
 
-.fire-ball-container.blue .fire-ball, .fire-ball-container.blue .b-1, .fire-ball-container.blue .b-2, .fire-ball-container.blue .b-3 {
+.fire-ball-container.blue .fire-ball, .fire-ball-container.blue .b-1, .fire-ball-container.blue .b-2, .fire-ball-container.blue .b-3, .fire-ball-container.blue .b-4 {
   background-color: #00D8FF; }
 
 .fire-ball-container.blue .number {
@@ -1031,6 +1031,10 @@ small {
       -webkit-transform: scaleX(0.75);
       -ms-transform: scaleX(0.75);
       transform: scaleX(0.75); }
+    .horizontal-bar .bar.b-60 {
+      -webkit-transform: scaleX(0.6);
+      -ms-transform: scaleX(0.6);
+      transform: scaleX(0.6); }
 
 @-webkit-keyframes flames {
   0% {
