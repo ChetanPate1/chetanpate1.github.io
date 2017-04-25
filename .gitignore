@@ -1,5 +1,8 @@
 .idea
 css/.sass-cache
-bower_components
+
+# Dependency directories
 node_modules
+bower_components
+
 build
