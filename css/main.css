@@ -281,17 +281,18 @@
 .main-footer {
   background: #ffffff;
   padding: 30px 15px; }
-  .main-footer .email {
+  .main-footer .link {
     display: block;
     margin: auto; }
-    .main-footer .email a {
+    .main-footer .link a {
+      font-weight: bold;
       display: block;
       text-align: center;
       text-transform: uppercase;
       font-size: 12px;
       font-family: "Montserrat", sans-serif;
       letter-spacing: 2px;
-      color: #bbd0e5; }
+      color: #a8c3de; }
 
 body {
   background-color: #F2F6FA;

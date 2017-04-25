@@ -2,19 +2,19 @@
   background: $color-1;
   padding: 30px 15px;
 
-  .email{
+  .link{
     display: block;
     margin: auto;
 
     a{
+      font-weight: bold;
       display: block;
       text-align: center;
       text-transform: uppercase;
       font-size: 12px;
       font-family: $h-font;
       letter-spacing: 2px;
-      color: darken($color-2, 15%);
-
+      color: darken($color-2, 20%);
     }
   }
 }
