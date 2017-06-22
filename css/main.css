@@ -667,6 +667,7 @@ small {
     background: linear-gradient(135deg, #40e5d5 0%, #6840e5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40e5d5', endColorstr='#6840e5',GradientType=1 ); }
     .card .gradient-container h5 {
+      margin: 0;
       font-size: 26px;
       z-index: 30;
       position: relative;
@@ -702,9 +703,9 @@ small {
       -ms-transform: translateZ(-45px);
       transform: translateZ(-45px); }
   .card .more-button {
-    -webkit-transform: translateZ(70px);
-    -ms-transform: translateZ(70px);
-    transform: translateZ(70px); }
+    -webkit-transform: translateY(25px) translateZ(70px);
+    -ms-transform: translateY(25px) translateZ(70px);
+    transform: translateY(25px) translateZ(70px); }
 
 .l-grey .card {
   background-color: #ffffff; }
@@ -995,8 +996,11 @@ small {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0); }
 
-.experiments .card, .work .card {
-  min-height: 450px; }
+.experiments .card {
+  min-height: auto; }
+
+.work .card {
+  min-height: 375px; }
 
 .horizontal-bar {
   margin: 5px 0 25px 0;

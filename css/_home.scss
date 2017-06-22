@@ -89,6 +89,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40e5d5', endColorstr='#6840e5',GradientType=1 );
 
     h5{
+      margin: 0;
       font-size: 26px;
       z-index: 30;
       position: relative;
@@ -125,7 +126,7 @@
   }
 
   .more-button{
-    @include transforms(translateZ(70px));
+    @include transforms(translateY(25px) translateZ(70px));
   }
 
 }
@@ -453,9 +454,15 @@
 }
 
 
-.experiments, .work{
+.experiments{
   .card{
-    min-height: 450px;
+    min-height: auto;
+  }
+}
+
+.work{
+  .card{
+    min-height: 375px;
   }
 }
 

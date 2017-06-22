@@ -1,0 +1,17 @@
+{
+  "name": "chetanpatel.github.io",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ChetanPate1 <=>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ChetanPate1/chetanpate1.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
