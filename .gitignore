@@ -1,0 +1,8 @@
+.idea
+css/.sass-cache
+
+# Dependency directories
+node_modules
+bower_components
+
+build
