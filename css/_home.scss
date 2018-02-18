@@ -501,6 +501,10 @@
     &.b-60{
       @include transforms(scaleX(0.60));
     }
+
+    &.b-50{
+      @include transforms(scaleX(0.50));
+    }
   }
 }
 
