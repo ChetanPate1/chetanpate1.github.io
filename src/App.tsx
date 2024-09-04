@@ -1,14 +1,12 @@
+// Core
 import { useState } from 'react';
-
+// Third party
+import { RouterProvider } from 'react-router-dom';
+// Local
+import router from "./routes";
 
 function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
