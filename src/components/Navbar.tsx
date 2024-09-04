@@ -28,7 +28,7 @@ const Navbar = () => {
                      className="relative text-center text-xl md:h-14 flex flex-row items-center justify-center mx-2 sm:mx-1 md:mx-0 sm:my-2 group text-primary-foreground text-neutral-800 dark:text-neutral-100"
                   >
                      {({ isActive }) => (
-                        <div className={`relative sm:h-14 sm:w-14 w-12 h-12 flex flex-row items-center justify-center ${isActive ? 'text-white' : ''}`}>
+                        <div className={`relative sm:h-14 sm:w-14 md:h-16 md:w-16 w-12 h-12 flex flex-row items-center justify-center ${isActive ? 'text-white' : ''}`}>
                            {item.icon}
 
                            <span className="sr-only">{item.name}</span>
