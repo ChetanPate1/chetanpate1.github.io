@@ -33,21 +33,28 @@ const Home = () => {
             <div className="col-span-2">
                <Card>
                   <CardContent className="py-16 px-10">
-                     <h1 className="font-semibold text-8xl text-primary">
-                        <ChevronRight size={96} className="inline" /> I am a <br />
-                        Web Developer;
-                     </h1>
+                     <h1 className="relative font-semibold text-8xl text-primary pl-20">
+                        <ChevronRight size={96} className="absolute -left-6" /> I am a <br />
+                        Web Developer;<br />
 
-                     <h5 className="text-primary font-semibold mt-6">Frontend Specialist</h5>
+                        <span className="text-primary text-lg font-semibold mt-6">Frontend Specialist</span>
+                     </h1>
                   </CardContent>
                </Card>
             </div>
 
             <Card className="relative bg-primary">
                <CardHeader>
-                  <h4 className="font-semibold">Experience</h4>
+                  <h4 className="font-semibold tracking-wide">Experience</h4>
                </CardHeader>
                <CardContent>
+                  <div className="absolute bottom-0 right-0 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-20 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-40 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-60 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-80 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+
+
                   <h4 className="font-semibold text-6xl text-black absolute bottom-10 right-8">+7 years</h4>
                </CardContent>
             </Card>
@@ -56,7 +63,7 @@ const Home = () => {
          <div className="grid grid-cols-3 gap-6">
             <Card>
                <CardHeader>
-                  <h4 className="font-semibold">Tools</h4>
+                  <h4 className="font-semibold tracking-wide">Tools</h4>
                </CardHeader>
                <CardContent>
                   <div className="grid grid-cols-4 gap-12 justify-items-center pt-10">
@@ -74,7 +81,7 @@ const Home = () => {
 
             <Card>
                <CardHeader>
-                  <h4 className="font-semibold">Skills</h4>
+                  <h4 className="font-semibold tracking-wide">Skills</h4>
                </CardHeader>
                <CardContent className="px-10">
                   {renderSkills()}
@@ -83,7 +90,7 @@ const Home = () => {
 
             <Card>
                <CardHeader>
-                  <h4 className="font-semibold">Sketches</h4>
+                  <h4 className="font-semibold tracking-wide">Sketches</h4>
                </CardHeader>
                <CardContent>
                   <Carousel

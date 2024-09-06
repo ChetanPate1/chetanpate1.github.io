@@ -7,7 +7,7 @@ import { DarkModeToggle } from "@/components/dark-mode-toggle";
 
 const Root = () => {
    return (
-      <div className="bg-neutral-200 dark:bg-neutral-950 pt-16 md:pl-24 h-full min-h-screen">
+      <div className="bg-neutral-200 dark:bg-neutral-950 pt-24 md:pl-24 h-full min-h-screen">
          <Logo size={45} className="fixed top-10 left-10" />
          <DarkModeToggle />
          <Navbar />
