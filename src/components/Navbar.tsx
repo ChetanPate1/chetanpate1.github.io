@@ -32,7 +32,7 @@ const Navbar = () => {
                            {item.icon}
 
                            <span className="sr-only">{item.name}</span>
-                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-transform duration-300 group-hover:scale-100 ${isActive ? 'scale-100' : 'scale-0'}`}></span>
+                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
                         </div>
                      )}
                   </NavLink>
@@ -48,7 +48,7 @@ const Navbar = () => {
    return (
       <TooltipProvider delayDuration={300}>
          <div className="flex flex-row md:flex-col justify-center fixed z-50 bottom-5 left-0 md:left-5 w-full md:w-20 h-16 md:h-[90%]">
-            <nav className="flex flex-row md:flex-col bg-white dark:bg-neutral-950 border-2 border-neutral-200 rounded-full dark:border-neutral-800">
+            <nav className="flex flex-row md:flex-col bg-neutral-100 dark:bg-neutral-950 border-2 border-white rounded-full dark:border-neutral-800">
                {renderLinks()}
             </nav>
          </div>
