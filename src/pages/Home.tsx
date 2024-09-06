@@ -17,6 +17,15 @@ const skills = [
    { name: 'Graphic Design', percentage: 85 }
 ];
 
+const sketches = [
+   { src: './sketches/small/root-study-2.jpg' },
+   { src: './sketches/small/root-study-1.jpg' },
+   { src: './sketches/small/fox-study.jpg' },
+   { src: './sketches/small/leopard.jpg' },
+   { src: './sketches/small/lion.jpg' },
+   { src: './sketches/small/bike.jpg' }
+];
+
 const Home = () => {
    const [api, setApi] = useState<CarouselApi>();
    const [current, setCurrent] = useState(0);
@@ -41,6 +50,12 @@ const Home = () => {
             <h5 className="min-w-44">{skill.name}</h5>
             <Progress value={skill.percentage} />
          </div>
+      ));
+   };
+
+   const renderSketches = () => {
+      return sketches.map((sketch, index) => (
+         <CarouselItem key={index} className="bg-cover bg-center" style={{ 'backgroundImage': `url(${sketch.src})` }} />
       ));
    };
 
@@ -78,7 +93,7 @@ const Home = () => {
             </Card>
          </div>
 
-         <div className="grid grid-cols-3 gap-6">
+         <div className="grid grid-cols-3 gap-6 pb-6">
             <Card>
                <CardHeader>
                   <h4 className="font-semibold tracking-wide">Tools</h4>
@@ -114,16 +129,8 @@ const Home = () => {
                   delay: 4000
                })]}
             >
-               <CarouselContent>
-                  <CarouselItem>
-                     <img src="./sketches/small/bike.jpg" alt="bike sketch" />
-                  </CarouselItem>
-                  <CarouselItem>
-                     <img src="./sketches/small/lion.jpg" alt="lion sketch" />
-                  </CarouselItem>
-                  <CarouselItem>
-                     <img src="./sketches/small/leopard.jpg" alt="leopard sketch" />
-                  </CarouselItem>
+               <CarouselContent className=" h-[360px]">
+                  {renderSketches()}
                </CarouselContent>
 
                <Progress className="absolute bottom-8 right-8 z-30 max-w-10 h-2" value={current / count * 100} />
