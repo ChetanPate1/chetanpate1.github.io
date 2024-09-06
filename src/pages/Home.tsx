@@ -21,6 +21,8 @@ const Home = () => {
    const [api, setApi] = useState<CarouselApi>();
    const [current, setCurrent] = useState(0);
    const [count, setCount] = useState(0);
+   const start = 2017;
+   const currentYear = new Date().getFullYear();
 
    useEffect(() => {
       if (!api) return;
@@ -69,7 +71,9 @@ const Home = () => {
                   <div className="absolute bottom-0 right-60 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-80 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
 
-                  <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">+7 years</h4>
+                  <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">
+                     +{currentYear - start} years
+                  </h4>
                </CardContent>
             </Card>
          </div>
