@@ -1,12 +1,12 @@
 // Core
+import { useEffect, useState } from 'react';
 // Third party
 import { ChevronRight } from 'lucide-react';
 import Autoplay from "embla-carousel-autoplay";
-
 // Local
 import Container from '@/components/Container';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { Progress } from '@/components/ui/progress';
 
 const skills = [
@@ -18,6 +18,21 @@ const skills = [
 ];
 
 const Home = () => {
+   const [api, setApi] = useState<CarouselApi>();
+   const [current, setCurrent] = useState(0);
+   const [count, setCount] = useState(0);
+
+   useEffect(() => {
+      if (!api) return;
+
+      setCount(api.scrollSnapList().length)
+      setCurrent(api.selectedScrollSnap() + 1)
+
+      api.on('select', () => {
+         setCurrent(api.selectedScrollSnap() + 1)
+      })
+   }, [api])
+
    const renderSkills = () => {
       return skills.map((skill, index) => (
          <div key={index} className="flex justify-between items-center mb-6">
@@ -25,7 +40,7 @@ const Home = () => {
             <Progress value={skill.percentage} />
          </div>
       ));
-   }
+   };
 
    return (
       <Container>
@@ -54,8 +69,7 @@ const Home = () => {
                   <div className="absolute bottom-0 right-60 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-80 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
 
-
-                  <h4 className="font-semibold text-6xl text-black absolute bottom-10 right-8">+7 years</h4>
+                  <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">+7 years</h4>
                </CardContent>
             </Card>
          </div>
@@ -88,25 +102,28 @@ const Home = () => {
                </CardContent>
             </Card>
 
-            <Card>
-               <CardHeader>
-                  <h4 className="font-semibold tracking-wide">Sketches</h4>
-               </CardHeader>
-               <CardContent>
-                  <Carousel
-                     opts={{ align: "start", loop: true }}
-                     plugins={[Autoplay({
-                        delay: 4000
-                     })]}
-                  >
-                     <CarouselContent>
-                        <CarouselItem>1</CarouselItem>
-                        <CarouselItem>2</CarouselItem>
-                        <CarouselItem>3</CarouselItem>
-                     </CarouselContent>
-                  </Carousel>
-               </CardContent>
-            </Card>
+            <Carousel
+               className="relative rounded-[50px] border-4 border-white overflow-hidden"
+               opts={{ align: "start", loop: true }}
+               setApi={setApi}
+               plugins={[Autoplay({
+                  delay: 4000
+               })]}
+            >
+               <CarouselContent>
+                  <CarouselItem>
+                     <img src="./sketches/small/bike.jpg" alt="bike sketch" />
+                  </CarouselItem>
+                  <CarouselItem>
+                     <img src="./sketches/small/lion.jpg" alt="lion sketch" />
+                  </CarouselItem>
+                  <CarouselItem>
+                     <img src="./sketches/small/leopard.jpg" alt="leopard sketch" />
+                  </CarouselItem>
+               </CarouselContent>
+
+               <Progress className="absolute bottom-8 right-8 z-30 max-w-10 h-2" value={current / count * 100} />
+            </Carousel>
          </div>
       </Container>
    );
