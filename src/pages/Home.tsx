@@ -2,14 +2,14 @@
 import { useEffect, useState } from 'react';
 // Third party
 import { ArrowRightIcon, ChevronRight } from 'lucide-react';
-import Autoplay from "embla-carousel-autoplay";
+import Autoplay from 'embla-carousel-autoplay';
+import { Link } from 'react-router-dom';
 // Local
 import Container from '@/components/Container';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const skills = [
    { name: 'Coding', percentage: 95 },
@@ -44,7 +44,7 @@ const Home = () => {
       api.on('select', () => {
          setCurrent(api.selectedScrollSnap() + 1)
       })
-   }, [api])
+   }, [api]);
 
    const renderSkills = () => {
       return skills.map((skill, index) => (

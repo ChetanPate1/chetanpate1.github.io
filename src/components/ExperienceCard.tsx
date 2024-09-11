@@ -7,33 +7,36 @@ type Props = {
    type: 'Full Time' | 'Part Time' | 'Contract';
    companyLogoName: string;
    className?: string;
+   active: boolean;
 };
 
 const ExperienceCard = (props: Props) => {
-   const { skills = [], time, type, companyLogoName } = props;
+   const { skills = [], time, type, companyLogoName, active } = props;
+   const colourClass = active ? 'bg-primary' : '';
+   const imageName = active ? 'white' : 'black';
+   const activeHeight = active ? 'min-h-56' : 'min-h-40';
 
    return (
-      <Card className="relative bg-primary">
-         <p className="absolute top-7 right-10 z-10 text-sm font-semibold">
-            <span className="relative bg-primary h-2 w-2 inline-block -left-1 -top-0.5 rounded-full"></span> {type}
+      <Card className={`relative ${colourClass} min-w-[550px]`}>
+         <p className="absolute top-6 right-12 z-10 text-xs font-semibold">
+            <span className="relative bg-primary h-2 w-2 w- inline-block -left-1 -top-0.6 rounded-full"></span> {type}
          </p>
 
          <CardContent className="relative px-10 pt-24">
-            <svg className="absolute -right-[5px] -top-[5px] z-0" width="193" height="148" viewBox="0 0 193 148" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M193 0H0V1.5H10.5C32.8675 1.5 51 19.6325 51 42C51 64.3675 69.1325 82.5 91.5 82.5H142C169.614 82.5 192 104.886 192 132.5V146.5C192 147.17 192 148 192 148H193V0Z" fill="#E5E5E5" />
-               <path d="M192 132C192 104.386 169.614 82 142 82H91.5C69.1325 82 51 63.8675 51 41.5C51 19.1325 32.8675 1 10.5 1H0V5H10.5C30.6584 5 47 21.3416 47 41.5C47 66.0767 66.9233 86 91.5 86H142C167.405 86 188 106.595 188 132V148H192V132Z" fill="white" />
+            <svg className="absolute -right-[4px] -top-[4px] z-0" width="194" height="119" viewBox="0 0 194 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M0.5 0C19.5538 0 35 15.4462 35 34.5C35 53.5538 50.4462 69 69.5 69H144C171.614 69 194 91.3858 194 119V0H0.5Z" fill="#E5E5E5" />
+               <path d="M194 119C194 112.032 192.575 105.398 190 99.3713C182.37 81.5142 164.647 69 144 69H69.5C50.4462 69 35 53.5538 35 34.5C35 21.2768 27.5608 9.7912 16.6393 4C11.8235 1.44641 6.33066 0 0.5 0V4C17.3447 4 31 17.6553 31 34.5C31 55.763 48.237 73 69.5 73H144C169.405 73 190 93.5949 190 119H194Z" fill="white" />
             </svg>
 
-
-            <div className="min-h-52">
-               <img className="absolute top-10 left-10 max-h-10" src={`./experience/${companyLogoName}-black.png`} />
+            <div className={activeHeight}>
+               <img className="absolute top-10 left-10" src={`./experience/${companyLogoName}-${imageName}.png`} />
 
                <div className="flex flex-row flex-wrap gap-2.5 mt-7">
-                  {skills.map((skill) => <Badge variant="secondary">{skill}</Badge>)}
+                  {skills.map((skill, i) => <Badge key={i} variant={active ? 'secondary' : 'default'}>{skill}</Badge>)}
                </div>
             </div>
 
-            <p className="absolute right-12 bottom-10 text-5xl font-semibold">
+            <p className="absolute right-12 bottom-10 font-semibold text-4xl">
                {time}
             </p>
          </CardContent>
