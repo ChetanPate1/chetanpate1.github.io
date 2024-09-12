@@ -48,7 +48,7 @@ const Home = () => {
 
    const renderSkills = () => {
       return skills.map((skill, index) => (
-         <div key={index} className="flex justify-between items-center mb-6">
+         <div key={index} className="flex justify-between items-center mb-3 lg:mb-6">
             <h5 className="min-w-44">{skill.name}</h5>
             <Progress value={skill.percentage} />
          </div>
@@ -63,12 +63,12 @@ const Home = () => {
 
    return (
       <Container>
-         <div className="grid grid-cols-3 gap-6 mb-6">
-            <div className="col-span-2">
+         <div className="grid grid-cols-3 gap-6 mb-6 px-6 lg:px-0">
+            <div className="col-span-full lg:col-span-2">
                <Card>
                   <CardContent className="py-16 px-10">
-                     <h1 className="relative font-semibold text-8xl text-primary pl-20">
-                        <ChevronRight size={96} className="absolute -left-6" /> I am a <br />
+                     <h1 className="relative font-semibold text-5xl md:text-6xl lg:text-8xl text-primary pl-10 lg:pl-20">
+                        <ChevronRight className="w-14 h-14 lg:w-24 lg:h-24 absolute -left-6" /> I am a <br />
                         Web Developer;<br />
 
                         <span className="text-primary text-lg font-semibold mt-6">
@@ -79,7 +79,7 @@ const Home = () => {
                </Card>
             </div>
 
-            <Card className="relative bg-primary">
+            <Card className="relative bg-primary col-span-full lg:col-auto min-h-52">
                <Link to="experience">
                   <Button size="icon" className="absolute right-5 top-5 z-10">
                      <ArrowRightIcon className="h-6 w-6" />
@@ -95,11 +95,10 @@ const Home = () => {
                   <h4 className="font-semibold tracking-wide">Experience</h4>
                </CardHeader>
                <CardContent>
-                  <div className="absolute bottom-0 right-0 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-20 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-40 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-60 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-80 w-20 h-64 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-0 w-20 h-1/2 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-20 w-20 h-2/3 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-40 w-20 h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-60 w-20 h-3/4  bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
 
                   <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">
                      +{currentYear - start} years
@@ -108,13 +107,13 @@ const Home = () => {
             </Card>
          </div>
 
-         <div className="grid grid-cols-3 gap-6 pb-6">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-0 pb-32 lg:pb-0">
             <Card>
                <CardHeader>
                   <h4 className="font-semibold tracking-wide">Tools</h4>
                </CardHeader>
                <CardContent>
-                  <div className="grid grid-cols-4 gap-12 justify-items-center pt-10">
+                  <div className="grid grid-cols-4 gap-6 lg:gap-12 justify-items-center lg:pt-10">
                      <img src="./assets/html.svg" alt="html icon" />
                      <img src="../assets/css.svg" alt="css icon" />
                      <img src="../assets/vue.svg" alt="vuejs icon" />
