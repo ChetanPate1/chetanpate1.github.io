@@ -109,11 +109,11 @@ const Experience = () => {
          </Container>
 
          <Container className="bg-white">
-            <div className="bg-white mx-auto max-w-5xl pb-20 px-10">
+            <div className="bg-white mx-auto max-w-5xl pb-32 px-10">
                <Tabs defaultValue="mug" value={active}>
                   <TabsContent value="mug">
                      <div className="flex justify-between items-center">
-                        <h1 className="text-6xl font-medium">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">
                            MyUtilityGenius LTD
                         </h1>
 
@@ -122,11 +122,11 @@ const Experience = () => {
                         </div>
                      </div>
 
-                     <p className="text-2xl font-medium text-primary mt-2 mb-16">
+                     <p className="text-xl md:text-2xl font-medium text-primary mt-2 mb-16">
                         Frontend Developer
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2">
                         What they do?
                      </h4>
 
@@ -134,7 +134,7 @@ const Experience = () => {
                         MyUtilityGenius is a software company created by energy professionals for energy professionals. They offer a number of software tools and solutions for domestic and commercial energy professionals and suppliers. They create software solutions can be off-the-shelf or tailored to the clients own specifications.
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2 mt-8">
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8">
                         What you did there?
                      </h4>
 
@@ -220,7 +220,7 @@ const Experience = () => {
 
                   <TabsContent value="lemonade">
                      <div className="flex justify-between items-center">
-                        <h1 className="text-6xl font-medium">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">
                            Lemonade Money LTD
                         </h1>
 
@@ -229,16 +229,16 @@ const Experience = () => {
                         </div>
                      </div>
 
-                     <p className="text-2xl font-medium text-primary mt-2 mb-16">
+                     <p className="text-xl md:text-2xl font-medium text-primary mt-2 mb-16">
                         Frontend Developer
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">What they do?</h4>
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2">What they do?</h4>
                      <p className="text-lg">
                         Lemonade Money provide financial advice such as protection for family, retirement or buying a home.
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2 mt-8">What you did there?</h4>
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8">What you did there?</h4>
                      <p className="text-xl mb-3">
                         I created the company website from the ground up. Previously was a wordpress website. They want to start creating products such as calculators and quote systems to generate more leads.
                      </p>
@@ -260,7 +260,7 @@ const Experience = () => {
 
                   <TabsContent value="healthwatch">
                      <div className="flex justify-between items-center">
-                        <h1 className="text-6xl font-medium">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium">
                            Healthwatch Surrey
                         </h1>
 
@@ -269,11 +269,11 @@ const Experience = () => {
                         </div>
                      </div>
 
-                     <p className="text-2xl font-medium text-primary mt-2 mb-16">
+                     <p className="text-xl md:text-2xl font-medium text-primary mt-2 mb-16">
                         Graphic Designer
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2">
                         What they do?
                      </h4>
 
@@ -281,7 +281,7 @@ const Experience = () => {
                         There are over 150 local Healthwatch across the country. They help people to voice there experiences with the heath service. They also provide trustworthy advice for the local health and social care services.
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2 mt-8">
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8">
                         What you did there?
                      </h4>
 
