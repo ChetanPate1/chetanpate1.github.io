@@ -46,7 +46,7 @@ const Experience = () => {
       <div>
          <Container className="overflow-hidden">
             <div className="relative mx-auto max-w-full pb-10">
-               <div className="z-10 absolute top-0 -left-36 h-full w-36 bg-gradient-to-r from-neutral-200 from-70%"></div>
+               <div className="z-10 absolute top-0 -left-36 h-full w-32 bg-gradient-to-r from-neutral-200 from-70%"></div>
 
                <div className="z-10 absolute top-0 -right-10 h-full w-32 bg-gradient-to-l from-neutral-200 from-40%"></div>
 
@@ -233,19 +233,29 @@ const Experience = () => {
                         Frontend Developer
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">
-                        What they do?
-                     </h4>
-
+                     <h4 className="text-2xl font-semibold mb-2">What they do?</h4>
                      <p className="text-lg">
-
+                        Lemonade Money provide financial advice such as protection for family, retirement or buying a home.
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">
-                        What you did there?
-                     </h4>
+                     <h4 className="text-2xl font-semibold mb-2 mt-8">What you did there?</h4>
+                     <p className="text-xl mb-3">
+                        I created the company website from the ground up. Previously was a wordpress website. They want to start creating products such as calculators and quote systems to generate more leads.
+                     </p>
 
-                     <p className="text-lg"></p>
+                     <p className="text-xl mb-3">
+                        A simple brand was provide which I then had to build UIs with similar styling. I also did wireframing and refined designs in photoshop before writing code.
+                     </p>
+
+                     <p className="font-semibold text-xl mt-10 mb-2">Cover Calculator</p>
+                     <p className="text-lg">
+                        The main was to make me people that they didn't have enough cover for there family if anything happened to them. The calculator was designed to be interactive so the user could see they need more cover. They then shown quotes from cover which they could select.
+                     </p>
+
+                     <p className="font-semibold text-xl mt-10 mb-2">1% Club</p>
+                     <p className="text-lg">
+                        This was a white label product which we branded to the clients specifications. The goal was to inform 1% earner in our clients company about there pensions.
+                     </p>
                   </TabsContent>
 
                   <TabsContent value="healthwatch">
@@ -267,13 +277,17 @@ const Experience = () => {
                         What they do?
                      </h4>
 
-                     <p className="text-xl">
-
+                     <p className="text-xl mb-3">
+                        There are over 150 local Healthwatch across the country. They help people to voice there experiences with the heath service. They also provide trustworthy advice for the local health and social care services.
                      </p>
 
-                     <h4 className="text-2xl font-semibold mb-2">
+                     <h4 className="text-2xl font-semibold mb-2 mt-8">
                         What you did there?
                      </h4>
+
+                     <p className="text-xl mb-3">
+                        My role was to provide poster, banners and postcards by using there existing brand of Healthwatch.
+                     </p>
                   </TabsContent>
                </Tabs>
             </div>
