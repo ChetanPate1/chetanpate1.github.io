@@ -17,9 +17,9 @@ const Experience = () => {
       if (active === 'mug') {
          return 'translate-x-0';
       } else if (active === 'lemonade') {
-         return '-translate-x-[550px]';
+         return '-translate-x-[472px] md:-translate-x-[582px]';
       } else if (active === 'healthwatch') {
-         return '-translate-x-[1100px]';
+         return '-translate-x-[942px] md:-translate-x-[1162px]';
       }
    };
 
@@ -45,12 +45,12 @@ const Experience = () => {
    return (
       <div>
          <Container className="overflow-hidden">
-            <div className="relative mx-auto max-w-full pb-10">
+            <div className="relative mx-auto max-w-full pb-10 px-4 md:px-0">
                <div className="z-10 absolute top-0 -left-36 h-full w-32 bg-gradient-to-r from-neutral-200 from-70%"></div>
 
                <div className="z-10 absolute top-0 -right-10 h-full w-32 bg-gradient-to-l from-neutral-200 from-40%"></div>
 
-               <div className={`flex flex-nowrap gap-8 mt-3 min-h-[440px] ${position()} transition-transform duration-500`}>
+               <div className={`flex flex-nowrap gap-8 mt-3 min-h-[450px] sm:min-h-[440px] ${position()} transition-transform duration-500`}>
                   <div>
                      <div className="px-8 max-w-32 text-center">
                         <p className="text-xs">October</p>
