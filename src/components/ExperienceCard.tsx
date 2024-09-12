@@ -8,16 +8,17 @@ type Props = {
    companyLogoName: string;
    className?: string;
    active: boolean;
+   onClick?: () => void;
 };
 
 const ExperienceCard = (props: Props) => {
-   const { skills = [], time, type, companyLogoName, active } = props;
+   const { skills = [], time, type, companyLogoName, active, onClick } = props;
    const colourClass = active ? 'bg-primary' : '';
    const imageName = active ? 'white' : 'black';
    const activeHeight = active ? 'min-h-56' : 'min-h-40';
 
    return (
-      <Card className={`relative ${colourClass} min-w-[550px]`}>
+      <Card className={`relative ${colourClass} min-w-[550px] transition-transform duration-500 hover:cursor-pointer hover:scale-105`} onClick={onClick}>
          <p className="absolute top-6 right-12 z-10 text-xs font-semibold">
             <span className="relative bg-primary h-2 w-2 w- inline-block -left-1 -top-0.6 rounded-full"></span> {type}
          </p>
@@ -28,7 +29,7 @@ const ExperienceCard = (props: Props) => {
                <path d="M194 119C194 112.032 192.575 105.398 190 99.3713C182.37 81.5142 164.647 69 144 69H69.5C50.4462 69 35 53.5538 35 34.5C35 21.2768 27.5608 9.7912 16.6393 4C11.8235 1.44641 6.33066 0 0.5 0V4C17.3447 4 31 17.6553 31 34.5C31 55.763 48.237 73 69.5 73H144C169.405 73 190 93.5949 190 119H194Z" fill="white" />
             </svg>
 
-            <div className={activeHeight}>
+            <div className={`${activeHeight} transition-all duration-500`}>
                <img className="absolute top-10 left-10" src={`./experience/${companyLogoName}-${imageName}.png`} />
 
                <div className="flex flex-row flex-wrap gap-2.5 mt-7">
