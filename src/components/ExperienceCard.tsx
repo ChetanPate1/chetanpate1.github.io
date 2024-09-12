@@ -18,7 +18,7 @@ const ExperienceCard = (props: Props) => {
    const activeHeight = active ? 'min-h-56' : 'min-h-40';
 
    return (
-      <Card className={`relative ${colourClass} min-w-[550px] transition-transform duration-500 hover:cursor-pointer hover:scale-105`} onClick={onClick}>
+      <Card className={`relative ${colourClass} min-w-[440px] md:min-w-[550px] transition-transform duration-500 hover:cursor-pointer hover:scale-105`} onClick={onClick}>
          <p className="absolute top-6 right-12 z-10 text-xs font-semibold">
             <span className="relative bg-primary h-2 w-2 w- inline-block -left-1 -top-0.6 rounded-full"></span> {type}
          </p>
