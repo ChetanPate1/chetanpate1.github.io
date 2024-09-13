@@ -6,7 +6,7 @@ type Props = {
 const Logo = (props: Props) => {
    const { size = 30 } = props;
 
-   return <img {...props} src="../../public/logo.svg" alt="Logo" height={size} width={size} />;
+   return <img {...props} src="./logo.svg" alt="Logo" height={size} width={size} />;
 };
 
 export default Logo;
