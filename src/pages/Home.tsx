@@ -63,8 +63,8 @@ const Home = () => {
 
    return (
       <Container>
-         <div className="grid grid-cols-3 gap-6 mb-6 px-6 lg:px-0">
-            <div className="col-span-full lg:col-span-2">
+         <div className="grid grid-cols-5 gap-6 mb-6 px-6 lg:px-0">
+            <div className="col-span-full lg:col-span-3">
                <Card>
                   <CardContent className="py-16 px-10">
                      <h1 className="relative font-semibold text-5xl md:text-6xl lg:text-8xl text-primary pl-10 lg:pl-20">
@@ -79,7 +79,7 @@ const Home = () => {
                </Card>
             </div>
 
-            <Card className="relative bg-primary col-span-full lg:col-auto min-h-52">
+            <Card className="relative bg-primary col-span-full lg:col-span-2 min-h-52">
                <Link to="experience">
                   <Button size="icon" className="absolute right-5 top-5 z-10">
                      <ArrowRightIcon className="h-6 w-6" />
@@ -98,7 +98,7 @@ const Home = () => {
                   <div className="absolute bottom-0 right-0 w-20 h-1/2 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-20 w-20 h-2/3 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-40 w-20 h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-60 w-20 h-3/4  bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-60 w-20 h-3/4  bg-gradient-to-l from-5% from-red-700  opacity-0 lg:opacity-20 rounded-full"></div>
 
                   <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">
                      +{currentYear - start} years
@@ -147,6 +147,7 @@ const Home = () => {
                   {renderSketches()}
                </CarouselContent>
 
+               <h4 className="font-semibold tracking-wide absolute top-8 left-8 drop-shadow-[0_0_3px_rgba(255,255,255,1)]">Sketches</h4>
                <Progress className="absolute bottom-8 right-8 z-30 max-w-10 h-2" value={current / count * 100} />
             </Carousel>
          </div>
