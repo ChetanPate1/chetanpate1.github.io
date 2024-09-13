@@ -48,14 +48,14 @@ const Sketches = () => {
             data-pswp-height={sketch.height}
             rel="noreferrer"
          >
-            <img className="rounded-[50px] border-4 border-white overflow-hidden" src={sketch.thumbnail} alt={sketch.thumbnail} />
+            <img className="rounded-[50px] border-4 w-full border-white overflow-hidden" src={sketch.thumbnail} alt={sketch.thumbnail} />
          </a>
       ));
    };
 
    return (
       <Container>
-         <div className="mx-auto max-w-5xl pb-10 px-10">
+         <div className="mx-auto max-w-6xl pb-10 px-10">
             <div className="pswp-gallery grid grid-cols-2 gap-6" id="sketches">
                {renderSketches()}
             </div>

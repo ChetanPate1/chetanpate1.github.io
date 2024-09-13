@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const Skills = () => {
    return (
       <Container>
-         <div className="mx-auto max-w-4xl pb-10 px-10">
+         <div className="mx-auto max-w-5xl pb-10 px-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <Card>
                   <CardContent className="py-8 px-8">
