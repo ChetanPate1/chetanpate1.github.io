@@ -1,14 +1,48 @@
 // Core
 import { useState } from 'react';
 // Third party
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 // Local
 import Container from '@/components/Container';
 import ExperienceCard from '@/components/ExperienceCard';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
+type Images = { src: string, alt: string }[];
+
+const works = {
+   healthwatch: [
+      { src: './experience/healthwatch/1-A4-young-girl-2.jpg', alt: 'Healthwatch Surrey Poster' },
+      { src: './experience/healthwatch/3-A3-01.jpg', alt: 'Healthwatch Surrey Poster' },
+      { src: './experience/healthwatch/Postcard-front-1.jpg', alt: 'Healthwatch Surrey Post Card 1' },
+      { src: './experience/healthwatch/Postcard-back-1.jpg', alt: 'Healthwatch Surrey Post Card 2' },
+      { src: './experience/healthwatch/Postcard-front-2.jpg', alt: 'Healthwatch Surrey Post Card 3' },
+      { src: './experience/healthwatch/Postcard-back-2.jpg', alt: 'Healthwatch Surrey Post Card 4' },
+      { src: './experience/healthwatch/web-banner.jpg', alt: 'Healthwatch Surrey Web Banner 1' },
+      { src: './experience/healthwatch/web-banner-1.jpg', alt: 'Healthwatch Surrey Web Banner 2' },
+      { src: './experience/healthwatch/web-banner-2.jpg', alt: 'Healthwatch Surrey Web Banner 3' },
+      { src: './experience/healthwatch/web-banner-3.jpg', alt: 'Healthwatch Surrey Web Banner 4' },
+      { src: './experience/healthwatch/email-footer-1.jpg', alt: 'Healthwatch Surrey Email Footer 1' },
+      { src: './experience/healthwatch/email-footer-2.jpg', alt: 'Healthwatch Surrey Email Footer 2' }
+   ],
+   lemonade: {
+      cover: [
+         { src: './experience/lemonade/protection-graph.jpg', alt: 'Protection graph' },
+         { src: './experience/lemonade/fhc.jpg', alt: 'Financial health calculator' },
+      ],
+      onePercentClub: [
+         { src: './experience/lemonade/lemonade-1percent.jpg', alt: '1% club Lemonade Money' },
+         { src: './experience/lemonade/aberdeen-1percent.jpg', alt: '1% club Aberdeen' },
+         { src: './experience/lemonade/fidelity-1percent.jpg', alt: '1% club Fidelity' },
+         { src: './experience/lemonade/fidelity-calc.jpg', alt: '1% club Fidelity Calculation 1' },
+         { src: './experience/lemonade/fidelity-calc-1.jpg', alt: '1% club Fidelity Calculation 2' }
+
+      ]
+   },
+   mug: []
+};
 
 const Experience = () => {
    const [active, setActive] = useState('mug');
@@ -40,6 +74,14 @@ const Experience = () => {
       const prev = order[prevIndex];
 
       setActive(prev);
+   };
+
+   const renderImages = (images: Images) => {
+      return images.map((work, index) => (
+         <Card key={index} className="overflow-hidden border-neutral-100 rounded-3xl mb-4">
+            <img src={work.src} alt={work.alt} />
+         </Card>
+      ));
    };
 
    return (
@@ -252,10 +294,18 @@ const Experience = () => {
                         The main was to make me people that they didn't have enough cover for there family if anything happened to them. The calculator was designed to be interactive so the user could see they need more cover. They then shown quotes from cover which they could select.
                      </p>
 
+                     <div className="mt-10 flex flex-row gap-4">
+                        {renderImages(works.lemonade.cover)}
+                     </div>
+
                      <p className="font-semibold text-xl mt-10 mb-2">1% Club</p>
                      <p className="text-lg">
                         This was a white label product which we branded to the clients specifications. The goal was to inform 1% earner in our clients company about there pensions.
                      </p>
+
+                     <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {renderImages(works.lemonade.onePercentClub)}
+                     </div>
                   </TabsContent>
 
                   <TabsContent value="healthwatch">
@@ -288,6 +338,14 @@ const Experience = () => {
                      <p className="text-xl mb-3">
                         My role was to provide poster, banners and postcards by using there existing brand of Healthwatch.
                      </p>
+
+                     <h4 className="text-xl md:text-2xl font-semibold mb-5 mt-8">
+                        Some works
+                     </h4>
+
+                     <div className="columns-2 gap-4">
+                        {renderImages(works.healthwatch)}
+                     </div>
                   </TabsContent>
                </Tabs>
             </div>

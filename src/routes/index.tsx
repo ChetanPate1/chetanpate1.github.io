@@ -4,7 +4,7 @@ import Root from "./Root";
 import Home from "@/pages/Home";
 import Sketches from "@/pages/Sketches";
 import Skills from "@/pages/Skills";
-import Experience from "@/pages/Experience/Experience";
+import Experience from "@/pages/Experience";
 import ErrorPage from "@/pages/ErrorPage";
 
 const router = createHashRouter([
