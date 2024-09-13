@@ -98,9 +98,9 @@ const Home = () => {
                   <div className="absolute bottom-0 right-0 w-20 h-1/2 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-20 w-20 h-2/3 lg:h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
                   <div className="absolute bottom-0 right-40 w-20 h-3/4 bg-gradient-to-l from-5% from-red-700 opacity-20 rounded-full"></div>
-                  <div className="absolute bottom-0 right-60 w-20 h-3/4  bg-gradient-to-l from-5% from-red-700  opacity-0 lg:opacity-20 rounded-full"></div>
+                  <div className="absolute bottom-0 right-60 w-20 h-3/4 bg-gradient-to-l from-5% from-red-700  opacity-0 lg:opacity-20 rounded-full"></div>
 
-                  <h4 className="font-semibold text-5xl text-black absolute bottom-10 right-10">
+                  <h4 className="font-semibold text-5xl text-black dark:text-white absolute bottom-10 right-10">
                      +{currentYear - start} years
                   </h4>
                </CardContent>
@@ -114,14 +114,14 @@ const Home = () => {
                </CardHeader>
                <CardContent>
                   <div className="grid grid-cols-4 gap-6 lg:gap-12 justify-items-center lg:pt-10">
-                     <img src="./assets/html.svg" alt="html icon" />
-                     <img src="../assets/css.svg" alt="css icon" />
-                     <img src="../assets/vue.svg" alt="vuejs icon" />
-                     <img src="../assets/react.svg" alt="reactjs icon" />
-                     <img src="../assets/figma.svg" alt="figma icon" />
-                     <img src="../assets/ts.svg" alt="typescript icon" />
-                     <img src="../assets/node.svg" alt="node icon" />
-                     <img src="./assets/sass.svg" alt="sass icon" />
+                     <img className="dark:invert" src="./assets/html.svg" alt="html icon" />
+                     <img className="dark:invert" src="../assets/css.svg" alt="css icon" />
+                     <img className="dark:invert" src="../assets/vue.svg" alt="vuejs icon" />
+                     <img className="dark:invert" src="../assets/react.svg" alt="reactjs icon" />
+                     <img className="dark:invert" src="../assets/figma.svg" alt="figma icon" />
+                     <img className="dark:invert" src="../assets/ts.svg" alt="typescript icon" />
+                     <img className="dark:invert" src="../assets/node.svg" alt="node icon" />
+                     <img className="dark:invert" src="./assets/sass.svg" alt="sass icon" />
                   </div>
                </CardContent>
             </Card>
