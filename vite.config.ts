@@ -9,14 +9,14 @@ export default defineConfig(({ command }) => {
       alias: {
         '@': path.resolve(__dirname, './src')
       }
-    }
+    },
+    plugins: [react()]
   };
 
   if (command === 'serve') {
     return {
       // dev specific config
       ...defaultConfig,
-      plugins: [react()],
       server: {
         port: 8080
       }
