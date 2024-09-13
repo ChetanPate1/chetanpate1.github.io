@@ -93,7 +93,7 @@ const Experience = () => {
 
                <div className={`flex flex-nowrap gap-8 mt-3 min-h-[450px] sm:min-h-[440px] ${position()} transition-transform duration-500`}>
                   <div>
-                     <div className="px-8 max-w-32 text-center">
+                     <div className="px-8 max-w-32 text-center dark:text-white">
                         <p className="text-xs">October</p>
                         <p className="text-xl font-semibold mb-4">2017</p>
                      </div>
@@ -108,7 +108,7 @@ const Experience = () => {
                   </div>
 
                   <div>
-                     <div className="px-8 max-w-32 text-center">
+                     <div className="px-8 max-w-32 text-center dark:text-white">
                         <p className="text-xs">Decemeber</p>
                         <p className="text-xl font-semibold mb-4">2016</p>
                      </div>
@@ -123,7 +123,7 @@ const Experience = () => {
                   </div>
 
                   <div>
-                     <div className="px-8 max-w-32 text-center">
+                     <div className="px-8 max-w-32 text-center dark:text-white">
                         <p className="text-xs">August</p>
                         <p className="text-xl font-semibold mb-4">2015</p>
                      </div>
