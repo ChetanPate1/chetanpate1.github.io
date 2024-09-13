@@ -22,7 +22,7 @@ const zoomSVGString = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height
 
 const Sketches = () => {
    useEffect(() => {
-      let lightbox = new PhotoSwipeLightbox({
+      const lightbox = new PhotoSwipeLightbox({
          gallery: '#sketches',
          arrowPrevSVG: leftArrowSVGString,
          arrowNextSVG: rightArrowSVGString,
@@ -35,7 +35,6 @@ const Sketches = () => {
 
       return () => {
          lightbox.destroy();
-         lightbox = null;
       };
    }, []);
 

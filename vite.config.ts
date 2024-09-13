@@ -3,7 +3,7 @@ import path from 'path';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
+export default defineConfig(({ command }) => {
   const defaultConfig = {
     resolve: {
       alias: {
