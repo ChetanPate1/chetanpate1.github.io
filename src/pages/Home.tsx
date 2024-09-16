@@ -119,6 +119,7 @@ const Home = () => {
                </CardHeader>
                <CardContent>
                   <div className="grid grid-cols-4 gap-6 lg:gap-12 justify-items-center lg:pt-10">
+<<<<<<< HEAD
                      <img className="dark:invert" src="./assets/html.svg" alt="html icon" />
                      <img className="dark:invert" src="../assets/css.svg" alt="css icon" />
                      <img className="dark:invert" src="../assets/vue.svg" alt="vuejs icon" />
@@ -127,6 +128,16 @@ const Home = () => {
                      <img className="dark:invert" src="../assets/ts.svg" alt="typescript icon" />
                      <img className="dark:invert" src="../assets/node.svg" alt="node icon" />
                      <img className="dark:invert" src="./assets/sass.svg" alt="sass icon" />
+=======
+                     <img className="dark:invert" src="./tools-icons/html.svg" alt="html icon" />
+                     <img className="dark:invert" src="../tools-icons/css.svg" alt="css icon" />
+                     <img className="dark:invert" src="../tools-icons/vue.svg" alt="vuejs icon" />
+                     <img className="dark:invert" src="../tools-icons/react.svg" alt="reactjs icon" />
+                     <img className="dark:invert" src="../tools-icons/figma.svg" alt="figma icon" />
+                     <img className="dark:invert" src="../tools-icons/ts.svg" alt="typescript icon" />
+                     <img className="dark:invert" src="../tools-icons/node.svg" alt="node icon" />
+                     <img className="dark:invert" src="./tools-icons/sass.svg" alt="sass icon" />
+>>>>>>> development
                   </div>
                </CardContent>
             </Card>
