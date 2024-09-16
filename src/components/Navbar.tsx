@@ -32,7 +32,7 @@ const Navbar = () => {
                            {item.icon}
 
                            <span className="sr-only">{item.name}</span>
-                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
+                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200 group-hover:opacity-100 ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
                         </div>
                      )}
                   </NavLink>
