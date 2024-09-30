@@ -6,6 +6,7 @@ import Sketches from "@/pages/Sketches";
 import Skills from "@/pages/Skills";
 import Experience from "@/pages/Experience";
 import ErrorPage from "@/pages/ErrorPage";
+import Tutorial from "@/pages/experiments/Tutorial";
 
 const router = createHashRouter([
   {
@@ -24,6 +25,10 @@ const router = createHashRouter([
       {
         path: "/experience",
         element: <Experience />
+      },
+      {
+        path: "/experience/tutorial",
+        element: <Tutorial />
       },
       {
         path: "/sketches",

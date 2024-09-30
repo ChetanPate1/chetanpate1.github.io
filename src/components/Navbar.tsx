@@ -1,6 +1,6 @@
 // Third party
 import { NavLink } from "react-router-dom";
-import { Brush, History, Home, PencilRuler } from 'lucide-react';
+import { Brush, History, Home, PencilRuler, FlaskConical } from 'lucide-react';
 // Local
 import {
    Tooltip,
@@ -13,6 +13,7 @@ const navigation = [
    { name: 'Home', to: '/', icon: <Home className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Skills', to: '/skills', icon: <PencilRuler className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Experience', to: '/experience', icon: <History className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
+   { name: 'Experiments', to: '/experiments', icon: <FlaskConical className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Sketches', to: '/sketches', icon: <Brush className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> }
 ];
 
@@ -32,7 +33,7 @@ const Navbar = () => {
                            {item.icon}
 
                            <span className="sr-only">{item.name}</span>
-                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200 group-hover:opacity-100 ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
+                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200 group-hover:opacity-100 dark:group-hover:bg-primary ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
                         </div>
                      )}
                   </NavLink>
