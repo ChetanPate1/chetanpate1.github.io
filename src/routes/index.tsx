@@ -5,8 +5,10 @@ import Home from "@/pages/Home";
 import Sketches from "@/pages/Sketches";
 import Skills from "@/pages/Skills";
 import Experience from "@/pages/Experience";
-import ErrorPage from "@/pages/ErrorPage";
+import Experiments from "@/pages/Experiments";
 import Tutorial from "@/pages/experiments/Tutorial";
+
+import ErrorPage from "@/pages/ErrorPage";
 
 const router = createHashRouter([
   {
@@ -27,7 +29,11 @@ const router = createHashRouter([
         element: <Experience />
       },
       {
-        path: "/experience/tutorial",
+        path: "/experiments",
+        element: <Experiments />
+      },
+      {
+        path: "/experiments/tutorial",
         element: <Tutorial />
       },
       {

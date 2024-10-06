@@ -60,7 +60,7 @@ const Sketches = () => {
                {renderSketches()}
             </div>
          </div>
-      </Container >
+      </Container>
    );
 };
 
