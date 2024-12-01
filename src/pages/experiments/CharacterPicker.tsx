@@ -67,7 +67,7 @@ const CharacterPicker = () => {
             </p>
 
             <p className="dark:text-neutral-100 mb-3">
-               Game UI looked interesting. I wanted to see if I could build it for the web.
+               Game UI looked interesting hover effect. I wanted to see if I could build it for the web.
             </p>
 
             <div className="flex gap-2 sm:gap-6 justify-between sm:justify-normal my-16 -mx-3">
