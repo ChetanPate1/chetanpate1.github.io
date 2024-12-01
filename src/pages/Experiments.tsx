@@ -12,7 +12,7 @@ const experiments = [
    {
       to: '/experiments/character-picker',
       name: 'Character Picker',
-      image: ''
+      image: './experiments/character-picker.png'
    },
    {
       to: '/experiments/parallax-cards',
