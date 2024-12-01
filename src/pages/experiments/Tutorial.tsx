@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 import { ChartNoAxesColumn, Cuboid, Download } from 'lucide-react';
 // Local
 import Container from '@/components/Container';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -31,16 +31,12 @@ interface Element {
 };
 
 const tutorialMap = [
-   {
-      id: 0, title: 'Refill Block', text: 'Tap to start refilling your salt brick.'
-   },
+   { id: 0, title: 'Refill Block', text: 'Tap to start refilling your salt blocks.' },
    {
       id: 1, title: 'Block Inventory',
-      text: 'This is the number of block you have left. Tap to manage stock.'
+      text: 'This is the number of blocks you have left. Tap to manage stock.'
    },
-   {
-      id: 2, title: 'Statistics', text: 'Tap to view your block usage stats.'
-   }
+   { id: 2, title: 'Statistics', text: 'Tap to view your block usage stats.' }
 ];
 
 const Tutorial = () => {
@@ -64,10 +60,16 @@ const Tutorial = () => {
    useEffect(() => {
       initialiseTutorials();
 
-      window.addEventListener('resize', () => setShowTutorial(false));
+      window.addEventListener('resize', () => {
+         setShowTutorial(false);
+         initialiseTutorials();
+      });
 
       return () => {
-         window.removeEventListener('resize', () => setShowTutorial(false));
+         window.removeEventListener('resize', () => {
+            setShowTutorial(false);
+            initialiseTutorials();
+         });
       };
    }, []);
 
@@ -127,7 +129,7 @@ const Tutorial = () => {
                </div>
 
                <Card className="fixed bottom-8 right-8 z-[1600] w-full max-w-80 rounded-2xl p-3">
-                  <div className="flex flex-row justify-between items-center border-b mb-3">
+                  <div className="flex flex-row justify-between items-center border-b dark:border-neutral-800 mb-3">
                      <Button className="relative -top-1 -left-1" variant="link" onClick={onSkip}>Skip</Button>
                      <p className="relative -top-1 text-xs dark:text-neutral-100">{current} of {tutorialMap.length}</p>
                   </div>
@@ -137,7 +139,6 @@ const Tutorial = () => {
                         {renderTutorialCarousel()}
                      </CarouselContent>
                   </Carousel>
-
 
                   <div className="flex flex-row items-center mt-4">
                      <Progress className="h-1 mr-7" value={(current / tutorialMap.length) * 100} />
@@ -180,23 +181,29 @@ const Tutorial = () => {
                Below is a UI from a personal project for a salt block refill system (for a Water Softener).
             </p>
 
-            <div className="mt-16">
-               <div className="flex flex-row max-w-60 justify-around dark:border-neutral-800 bg-white dark:bg-transparent h-16 rounded-3xl mb-2" ref={buttons}>
-                  <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
-                     <Download className="h-5 w-5" />
+            <Card className="mt-10 max-w-md">
+               <CardContent className="relative min-h-40">
+                  <div className="flex justify-center mt-10">
+                     <div className="flex flex-row max-w-60 justify-around border-2 dark:border-neutral-800 bg-white dark:bg-transparent h-16 rounded-3xl mb-2" ref={buttons}>
+                        <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
+                           <Download className="h-5 w-5" />
+                        </div>
+
+                        <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
+                           5<Cuboid className="h-5 w-5 ml-2" />
+                        </div>
+
+                        <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
+                           <ChartNoAxesColumn className="h-5 w-5" />
+                        </div>
+                     </div>
                   </div>
 
-                  <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
-                     5<Cuboid className="h-5 w-5 ml-2" />
-                  </div>
-
-                  <div className="relative text-center text-xl flex flex-row items-center justify-center text-primary-foreground text-neutral-800 dark:text-neutral-100 h-16 w-16">
-                     <ChartNoAxesColumn className="h-5 w-5" />
-                  </div>
-               </div>
-
-               <Button onClick={onStart}>Demo</Button>
-            </div>
+                  <Button className="absolute bottom-5 right-5 rounded-full" onClick={onStart}>
+                     Demo
+                  </Button>
+               </CardContent>
+            </Card>
          </div>
          {renderTutorial()}
       </Container>
