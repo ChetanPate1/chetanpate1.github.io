@@ -5,15 +5,12 @@ type Event = MouseEvent | TouchEvent;
 export const useParallaxCard = (tiltMax: number = 50) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const onStart = useCallback((e: Event) => {
-    e.preventDefault();
+  const onStart = useCallback((e: TiltEvent) => {
+    // Intentionally left empty
   }, []);
 
   const onMove = useCallback(
-    (e: Event) => {
-      // Prevent default to stop unwanted behaviors like scrolling
-      e.preventDefault();
-
+    (e: TiltEvent) => {
       // Support both mouse and touch events
       const pageX = 'pageX' in e ? e.pageX : (e as TouchEvent).touches?.[0]?.pageX;
       const pageY = 'pageY' in e ? e.pageY : (e as TouchEvent).touches?.[0]?.pageY;
@@ -24,9 +21,13 @@ export const useParallaxCard = (tiltMax: number = 50) => {
       // Get the element's bounding rectangle for precise positioning
       const rect = ref.current.getBoundingClientRect();
 
-      // Calculate precise relative positions
-      const relativeX = pageX - rect.left;
-      const relativeY = pageY - rect.top;
+      // Account for scroll position
+      const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Calculate precise relative positions considering scroll
+      const relativeX = pageX - rect.left + scrollX;
+      const relativeY = pageY - rect.top + scrollY;
 
       // Calculate center points
       const centerX = rect.width / 2;
@@ -40,9 +41,9 @@ export const useParallaxCard = (tiltMax: number = 50) => {
       ref.current.style.transition = 'transform 0.1s ease-out';
       ref.current.style.transformStyle = 'preserve-3d';
       ref.current.style.transform = `
-        rotateX(${rotationX.toFixed(2)}deg)
-        rotateY(${rotationY.toFixed(2)}deg)
-      `;
+      rotateX(${rotationX.toFixed(2)}deg)
+      rotateY(${rotationY.toFixed(2)}deg)
+    `;
     },
     [tiltMax]
   );
