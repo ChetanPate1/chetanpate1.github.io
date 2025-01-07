@@ -1,9 +1,3 @@
-// highlight part on the ui and show a tooltip
-// use box-shadow to highlight controls with translucent color with high spread
-
-// other ideas:
-// create a case study for a existing product and show how you would improve it (maybe apple product)
-
 // Core
 import { useEffect, useRef, useState } from 'react';
 // Third Party
@@ -42,7 +36,7 @@ const tutorialMap = [
 const Tutorial = () => {
    const [api, setApi] = useState<CarouselApi>();
    const [current, setCurrent] = useState(0);
-   const buttons = useRef(null);
+   const buttons = useRef<HTMLDivElement>(null);
    const [elementPositions, setElementPositions] = useState<Element[]>([]);
    const [activeElement, setActiveElement] = useState<Element>({ id: 0, x: 0, y: 0, height: 0, width: 0 });
    const [showTutorial, setShowTutorial] = useState(false);
@@ -74,7 +68,10 @@ const Tutorial = () => {
    }, []);
 
    const initialiseTutorials = () => {
-      const buttonElements: HTMLCollection = buttons.current?.children;
+      if (!buttons.current) return;
+
+      const buttonElements: HTMLCollection = buttons.current.children;
+
       if (buttonElements.length > 0) {
          const positions: Element[] = [...buttonElements].map((button, i: number) => {
             const { x, y, height, width } = button.getBoundingClientRect();
