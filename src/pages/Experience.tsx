@@ -266,7 +266,7 @@ const Experience = () => {
                         </h1>
 
                         <div>
-                           <Badge>Contact</Badge>
+                           <Badge>Contract</Badge>
                         </div>
                      </div>
 

@@ -1,11 +1,15 @@
 import { createHashRouter } from "react-router-dom";
 
 import Root from "./Root";
+import ErrorPage from "@/pages/ErrorPage";
 import Home from "@/pages/Home";
 import Sketches from "@/pages/Sketches";
 import Skills from "@/pages/Skills";
 import Experience from "@/pages/Experience";
-import ErrorPage from "@/pages/ErrorPage";
+import Experiments from "@/pages/Experiments";
+import Tutorial from "@/pages/experiments/Tutorial";
+import CharacterPicker from "@/pages/experiments/CharacterPicker";
+import ParallaxCards from '@/pages/experiments/ParallaxCards';
 
 const router = createHashRouter([
   {
@@ -26,6 +30,22 @@ const router = createHashRouter([
         element: <Experience />
       },
       {
+        path: "/experiments",
+        element: <Experiments />
+      },
+      {
+        path: "/experiments/tutorial",
+        element: <Tutorial />
+      },
+      {
+        path: "/experiments/character-picker",
+        element: <CharacterPicker />
+      },
+      {
+        path: "/experiments/parallax-cards",
+        element: <ParallaxCards />
+      },
+      {
         path: "/sketches",
         element: <Sketches />
       },
@@ -33,8 +53,8 @@ const router = createHashRouter([
         path: "*",
         element: <Home />
       }
-    ],
-  },
+    ]
+  }
 ]);
 
 export default router;
