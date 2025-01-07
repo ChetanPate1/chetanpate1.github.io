@@ -32,7 +32,7 @@ const Skills = () => {
                      </div>
 
                      <p>
-                        Javascript is my favourite language to code with. I can use it to frontend and backend along with a typescript complier.
+                        Javascript is my favourite language to code with. I can use it to frontend and backend along with a typescript complier to catch any error before runtime.
                      </p>
                   </CardContent>
                </Card>

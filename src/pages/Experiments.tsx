@@ -16,8 +16,8 @@ const experiments = [
    },
    {
       to: '/experiments/parallax-cards',
-      name: 'parallax-cards',
-      image: ''
+      name: 'Parallax Cards',
+      image: './experiments/parallax-card.gif'
    }
 ]
 
@@ -27,10 +27,11 @@ const Experiments = () => {
          <NavLink
             key={index}
             to={item.to}>
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden relative">
+               <div className="absolute z-10 left-0 right-0 w-full h-full bg-gradient-to-b from-black/35"></div>
+               <p className=" absolute z-20 left-8 top-8 font-bold text-white">{item.name}</p>
                <img className="w-full" src={item.image} />
             </Card>
-            {item.name}
          </NavLink>
       ));
    };

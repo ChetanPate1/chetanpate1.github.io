@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Container from "@/components/Container";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Card } from "@/components/ui/card";
 import { useParallaxCard } from "./parallax-card.hook";
 
 const ParallaxCards = () => {
@@ -54,8 +53,6 @@ const ParallaxCards = () => {
                   <img className="absolute z-50 left-0 top-0 origin-center" style={{ transform: 'translateZ(120px)' }} src="./experiments/parallax-cards/interstellar-1.png" />
                </div>
             </div>
-
-
 
             <div className="relative transition-transform will-change-transform"
                ref={parallaxCard2.ref}
