@@ -5,7 +5,7 @@ type TiltEvent = MouseEvent | TouchEvent;
 export const useParallaxCard = (tiltMax: number = 50) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const onStart = useCallback((e: TiltEvent) => {
+  const onStart = useCallback(() => {
     // Intentionally left empty
   }, []);
 
