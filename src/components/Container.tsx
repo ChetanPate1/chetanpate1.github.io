@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Container = ({ children, className }: Props) => (
-   <div className={cn('pt-24 md:pl-36 md:pr-7', className)}>
+   <div className={cn('pt-24 md:pl-36 md:pr-7 pb-32 lg:pb-5', className)}>
       {children}
    </div>
 );

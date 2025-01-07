@@ -112,7 +112,7 @@ const Home = () => {
             </Card>
          </div>
 
-         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-0 pb-32 lg:pb-0">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-0">
             <Card>
                <CardHeader>
                   <h4 className="font-semibold tracking-wide">Tools</h4>
