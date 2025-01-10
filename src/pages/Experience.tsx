@@ -176,11 +176,11 @@ const Experience = () => {
                      </p>
 
                      <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8 dark:text-white">
-                        What you did there?
+                        Your role
                      </h4>
 
                      <p className="text-lg dark:text-white">
-                        I managed and maintained existing projects and create new projects. Main achievements marketing campaigns, portals for internal and external use, new quoting system for domestic use.
+                        I manage and maintain existing projects and create new projects. Main achievements marketing campaigns, portals for internal and external use, new quoting system for domestic use.
                      </p>
 
                      <h5 className="text-xl font-semibold mb-2 mt-8 dark:text-white">
@@ -279,7 +279,7 @@ const Experience = () => {
                         Lemonade Money provide financial advice such as protection for family, retirement or buying a home.
                      </p>
 
-                     <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8 dark:text-white">What you did there?</h4>
+                     <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8 dark:text-white">Your role</h4>
                      <p className="text-xl mb-3 dark:text-white">
                         I created the company website from the ground up. Previously was a wordpress website. They want to start creating products such as calculators and quote systems to generate more leads.
                      </p>
@@ -331,7 +331,7 @@ const Experience = () => {
                      </p>
 
                      <h4 className="text-xl md:text-2xl font-semibold mb-2 mt-8 dark:text-white">
-                        What you did there?
+                        Your role
                      </h4>
 
                      <p className="text-xl mb-3 dark:text-white">
