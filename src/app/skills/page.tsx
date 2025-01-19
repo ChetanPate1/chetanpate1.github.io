@@ -1,5 +1,5 @@
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/ui/container';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Page = () => {

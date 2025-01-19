@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -34,7 +35,7 @@ const ExperienceCard = (props: Props) => {
             </svg>
 
             <div className={`${activeHeight} transition-all duration-500`}>
-               <img className={`absolute top-10 left-10 ${active ? 'invert' : ''} dark:invert`} src={`./experience/${companyLogoName}-black.png`} />
+               <Image height={80} width={150} className={`absolute top-10 left-10 ${active ? 'invert' : ''} dark:invert`} src={`./experience/${companyLogoName}-black.png`} alt="logo" />
 
                <div className="flex flex-row flex-wrap gap-2.5 mt-7">
                   {skills.map((skill, i) => <Badge className="dark:border-transparent" key={i} variant={active ? 'secondary' : 'default'}>{skill}</Badge>)}

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import Logo from "@/components/Logo";
+import { Logo } from "@/components/ui/logo";
 import { DarkModeToggle } from "@/components/dark-mode-toggle";
-import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components/ui/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {

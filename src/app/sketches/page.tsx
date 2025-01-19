@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/ui/container';
 
 const sketchList = [
    { src: './sketches/bike.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/bike.jpg', alt: 'cafe racer' },
