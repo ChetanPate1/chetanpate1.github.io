@@ -1,19 +1,21 @@
 'use client';
 // Core
 import { useEffect } from 'react';
+import Image from 'next/image';
 // Third party
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 // Local
 import { Container } from '@/components/ui/container';
 
+
 const sketchList = [
-   { src: './sketches/bike.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/bike.jpg', alt: 'cafe racer' },
-   { src: './sketches/lion.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/lion.jpg', alt: 'lion' },
-   { src: './sketches/leopard.png', width: 2732, height: 2048, thumbnail: './sketches/small/leopard.jpg', alt: 'leopard' },
-   { src: './sketches/fox-study.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/fox-study.jpg', alt: 'fox study' },
-   { src: './sketches/root-study-1.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/root-study-1.jpg', alt: 'root study 1' },
-   { src: './sketches/root-study-2.jpg', width: 2732, height: 2048, thumbnail: './sketches/small/root-study-2.jpg', alt: 'root study 2' }
+   { src: '/sketches/bike.jpg', width: 2732, height: 2048, thumbnail: '/sketches/small/bike.jpg', alt: 'cafe racer' },
+   { src: '/sketches/lion.jpg', width: 2732, height: 2048, thumbnail: '/sketches/small/lion.jpg', alt: 'lion' },
+   { src: '/sketches/leopard.png', width: 2732, height: 2048, thumbnail: '/sketches/small/leopard.jpg', alt: 'leopard' },
+   { src: '/sketches/fox-study.jpg', width: 2732, height: 2048, thumbnail: '/sketches/small/fox-study.jpg', alt: 'fox study' },
+   { src: '/sketches/root-study-1.jpg', width: 2732, height: 2048, thumbnail: '/sketches/small/root-study-1.jpg', alt: 'root study 1' },
+   { src: '/sketches/root-study-2.jpg', width: 2732, height: 2048, thumbnail: '/sketches/small/root-study-2.jpg', alt: 'root study 2' }
 ];
 
 const leftArrowSVGString = '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>';
@@ -49,7 +51,7 @@ const Page = () => {
             data-pswp-height={sketch.height}
             rel="noreferrer"
          >
-            <img className="rounded-[50px] border-4 w-full border-white overflow-hidden" src={sketch.thumbnail} alt={sketch.thumbnail} />
+            <Image className="rounded-[50px] border-4 w-full border-white overflow-hidden" src={sketch.thumbnail} alt={sketch.thumbnail} height={405} width={524} />
          </a>
       ));
    };
