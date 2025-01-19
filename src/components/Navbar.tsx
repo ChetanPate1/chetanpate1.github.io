@@ -1,5 +1,7 @@
+'use client';
 // Third party
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Brush, History, Home, PencilRuler, FlaskConical } from 'lucide-react';
 // Local
 import {
@@ -18,24 +20,26 @@ const navigation = [
 ];
 
 const Navbar = () => {
+   const pathname = usePathname()
+
    const renderLinks = () => {
       return navigation.map((item) => {
+         const isActive = pathname == item.to;
+
          return (
             <Tooltip
                key={item.name}>
                <TooltipTrigger asChild>
                   <Link
                      href={item.to}
-                     className="relative text-center text-xl md:h-14 flex flex-row items-center justify-center mx-2 sm:mx-1 md:mx-0 sm:my-2 group text-primary-foreground text-neutral-800 dark:text-neutral-100"
+                     className="relative text-center text-xl md:h-14 flex flex-row items-center justify-center mx-2 sm:mx-1 md:mx-0 sm:my-2 group text-primary-foreground text-neutral-800 dark:text-neutral-200"
                   >
-                     {/* {({ isActive }) => (
-                        <div className={`relative sm:h-14 sm:w-14 md:h-16 md:w-16 w-12 h-12 flex flex-row items-center justify-center `}>
-                           {item.icon}
+                     <div className={`relative sm:h-14 sm:w-14 md:h-16 md:w-16 w-12 h-12 flex flex-row items-center justify-center group-hover:text-neutral-800 ${isActive ? 'text-white group-hover:text-white' : ''}`}>
+                        {item.icon}
 
-                           <span className="sr-only">{item.name}</span>
-                           <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200 group-hover:dark:bg-neutral-700 group-hover:text group-hover:opacity-100 ${isActive ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
-                        </div>
-                     )} */}
+                        <span className="sr-only">{item.name}</span>
+                        <span className={`absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200  group-hover:opacity-100 ${isActive ? 'group-hover:bg-primary  scale-100 opacity-100' : 'scale-0 opacity-0'}`}></span>
+                     </div>
                   </Link>
                </TooltipTrigger>
                <TooltipContent side="right">
