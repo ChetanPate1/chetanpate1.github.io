@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const navigation = [
-   { name: 'Home', to: '/', icon: <Home className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
+   { name: 'Home', to: '/home', icon: <Home className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Skills', to: '/skills', icon: <PencilRuler className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Experience', to: '/experience', icon: <History className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
    { name: 'Experiments', to: '/experiments', icon: <FlaskConical className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> },
