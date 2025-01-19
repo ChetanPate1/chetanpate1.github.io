@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/chetanpatel/Documents/github/chetanpate1.github.io/src/app/home/loading.tsx"],"sourcesContent":["export default function Loading() {\n   // Or a custom loading skeleton component\n   return <p>Loading...</p>\n}"],"names":[],"mappings":";;;;;AAAe,SAAS;IACrB,yCAAyC;IACzC,qBAAO,8OAAC;kBAAE;;;;;;AACb"}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
