@@ -557,12 +557,15 @@ const navigation = [
         }, this)
     }
 ];
+const activePath = (path, url)=>{
+    return path.startsWith(url);
+};
 const Navbar = ()=>{
     _s();
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const renderLinks = ()=>{
         return navigation.map((item)=>{
-            const isActive = pathname == item.to;
+            const isActive = activePath(pathname, item.to);
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipTrigger"], {
@@ -579,30 +582,30 @@ const Navbar = ()=>{
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/navbar.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 44,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: `absolute h-full w-full rounded-full top-0 bg-primary transition-all duration-300 group-hover:scale-100 group-hover:bg-neutral-200  group-hover:opacity-100 ${isActive ? 'group-hover:bg-primary  scale-100 opacity-100' : 'scale-0 opacity-0'}`
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/navbar.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 45,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/navbar.tsx",
-                                lineNumber: 37,
+                                lineNumber: 41,
                                 columnNumber: 22
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/navbar.tsx",
-                            lineNumber: 33,
+                            lineNumber: 37,
                             columnNumber: 19
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/navbar.tsx",
-                        lineNumber: 32,
+                        lineNumber: 36,
                         columnNumber: 16
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -611,18 +614,18 @@ const Navbar = ()=>{
                             children: item.name
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/navbar.tsx",
-                            lineNumber: 46,
+                            lineNumber: 50,
                             columnNumber: 19
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/navbar.tsx",
-                        lineNumber: 45,
+                        lineNumber: 49,
                         columnNumber: 16
                     }, this)
                 ]
             }, item.name, true, {
                 fileName: "[project]/src/components/ui/navbar.tsx",
-                lineNumber: 30,
+                lineNumber: 34,
                 columnNumber: 13
             }, this);
         });
@@ -636,17 +639,17 @@ const Navbar = ()=>{
                 children: renderLinks()
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/navbar.tsx",
-                lineNumber: 56,
+                lineNumber: 60,
                 columnNumber: 13
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/navbar.tsx",
-            lineNumber: 55,
+            lineNumber: 59,
             columnNumber: 10
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/navbar.tsx",
-        lineNumber: 54,
+        lineNumber: 58,
         columnNumber: 7
     }, this);
 };

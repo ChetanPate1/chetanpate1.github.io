@@ -1,7 +1,7 @@
 'use client';
 // Third party
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { Brush, History, Home, PencilRuler, FlaskConical } from 'lucide-react';
 // Local
 import {
@@ -19,12 +19,16 @@ const navigation = [
    { name: 'Sketches', to: '/sketches', icon: <Brush className="sm:h-5 sm:w-5 h-4 w-4 z-10" /> }
 ];
 
+const activePath = (path: string, url: string) => {
+   return path.startsWith(url);
+}
+
 const Navbar = () => {
-   const pathname = usePathname()
+   const pathname = usePathname();
 
    const renderLinks = () => {
       return navigation.map((item) => {
-         const isActive = pathname == item.to;
+         const isActive = activePath(pathname, item.to);
 
          return (
             <Tooltip
