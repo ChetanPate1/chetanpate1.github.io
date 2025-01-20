@@ -1,7 +1,7 @@
 'use client';
 // Third party
 import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Brush, History, Home, PencilRuler, FlaskConical } from 'lucide-react';
 // Local
 import {

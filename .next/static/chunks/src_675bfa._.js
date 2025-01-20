@@ -351,14 +351,14 @@ function DarkModeToggle() {
                             className: "rotate-0 w-[15px] h-[15px] scale-100 transition-all dark:-rotate-90 dark:scale-0"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                            lineNumber: 22,
+                            lineNumber: 23,
                             columnNumber: 16
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
                             className: "absolute w-[15px] h-[15px] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                            lineNumber: 23,
+                            lineNumber: 24,
                             columnNumber: 16
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -366,18 +366,18 @@ function DarkModeToggle() {
                             children: "Toggle theme"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 16
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 10
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -388,7 +388,7 @@ function DarkModeToggle() {
                         children: "Light"
                     }, void 0, false, {
                         fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                        lineNumber: 28,
+                        lineNumber: 29,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -396,7 +396,7 @@ function DarkModeToggle() {
                         children: "Dark"
                     }, void 0, false, {
                         fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                        lineNumber: 31,
+                        lineNumber: 32,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -404,19 +404,19 @@ function DarkModeToggle() {
                         children: "System"
                     }, void 0, false, {
                         fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/dark-mode-toggle.tsx",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 10
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/dark-mode-toggle.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 7
     }, this);
 }
@@ -676,7 +676,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$themes$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next-themes/dist/index.mjs [app-client] (ecmascript)");
-"use client";
+'use client';
 ;
 ;
 function ThemeProvider({ children, ...props }) {
