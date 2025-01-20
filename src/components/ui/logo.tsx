@@ -8,7 +8,7 @@ type Props = {
 const Logo = (props: Props) => {
    const { size = 30 } = props;
 
-   return <Image {...props} src="./logo.svg" alt="Logo" height={size} width={size} />;
+   return <Image {...props} src="/logo.svg" alt="Logo" height={size} width={size} />;
 };
 
 export { Logo };
