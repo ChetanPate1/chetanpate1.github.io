@@ -35,7 +35,7 @@ const ExperienceCard = (props: Props) => {
             </svg>
 
             <div className={`${activeHeight} transition-all duration-500`}>
-               <Image height={80} width={150} className={`absolute top-10 left-10 ${active ? 'invert' : ''} dark:invert`} src={`./experience/${companyLogoName}-black.png`} alt="logo" />
+               <Image height={80} width={150} className={`absolute top-10 left-10 ${active ? 'invert' : ''} dark:invert`} src={`/experience/${companyLogoName}-black.png`} alt="logo" />
 
                <div className="flex flex-row flex-wrap gap-2.5 mt-7">
                   {skills.map((skill, i) => <Badge className="dark:border-transparent" key={i} variant={active ? 'secondary' : 'default'}>{skill}</Badge>)}
@@ -50,4 +50,4 @@ const ExperienceCard = (props: Props) => {
    );
 };
 
-export default ExperienceCard;
+export { ExperienceCard };
