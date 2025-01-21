@@ -131,9 +131,11 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 // Local
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$container$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/container.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/card.tsx [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -166,7 +168,7 @@ const Page = ()=>{
                             className: "absolute z-10 left-0 right-0 w-full h-full bg-gradient-to-b from-black/35"
                         }, void 0, false, {
                             fileName: "[project]/src/app/experiments/page.tsx",
-                            lineNumber: 32,
+                            lineNumber: 33,
                             columnNumber: 16
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -174,26 +176,29 @@ const Page = ()=>{
                             children: item.name
                         }, void 0, false, {
                             fileName: "[project]/src/app/experiments/page.tsx",
-                            lineNumber: 33,
+                            lineNumber: 34,
                             columnNumber: 16
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                            height: 373,
+                            width: 524,
+                            alt: "character picker",
                             className: "w-full",
                             src: item.image
                         }, void 0, false, {
                             fileName: "[project]/src/app/experiments/page.tsx",
-                            lineNumber: 34,
+                            lineNumber: 35,
                             columnNumber: 16
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/experiments/page.tsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 13
                 }, this)
             }, index, false, {
                 fileName: "[project]/src/app/experiments/page.tsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 10
             }, this));
     };
@@ -205,17 +210,17 @@ const Page = ()=>{
                 children: renderExperiments()
             }, void 0, false, {
                 fileName: "[project]/src/app/experiments/page.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 13
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/experiments/page.tsx",
-            lineNumber: 42,
+            lineNumber: 43,
             columnNumber: 10
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/experiments/page.tsx",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 7
     }, this);
 };

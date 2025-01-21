@@ -278,7 +278,7 @@ const ExperienceCard = (props)=>{
                                 height: 80,
                                 width: 150,
                                 className: `absolute top-10 left-10 ${active ? 'invert' : ''} dark:invert`,
-                                src: `./experience/${companyLogoName}-black.png`,
+                                src: `/experience/${companyLogoName}-black.png`,
                                 alt: "logo"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/experience-card.tsx",
@@ -448,11 +448,11 @@ Button.displayName = "Button";
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 // Core
+// import { useState } from 'react';
 __turbopack_esm__({
-    "Page": (()=>Page)
+    "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 // Local
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$container$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/container.tsx [app-rsc] (ecmascript)");
@@ -473,88 +473,87 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 ;
 ;
-;
 const works = {
     healthwatch: [
         {
-            src: './experience/healthwatch/1-A4-young-girl-2.jpg',
+            src: '/experience/healthwatch/1-A4-young-girl-2.jpg',
             alt: 'Healthwatch Surrey Poster'
         },
         {
-            src: './experience/healthwatch/3-A3-01.jpg',
+            src: '/experience/healthwatch/3-A3-01.jpg',
             alt: 'Healthwatch Surrey Poster'
         },
         {
-            src: './experience/healthwatch/Postcard-front-1.jpg',
+            src: '/experience/healthwatch/Postcard-front-1.jpg',
             alt: 'Healthwatch Surrey Post Card 1'
         },
         {
-            src: './experience/healthwatch/Postcard-back-1.jpg',
+            src: '/experience/healthwatch/Postcard-back-1.jpg',
             alt: 'Healthwatch Surrey Post Card 2'
         },
         {
-            src: './experience/healthwatch/Postcard-front-2.jpg',
+            src: '/experience/healthwatch/Postcard-front-2.jpg',
             alt: 'Healthwatch Surrey Post Card 3'
         },
         {
-            src: './experience/healthwatch/Postcard-back-2.jpg',
+            src: '/experience/healthwatch/Postcard-back-2.jpg',
             alt: 'Healthwatch Surrey Post Card 4'
         },
         {
-            src: './experience/healthwatch/web-banner.jpg',
+            src: '/experience/healthwatch/web-banner.jpg',
             alt: 'Healthwatch Surrey Web Banner 1'
         },
         {
-            src: './experience/healthwatch/web-banner-1.jpg',
+            src: '/experience/healthwatch/web-banner-1.jpg',
             alt: 'Healthwatch Surrey Web Banner 2'
         },
         {
-            src: './experience/healthwatch/web-banner-2.jpg',
+            src: '/experience/healthwatch/web-banner-2.jpg',
             alt: 'Healthwatch Surrey Web Banner 3'
         },
         {
-            src: './experience/healthwatch/web-banner-3.jpg',
+            src: '/experience/healthwatch/web-banner-3.jpg',
             alt: 'Healthwatch Surrey Web Banner 4'
         },
         {
-            src: './experience/healthwatch/email-footer-1.jpg',
+            src: '/experience/healthwatch/email-footer-1.jpg',
             alt: 'Healthwatch Surrey Email Footer 1'
         },
         {
-            src: './experience/healthwatch/email-footer-2.jpg',
+            src: '/experience/healthwatch/email-footer-2.jpg',
             alt: 'Healthwatch Surrey Email Footer 2'
         }
     ],
     lemonade: {
         cover: [
             {
-                src: './experience/lemonade/protection-graph.jpg',
+                src: '/experience/lemonade/protection-graph.jpg',
                 alt: 'Protection graph'
             },
             {
-                src: './experience/lemonade/fhc.jpg',
+                src: '/experience/lemonade/fhc.jpg',
                 alt: 'Financial health calculator'
             }
         ],
         onePercentClub: [
             {
-                src: './experience/lemonade/lemonade-1percent.jpg',
+                src: '/experience/lemonade/lemonade-1percent.jpg',
                 alt: '1% club Lemonade Money'
             },
             {
-                src: './experience/lemonade/aberdeen-1percent.jpg',
+                src: '/experience/lemonade/aberdeen-1percent.jpg',
                 alt: '1% club Aberdeen'
             },
             {
-                src: './experience/lemonade/fidelity-1percent.jpg',
+                src: '/experience/lemonade/fidelity-1percent.jpg',
                 alt: '1% club Fidelity'
             },
             {
-                src: './experience/lemonade/fidelity-calc.jpg',
+                src: '/experience/lemonade/fidelity-calc.jpg',
                 alt: '1% club Fidelity Calculation 1'
             },
             {
-                src: './experience/lemonade/fidelity-calc-1.jpg',
+                src: '/experience/lemonade/fidelity-calc-1.jpg',
                 alt: '1% club Fidelity Calculation 2'
             }
         ]
@@ -562,20 +561,17 @@ const works = {
     mug: []
 };
 const Page = ()=>{
-    const [active, setActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["useState"])('mug');
+    // const [active, setActive] = useState<'mug' | 'lemonade' | 'healthwatch'>('mug');
+    const active = 'mug';
     const order = [
         'mug',
         'lemonade',
         'healthwatch'
     ];
-    const position = ()=>{
-        if (active === 'mug') {
-            return 'translate-x-0';
-        } else if (active === 'lemonade') {
-            return '-translate-x-[472px] md:-translate-x-[582px]';
-        } else if (active === 'healthwatch') {
-            return '-translate-x-[942px] md:-translate-x-[1162px]';
-        }
+    const position = {
+        mug: 'translate-x-0',
+        lemonade: '-translate-x-[472px] md:-translate-x-[582px]',
+        healthwatch: '-translate-x-[942px] md:-translate-x-[1162px]'
     };
     const isLast = order.indexOf(active) === order.length - 1;
     const isFirst = order.indexOf(active) === 0;
@@ -583,28 +579,30 @@ const Page = ()=>{
         const currentIndex = order.indexOf(active);
         const nextIndex = currentIndex + 1;
         const next = order[nextIndex];
-        setActive(next);
+    // setActive(next);
     };
     const onPrev = ()=>{
         const currentIndex = order.indexOf(active);
         const prevIndex = currentIndex - 1;
         const prev = order[prevIndex];
-        setActive(prev);
+    // setActive(prev);
     };
-    const renderImages = (images)=>{
+    const renderImages = (images, height, width)=>{
         return images.map((work, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
                 className: "overflow-hidden border-neutral-100 rounded-3xl mb-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                    height: height,
+                    width: width,
                     src: work.src,
                     alt: work.alt
                 }, void 0, false, {
                     fileName: "[project]/src/app/experience/page.tsx",
-                    lineNumber: 82,
+                    lineNumber: 80,
                     columnNumber: 13
                 }, this)
             }, index, false, {
                 fileName: "[project]/src/app/experience/page.tsx",
-                lineNumber: 81,
+                lineNumber: 79,
                 columnNumber: 10
             }, this));
     };
@@ -619,18 +617,18 @@ const Page = ()=>{
                             className: "z-10 absolute top-0 -left-36 h-full w-32 bg-gradient-to-r from-neutral-200 dark:from-black from-70%"
                         }, void 0, false, {
                             fileName: "[project]/src/app/experience/page.tsx",
+                            lineNumber: 89,
+                            columnNumber: 16
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "z-10 absolute top-0 -right-10 h-full w-32 bg-gradient-to-l from-neutral-200 dark:from-black from-40%"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/experience/page.tsx",
                             lineNumber: 91,
                             columnNumber: 16
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "z-10 absolute top-0 -right-10 h-full w-32 bg-gradient-to-l from-neutral-200 dark:from-black from-40% "
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/experience/page.tsx",
-                            lineNumber: 93,
-                            columnNumber: 16
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `flex flex-nowrap gap-8 mt-3 min-h-[450px] sm:min-h-[440px] ${position()} transition-transform duration-500`,
+                            className: `flex flex-nowrap gap-8 mt-3 min-h-[450px] sm:min-h-[440px] ${position[active]} transition-transform duration-500`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
@@ -642,7 +640,7 @@ const Page = ()=>{
                                                     children: "October"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 96,
                                                     columnNumber: 25
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -650,13 +648,13 @@ const Page = ()=>{
                                                     children: "2017"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 97,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 95,
                                             columnNumber: 22
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$experience$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ExperienceCard"], {
@@ -668,7 +666,7 @@ const Page = ()=>{
                                                 'Javascript',
                                                 'Typescript',
                                                 'Vue.js',
-                                                'React.js',
+                                                'React',
                                                 'Angular.js',
                                                 'Design & Implementation',
                                                 'Figma'
@@ -678,13 +676,13 @@ const Page = ()=>{
                                             onClick: ()=>setActive('mug')
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 100,
                                             columnNumber: 22
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/experience/page.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 94,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -697,7 +695,7 @@ const Page = ()=>{
                                                     children: "Decemeber"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 113,
+                                                    lineNumber: 111,
                                                     columnNumber: 25
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -705,13 +703,13 @@ const Page = ()=>{
                                                     children: "2016"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 114,
+                                                    lineNumber: 112,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 112,
+                                            lineNumber: 110,
                                             columnNumber: 22
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$experience$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ExperienceCard"], {
@@ -731,13 +729,13 @@ const Page = ()=>{
                                             onClick: ()=>setActive('lemonade')
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 115,
                                             columnNumber: 22
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/experience/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 109,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -750,7 +748,7 @@ const Page = ()=>{
                                                     children: "August"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 128,
+                                                    lineNumber: 126,
                                                     columnNumber: 25
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -758,13 +756,13 @@ const Page = ()=>{
                                                     children: "2015"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 129,
+                                                    lineNumber: 127,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 125,
                                             columnNumber: 22
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$experience$2d$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ExperienceCard"], {
@@ -781,19 +779,19 @@ const Page = ()=>{
                                             onClick: ()=>setActive('healthwatch')
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/experience/page.tsx",
-                                            lineNumber: 132,
+                                            lineNumber: 130,
                                             columnNumber: 22
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/experience/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 124,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/experience/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 93,
                             columnNumber: 16
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -808,12 +806,12 @@ const Page = ()=>{
                                         size: 24
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 141,
                                         columnNumber: 22
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/experience/page.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 140,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -824,29 +822,29 @@ const Page = ()=>{
                                         size: 24
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 145,
                                         columnNumber: 22
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/experience/page.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 144,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/experience/page.tsx",
-                            lineNumber: 141,
+                            lineNumber: 139,
                             columnNumber: 16
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/experience/page.tsx",
-                    lineNumber: 90,
+                    lineNumber: 88,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/experience/page.tsx",
-                lineNumber: 89,
+                lineNumber: 87,
                 columnNumber: 10
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$container$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Container"], {
@@ -868,7 +866,7 @@ const Page = ()=>{
                                                 children: "MyUtilityGenius LTD"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 156,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -876,18 +874,18 @@ const Page = ()=>{
                                                     children: "Full Time"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 161,
                                                     columnNumber: 28
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 160,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 155,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -895,7 +893,7 @@ const Page = ()=>{
                                         children: "Frontend Developer"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 165,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -903,7 +901,7 @@ const Page = ()=>{
                                         children: "What they do?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 169,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -911,7 +909,7 @@ const Page = ()=>{
                                         children: "MyUtilityGenius is a software company created by energy professionals for energy professionals. They offer a number of software tools and solutions for domestic and commercial energy professionals and suppliers. They create software solutions can be off-the-shelf or tailored to the clients own specifications."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 173,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -919,7 +917,7 @@ const Page = ()=>{
                                         children: "Your role"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 177,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -927,7 +925,7 @@ const Page = ()=>{
                                         children: "I manage and maintain existing projects and create new projects. Main achievements marketing campaigns, portals for internal and external use, new quoting system for domestic use."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 181,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -935,7 +933,7 @@ const Page = ()=>{
                                         children: "Marketing campaigns"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 185,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -943,7 +941,7 @@ const Page = ()=>{
                                         children: "I led the redevelopment of a legacy energy comparison platform into a vue.js based white-label solution, serving major providers like Evri, E.ON, and Octopus. This enterprise-grade product enhances customer retention and acquisition through a customisable interface."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 189,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -951,7 +949,7 @@ const Page = ()=>{
                                         children: "The platform delivers a seamless, brand-tailored energy switching experience. Leveraging vue.js, I created a more responsive and efficient user interface, significantly improving user engagement."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 193,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -959,7 +957,7 @@ const Page = ()=>{
                                         children: "Implementation included phased marketing campaigns, directing customers to the white-label platform via targeted emails. For each client, I oversaw comprehensive UI rebranding to align with their brand identity."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 199,
+                                        lineNumber: 197,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -967,7 +965,7 @@ const Page = ()=>{
                                         children: "This project modernised the technology stack and opened new market opportunities. The white-label approach allows rapid deployment under individual brands, accelerating digital transformation while maintaining customer relationships."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 201,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -975,7 +973,7 @@ const Page = ()=>{
                                         children: "Marketing campaigns"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 207,
+                                        lineNumber: 205,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -988,12 +986,12 @@ const Page = ()=>{
                                                     children: "White label"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 210,
+                                                    lineNumber: 208,
                                                     columnNumber: 28
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 209,
+                                                lineNumber: 207,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1003,40 +1001,40 @@ const Page = ()=>{
                                                         children: "+ Brand style"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 214,
+                                                        lineNumber: 212,
                                                         columnNumber: 28
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         children: "+ Logo"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 215,
+                                                        lineNumber: 213,
                                                         columnNumber: 28
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         children: "+ Fonts"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 216,
+                                                        lineNumber: 214,
                                                         columnNumber: 28
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         children: "+ Wording"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 217,
+                                                        lineNumber: 215,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 211,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 206,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1044,7 +1042,7 @@ const Page = ()=>{
                                         children: "Commercial Energy Broker Portal"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 219,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1052,7 +1050,7 @@ const Page = ()=>{
                                         children: "Developed a specialized platform for energy brokers serving large commercial clients. Key features:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 220,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1062,34 +1060,34 @@ const Page = ()=>{
                                                 children: "Client portfolio management"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 224,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Custom tender/contract generation"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 225,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "E-signature capabilities"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 228,
+                                                lineNumber: 226,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "Streamlined multi-account handling"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 229,
+                                                lineNumber: 227,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 225,
+                                        lineNumber: 223,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1097,7 +1095,7 @@ const Page = ()=>{
                                         children: "This portal optimizes commercial energy procurement, enabling brokers to efficiently manage bespoke contracts for high-volume consumers beyond standard tariff structures."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 231,
+                                        lineNumber: 229,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1105,7 +1103,7 @@ const Page = ()=>{
                                         children: "Commercial Energy Supplier Portal"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 235,
+                                        lineNumber: 233,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1113,7 +1111,7 @@ const Page = ()=>{
                                         children: "Developed a dual-portal solution for the commercial energy sector:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 234,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1130,33 +1128,33 @@ const Page = ()=>{
                                                                 children: "Client portfolio management"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                                lineNumber: 243,
+                                                                lineNumber: 241,
                                                                 columnNumber: 31
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                 children: "Custom tender/contract generation"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                                lineNumber: 244,
+                                                                lineNumber: 242,
                                                                 columnNumber: 31
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                 children: "E-signature capabilities"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 243,
                                                                 columnNumber: 31
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 242,
+                                                        lineNumber: 240,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 240,
+                                                lineNumber: 238,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1170,32 +1168,32 @@ const Page = ()=>{
                                                                 children: "Tariff management"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                                lineNumber: 252,
+                                                                lineNumber: 250,
                                                                 columnNumber: 31
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                 children: "Tender review and processing"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                                lineNumber: 253,
+                                                                lineNumber: 251,
                                                                 columnNumber: 31
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/experience/page.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 249,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 249,
+                                                lineNumber: 247,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 239,
+                                        lineNumber: 237,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1203,13 +1201,13 @@ const Page = ()=>{
                                         children: "This integrated system enables a seamless end-to-end workflow, allowing brokers and suppliers to collaborate efficiently on complex commercial energy contracts. Brokers can access both portals, streamlining the entire process from tender creation to contract finalisation."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 258,
+                                        lineNumber: 256,
                                         columnNumber: 22
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/experience/page.tsx",
-                                lineNumber: 156,
+                                lineNumber: 154,
                                 columnNumber: 19
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1223,7 +1221,7 @@ const Page = ()=>{
                                                 children: "Lemonade Money LTD"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 265,
+                                                lineNumber: 263,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1231,18 +1229,18 @@ const Page = ()=>{
                                                     children: "Contract"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 270,
+                                                    lineNumber: 268,
                                                     columnNumber: 28
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 267,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 264,
+                                        lineNumber: 262,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1250,7 +1248,7 @@ const Page = ()=>{
                                         children: "Frontend Developer"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 272,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1258,7 +1256,7 @@ const Page = ()=>{
                                         children: "What they do?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 278,
+                                        lineNumber: 276,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1266,7 +1264,7 @@ const Page = ()=>{
                                         children: "Lemonade Money provide financial advice such as protection for family, retirement or buying a home."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 279,
+                                        lineNumber: 277,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1274,7 +1272,7 @@ const Page = ()=>{
                                         children: "Your role"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 283,
+                                        lineNumber: 281,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1282,7 +1280,7 @@ const Page = ()=>{
                                         children: "I created the company website from the ground up. Previously was a wordpress website. They want to start creating products such as calculators and quote systems to generate more leads."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 284,
+                                        lineNumber: 282,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1290,7 +1288,7 @@ const Page = ()=>{
                                         children: "A simple brand was provide which I then had to build UIs with similar styling. I also did wireframing and refined designs in photoshop before writing code."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 288,
+                                        lineNumber: 286,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1298,23 +1296,23 @@ const Page = ()=>{
                                         children: "Cover Calculator"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 292,
+                                        lineNumber: 290,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-lg dark:text-white",
-                                        children: "The main was to make me people that they didn't have enough cover for there family if anything happened to them. The calculator was designed to be interactive so the user could see they need more cover. They then shown quotes from cover which they could select."
+                                        children: "The main was to make me people that they didn‘t have enough cover for there family if anything happened to them. The calculator was designed to be interactive so the user could see they need more cover. They then shown quotes from cover which they could select."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 293,
+                                        lineNumber: 291,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mt-10 flex flex-row gap-4",
-                                        children: renderImages(works.lemonade.cover)
+                                        children: renderImages(works.lemonade.cover, 228, 456)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 297,
+                                        lineNumber: 295,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1322,7 +1320,7 @@ const Page = ()=>{
                                         children: "1% Club"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 301,
+                                        lineNumber: 299,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1330,21 +1328,21 @@ const Page = ()=>{
                                         children: "This was a white label product which we branded to the clients specifications. The goal was to inform 1% earner in our clients company about there pensions."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 300,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mt-10 grid grid-cols-1 md:grid-cols-2 gap-3",
-                                        children: renderImages(works.lemonade.onePercentClub)
+                                        children: renderImages(works.lemonade.onePercentClub, 229, 458)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 306,
+                                        lineNumber: 304,
                                         columnNumber: 22
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/experience/page.tsx",
-                                lineNumber: 263,
+                                lineNumber: 261,
                                 columnNumber: 19
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1358,7 +1356,7 @@ const Page = ()=>{
                                                 children: "Healthwatch Surrey"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 313,
+                                                lineNumber: 311,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1366,18 +1364,18 @@ const Page = ()=>{
                                                     children: "Contract"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/experience/page.tsx",
-                                                    lineNumber: 318,
+                                                    lineNumber: 316,
                                                     columnNumber: 28
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/experience/page.tsx",
-                                                lineNumber: 317,
+                                                lineNumber: 315,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 312,
+                                        lineNumber: 310,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1385,7 +1383,7 @@ const Page = ()=>{
                                         children: "Graphic Designer"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 322,
+                                        lineNumber: 320,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1393,7 +1391,7 @@ const Page = ()=>{
                                         children: "What they do?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 324,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1401,7 +1399,7 @@ const Page = ()=>{
                                         children: "There are over 150 local Healthwatch across the country. They help people to voice there experiences with the heath service. They also provide trustworthy advice for the local health and social care services."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 330,
+                                        lineNumber: 328,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1409,7 +1407,7 @@ const Page = ()=>{
                                         children: "Your role"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 332,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1417,7 +1415,7 @@ const Page = ()=>{
                                         children: "My role was to provide poster, banners and postcards by using there existing brand of Healthwatch."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 338,
+                                        lineNumber: 336,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1425,47 +1423,47 @@ const Page = ()=>{
                                         children: "Some works"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 342,
+                                        lineNumber: 340,
                                         columnNumber: 22
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "columns-2 gap-4",
-                                        children: renderImages(works.healthwatch)
+                                        children: renderImages(works.healthwatch, 324, 456)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/experience/page.tsx",
-                                        lineNumber: 346,
+                                        lineNumber: 344,
                                         columnNumber: 22
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/experience/page.tsx",
-                                lineNumber: 311,
+                                lineNumber: 309,
                                 columnNumber: 19
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/experience/page.tsx",
-                        lineNumber: 155,
+                        lineNumber: 153,
                         columnNumber: 16
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/experience/page.tsx",
-                    lineNumber: 154,
+                    lineNumber: 152,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/experience/page.tsx",
-                lineNumber: 153,
+                lineNumber: 151,
                 columnNumber: 10
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/experience/page.tsx",
-        lineNumber: 88,
+        lineNumber: 86,
         columnNumber: 7
     }, this);
 };
-;
+const __TURBOPACK__default__export__ = Page;
 }}),
 "[project]/src/app/experience/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 

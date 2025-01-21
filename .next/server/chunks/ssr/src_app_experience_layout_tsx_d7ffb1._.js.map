@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/chetanpatel/Documents/github/chetanpate1.github.io/src/app/experience/layout.tsx"],"sourcesContent":["import Link from 'next/link'\n\nexport default function Layout({ children }: { children: React.ReactNode }) {\n\n\n   return (\n      <>\n         <nav>\n            <Link href=\"/page-views\">Page Views</Link>\n            <Link href=\"/visitors\">Visitors</Link>\n         </nav>\n         <div>{children}</div>\n      </>\n   )\n}"],"names":[],"mappings":";;;;AAAA;;;AAEe,SAAS,OAAO,EAAE,QAAQ,EAAiC;IAGvE,qBACG;;0BACG,8OAAC;;kCACE,8OAAC,4JAAA,CAAA,UAAI;wBAAC,MAAK;kCAAc;;;;;;kCACzB,8OAAC,4JAAA,CAAA,UAAI;wBAAC,MAAK;kCAAY;;;;;;;;;;;;0BAE1B,8OAAC;0BAAK;;;;;;;;AAGf"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

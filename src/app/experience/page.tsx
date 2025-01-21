@@ -1,6 +1,6 @@
-'use client';
+
 // Core
-import { useState } from 'react';
+// import { useState } from 'react';
 import Image from 'next/image';
 // Third party
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { getAll } from '@/lib/experience-post';
 
 type Images = { src: string, alt: string }[];
 
@@ -45,8 +46,12 @@ const works = {
    mug: []
 };
 
-const Page = () => {
-   const [active, setActive] = useState<'mug' | 'lemonade' | 'healthwatch'>('mug');
+const Page = async () => {
+   // const [active, setActive] = useState<'mug' | 'lemonade' | 'healthwatch'>('mug');
+
+   const experiences = await getAll()
+
+   const active = 'mug'
    const order = ['mug', 'lemonade', 'healthwatch'];
    const position = {
       mug: 'translate-x-0',
@@ -62,7 +67,7 @@ const Page = () => {
       const nextIndex = currentIndex + 1;
       const next = order[nextIndex];
 
-      setActive(next);
+      // setActive(next);
    };
 
    const onPrev = () => {
@@ -70,7 +75,7 @@ const Page = () => {
       const prevIndex = currentIndex - 1;
       const prev = order[prevIndex];
 
-      setActive(prev);
+      // setActive(prev);
    };
 
    const renderImages = (images: Images, height: number, width: number) => {
@@ -101,7 +106,7 @@ const Page = () => {
                         type="Full Time"
                         skills={['HTML', 'CSS', 'Javascript', 'Typescript', 'Vue.js', 'React', 'Angular.js', 'Design & Implementation', 'Figma']} time="7 years"
                         companyLogoName="mug"
-                        onClick={() => setActive('mug')}
+                     // onClick={() => setActive('mug')}
                      />
                   </div>
 
@@ -116,7 +121,7 @@ const Page = () => {
                         type="Contract"
                         skills={['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular.js', 'Design & Implementation', 'Figma']} time="1 year"
                         companyLogoName="lemonade"
-                        onClick={() => setActive('lemonade')}
+                     // onClick={() => setActive('lemonade')}
                      />
                   </div>
 
@@ -130,12 +135,12 @@ const Page = () => {
                         active={active == 'healthwatch'}
                         type="Contract"
                         skills={['Photoshop', 'Illustrator', 'Sketching', 'Design']} time="6 months" companyLogoName="healthwatch"
-                        onClick={() => setActive('healthwatch')}
+                     // onClick={() => setActive('healthwatch')}
                      />
                   </div>
                </div>
 
-               <div className="absolute bottom-6 right-2 z-20">
+               {/* <div className="absolute bottom-6 right-2 z-20">
                   <Button size="icon" onClick={onPrev} disabled={isFirst} className="mr-3">
                      <ArrowLeft size={24} />
                   </Button>
@@ -143,10 +148,14 @@ const Page = () => {
                   <Button size="icon" onClick={onNext} disabled={isLast}>
                      <ArrowRight size={24} />
                   </Button>
-               </div>
+               </div> */}
+
+               {experiences.map((item) => (
+                  <h1>{item.id}</h1>
+               ))}
             </div>
          </Container>
-
+         {/* 
          <Container className="bg-white dark:bg-neutral-900">
             <div className="mx-auto max-w-5xl pb-32 px-10">
                <Tabs defaultValue="mug" value={active}>
@@ -346,7 +355,7 @@ const Page = () => {
                   </TabsContent>
                </Tabs>
             </div>
-         </Container>
+         </Container> */}
       </div>
    );
 };

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 const dir = path.join(process.cwd(), 'experience');
 
-export function getAll() {
+export async function getAll() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(dir);
   const allPostsData = fileNames.map((fileName) => {

@@ -1,5 +1,6 @@
 // Core
 import Link from "next/link";
+import Image from "next/image";
 // Local
 import { Container } from "@/components/ui/container";
 import { Card } from "@/components/ui/card";
@@ -31,7 +32,7 @@ const Page = () => {
             <Card className="overflow-hidden relative">
                <div className="absolute z-10 left-0 right-0 w-full h-full bg-gradient-to-b from-black/35"></div>
                <p className=" absolute z-20 left-8 top-8 font-bold text-white">{item.name}</p>
-               <img className="w-full" src={item.image} />
+               <Image height={373} width={524} alt="character picker" className="w-full" src={item.image} />
             </Card>
          </Link>
       ));
