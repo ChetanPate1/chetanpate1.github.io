@@ -10,6 +10,7 @@ import Experiments from "@/pages/Experiments";
 import Tutorial from "@/pages/experiments/Tutorial";
 import CharacterPicker from "@/pages/experiments/CharacterPicker";
 import ParallaxCards from '@/pages/experiments/ParallaxCards';
+import StripeAnimation from "@/pages/experiments/StripeAnimation";
 
 const router = createHashRouter([
   {
@@ -44,6 +45,10 @@ const router = createHashRouter([
       {
         path: "/experiments/parallax-cards",
         element: <ParallaxCards />
+      },
+      {
+        path: '/experiments/stripe-animation',
+        element: <StripeAnimation />
       },
       {
         path: "/sketches",
