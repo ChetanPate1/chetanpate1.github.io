@@ -135,11 +135,10 @@ const StripeAnimation = () => {
    const connectToTerminalRef = useRef<SVGPathElement>(null);
 
    useEffect(() => {
-
-      // animateBillingToInvoicing();
-      // animatePaymentToTaxRadar();
-      // animatePaymentToConnectTerminal();
-      // animateIssuingToCapitalTreasury();
+      animateBillingToInvoicing();
+      animatePaymentToTaxRadar();
+      animatePaymentToConnectTerminal();
+      animateIssuingToCapitalTreasury();
       animateConnectToTerminal()
    }, []);
 
@@ -276,7 +275,7 @@ const StripeAnimation = () => {
 
             <Card className="mt-10">
                <CardContent className="relative min-h-40">
-                  {/* <svg className="absolute" style={{ left: 242, top: 79 }} width="2" height="102" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="absolute" style={{ left: 242, top: 79 }} width="2" height="102" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M1 102V0" stroke="url(#paint0_linear_8_213)" stroke-width="2" stroke-dasharray="102 102" ref={paymentToTaxRef} />
                      <defs>
                         <linearGradient id="paint0_linear_8_213" x1="100" y1="100" x2="100" y2="100" gradientUnits="userSpaceOnUse">
@@ -294,9 +293,9 @@ const StripeAnimation = () => {
                            <stop offset="1" stop-color="#9966FF" />
                         </linearGradient>
                      </defs>
-                  </svg> */}
+                  </svg>
 
-                  {/* <svg className="absolute" style={{ left: 103, top: 131 }} width="192" height="2" viewBox="0 0 192 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="absolute" style={{ left: 103, top: 131 }} width="192" height="2" viewBox="0 0 192 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M0 1H192" stroke="url(#paint0_linear_8_216)" stroke-width="2" stroke-dasharray="192 192" strokeDashoffset={0} ref={billingToInvoicingRef} />
                      <defs>
                         <linearGradient id="paint0_linear_8_216" x1="nan" y1="nan" x2="nan" y2="nan" gradientUnits="userSpaceOnUse">
@@ -304,9 +303,9 @@ const StripeAnimation = () => {
                            <stop offset="1" stop-color="#00D924" />
                         </linearGradient>
                      </defs>
-                  </svg> */}
+                  </svg>
 
-                  {/* <svg className="absolute" style={{ left: 103, top: 260 }} width="134" height="52" viewBox="0 0 134 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="absolute" style={{ left: 103, top: 260 }} width="134" height="52" viewBox="0 0 134 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M133 0V31C133 44.3333 126.333 51 113 51H0" stroke="url(#paint0_linear_8_228)" stroke-width="2" stroke-dasharray="176.46 176.46" strokeDashoffset={0} ref={paymentToConnectRef} />
                      <defs>
                         <linearGradient id="paint0_linear_8_228" x1="-0.748426" y1="54.0094" x2="98.7484" y2="43.9906" gradientUnits="userSpaceOnUse">
@@ -324,7 +323,7 @@ const StripeAnimation = () => {
                            <stop offset="1" stop-color="#9966FF" />
                         </linearGradient>
                      </defs>
-                  </svg> */}
+                  </svg>
 
                   <svg className="absolute" style={{ left: 417, top: 169 }} width="2" height="192" viewBox="0 0 2 192" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M1 192V0" stroke="url(#paint0_linear_8_222)" stroke-width="2" stroke-dasharray="192 192" strokeDashoffset={0} ref={issuingToCapitalRef} />
