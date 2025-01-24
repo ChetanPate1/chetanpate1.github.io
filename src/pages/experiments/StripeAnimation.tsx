@@ -25,11 +25,12 @@ const products = [
 ];
 
 const Product = [
-   {
-      name: 'Billing',
-      to: ['Invoice']
-   }
-]
+   { name: 'Payment', connectedTo: ['Tax', 'Radar'] },
+   { name: 'Billing', connectedTo: ['Invoice'] },
+   { name: 'Payment', connectedTo: ['Connect', 'Terminal'] },
+   { name: 'Issuing', connectedTo: ['Capital', 'Treasury'] },
+   { name: 'Connect', connectedTo: ['Terminal'] }
+];
 
 const StripeIcon = (props: StripIconProps) => {
    const icon = props.name.toLowerCase();
@@ -56,7 +57,7 @@ const StripeIcon = (props: StripIconProps) => {
          </span>
       </button>
    );
-}
+};
 
 const gridStyle = {
    display: 'grid',
@@ -74,14 +75,104 @@ const gridStyle = {
    width: '540px'
 };
 
+function animatePathIn(path, onComplete) {
+   const length = path.getTotalLength();
+
+   path.style.strokeDasharray = length;
+   path.style.strokeDashoffset = length;
+
+   const startTime = performance.now();
+
+   const animate = (time: number) => {
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / 480, 1);
+      path.style.strokeDashoffset = length * (1 - progress);
+
+      if (progress < 1) {
+         requestAnimationFrame(animate);
+      } else {
+         onComplete();
+      }
+   };
+
+   requestAnimationFrame(animate);
+}
+
+function animatePathOut(path, onComplete) {
+   const length = path.getTotalLength();
+
+   path.style.strokeDashoffset = length;
+
+   const startTime = performance.now();
+
+   const animate = (time: number) => {
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / 480, 1);
+
+      path.style.strokeDashoffset = length + (length * (1 - progress));
+
+      if (progress < 1) {
+         requestAnimationFrame(animate);
+      } else {
+         onComplete();
+      }
+   };
+
+   requestAnimationFrame(animate);
+}
+
+const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 const StripeAnimation = () => {
-   // payment -> tax, radar => 102 -> 0, 94 -> 0
+   const [activeProduct, setActiveProduct] = useState({
+      Tax: false, Billing: false, Invoicing: false, Capital: false,
+      Atlas: false, Payments: false, Climate: false, Treasury: false,
+      Connect: false, Radar: false, Terminal: false, Checkout: false,
+      Issuing: false, Identity: false, Sigma: false, Elements: false
+   })
+   // payment -> tax, radar => 102 -> 0 -> -102, 94 -> 0 -> -94
    // billing -> invoicing => 192 -> 0
    // payment -> connect, terminal => 177 -> 0, 102 -> 0
    // issuing -> capital, treasury => 192 -> 0, 177 -> 0
    // connect -> terminal => 185 -> 0
+   /*
+   // Billing active: true  -> start animations -> 0 -> 2xlength -> Invoicing active: true, Billing active: false
+   
+   activateProduct('Billing')
+      .animatePathIn(ref)
+      .animatePathOut(ref)
+      .deactivateProduct('Billing')
+   */
+   const billingToInvoicingRef = useRef(null);
+   const paymentToTaxRef = useRef(null);
+   const paymentToRadarRef = useRef(null);
+   const paymentToConnectRef = useRef(null);
+   const paymentToTerminalRef = useRef(null);
+   const issuingToCapitalRef = useRef(null);
+   const issuingToTreasuryRef = useRef(null);
+   const connectToTerminalRef = useRef(null);
 
-   // Billing active: true  -> start animations -> 0 -> Invoicing active: true, Billing active: false
+   useEffect(() => {
+
+      animateBillingToInvoicing();
+   }, []);
+
+   const animateBillingToInvoicing = async () => {
+      setActiveProduct({ ...activeProduct, Billing: true });
+      animatePathIn(billingToInvoicingRef.current, async () => {
+         setActiveProduct((props) => ({ ...props, Invoicing: true }));
+         await wait(3000);
+         setActiveProduct((props) => ({ ...props, Billing: false }));
+         animatePathOut(billingToInvoicingRef.current, () => {
+            setActiveProduct((props) => ({ ...props, Invoicing: false }));
+         });
+      })
+   };
+
+
+
+
+
 
    return (
       <Container>
@@ -108,7 +199,7 @@ const StripeAnimation = () => {
             <Card className="mt-10">
                <CardContent className="relative min-h-40">
                   <svg className="absolute" style={{ left: 242, top: 79 }} width="2" height="102" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M1 102V0" stroke="url(#paint0_linear_8_213)" stroke-width="2" stroke-dasharray="102 102" strokeDashoffset={0} />
+                     <path d="M1 102V0" stroke="url(#paint0_linear_8_213)" stroke-width="2" stroke-dasharray="102 102" />
                      <defs>
                         <linearGradient id="paint0_linear_8_213" x1="100" y1="100" x2="100" y2="100" gradientUnits="userSpaceOnUse">
                            <stop stop-color="#FF5996" />
@@ -128,7 +219,7 @@ const StripeAnimation = () => {
                   </svg>
 
                   <svg className="absolute" style={{ left: 103, top: 131 }} width="192" height="2" viewBox="0 0 192 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M0 1H192" stroke="url(#paint0_linear_8_216)" stroke-width="2" stroke-dasharray="192 192" strokeDashoffset={0} />
+                     <path d="M0 1H192" stroke="url(#paint0_linear_8_216)" stroke-width="2" stroke-dasharray="192 192" strokeDashoffset={0} ref={billingToInvoicingRef} />
                      <defs>
                         <linearGradient id="paint0_linear_8_216" x1="nan" y1="nan" x2="nan" y2="nan" gradientUnits="userSpaceOnUse">
                            <stop stop-color="#FFD848" />
@@ -189,7 +280,7 @@ const StripeAnimation = () => {
 
                   <div className="mt-10" style={gridStyle}>
                      {products.map((p) => (
-                        <StripeIcon key={p} name={p} />
+                        <StripeIcon key={p} name={p} active={activeProduct[p]} />
                      ))}
                   </div>
                </CardContent>
