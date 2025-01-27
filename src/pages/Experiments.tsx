@@ -18,6 +18,11 @@ const experiments = [
       to: '/experiments/parallax-cards',
       name: 'Parallax Cards',
       image: './experiments/parallax-card.gif'
+   },
+   {
+      to: '/experiments/stripe-animation',
+      name: 'Stripe Animation',
+      image: './experiments/stripe-animation.gif'
    }
 ]
 
