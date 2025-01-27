@@ -14,6 +14,9 @@ export default {
       },
       colors: {
         primary: '#FF5555'
+      },
+      boxShadow: {
+        '3xl': '0 12.6px 25.2px -11.5733px rgba(50,50,93,.25),0 7.56px 15.12px -7.56px rgba(0,0,0,.1)',
       }
     }
   },
