@@ -3,7 +3,7 @@ import { memo, useCallback, useEffect, useRef, useState } from 'react';
 // Third Party
 import { NavLink } from 'react-router-dom';
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/layout/container';
 import { Card, CardContent } from '@/components/ui/card';
 import {
    Breadcrumb,

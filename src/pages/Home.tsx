@@ -5,7 +5,7 @@ import { ArrowRightIcon, ChevronRight } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Link } from 'react-router-dom';
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/layout/container';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { Progress } from '@/components/ui/progress';

@@ -9,4 +9,4 @@ const Logo = (props: Props) => {
    return <img {...props} src="./logo.svg" alt="Logo" height={size} width={size} />;
 };
 
-export default Logo;
+export { Logo };

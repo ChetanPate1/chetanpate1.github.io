@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ChartNoAxesColumn, Cuboid, Download } from 'lucide-react';
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/layout/container';
 import { Card, CardContent } from '@/components/ui/card';
 import {
    Breadcrumb,

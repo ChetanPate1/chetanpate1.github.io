@@ -1,8 +1,8 @@
 // Third Party
 import { NavLink, Outlet } from "react-router-dom";
 // Local
-import Navbar from "@/components/Navbar";
-import Logo from "@/components/Logo";
+import { Navbar } from "@/components/layout/navbar";
+import { Logo } from "@/components/ui/logo";
 import { DarkModeToggle } from "@/components/dark-mode-toggle";
 
 const Root = () => {

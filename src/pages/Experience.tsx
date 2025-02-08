@@ -3,7 +3,7 @@ import { useState } from 'react';
 // Third party
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 // Local
-import Container from '@/components/Container';
+import { Container } from '@/components/layout/container';
 import ExperienceCard from '@/components/ExperienceCard';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent } from '@/components/ui/tabs';

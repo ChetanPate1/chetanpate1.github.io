@@ -1,5 +1,5 @@
 // Local
-import Container from "@/components/Container";
+import { Container } from "@/components/layout/container";
 import { Card } from "@/components/ui/card";
 import { NavLink } from "react-router-dom";
 

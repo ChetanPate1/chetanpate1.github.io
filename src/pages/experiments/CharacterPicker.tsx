@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Container from "@/components/Container";
+import { Container } from "@/components/layout/container";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Card } from "@/components/ui/card";
 
